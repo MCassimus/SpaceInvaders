@@ -1,3 +1,7 @@
-﻿  ConsoleApplication1.cpp
-  ConsoleApplication1.vcxproj -> c:\users\18mac03\documents\visual studio 2017\Projects\ConsoleApplication1\Debug\ConsoleApplication1.exe
-  ConsoleApplication1.vcxproj -> c:\users\18mac03\documents\visual studio 2017\Projects\ConsoleApplication1\Debug\ConsoleApplication1.pdb (Partial PDB)
+﻿  stdafx.cpp
+  Shield.cpp
+  ConsoleApplication1.cpp
+  Bullet.cpp
+  Generating Code...
+  ConsoleApplication1.vcxproj -> C:\Users\18mac03\Documents\GitHub\SpaceInvaders\Debug\ConsoleApplication1.exe
+  ConsoleApplication1.vcxproj -> C:\Users\18mac03\Documents\GitHub\SpaceInvaders\Debug\ConsoleApplication1.pdb (Partial PDB)
