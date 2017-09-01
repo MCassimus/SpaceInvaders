@@ -5,6 +5,7 @@
 */
 #include "stdafx.h"
 #include <SFML/Graphics.hpp>
+#include "Bullet.h"
 
 void loop(int &, sf::RenderWindow &);
 void render(sf::RenderWindow &);
@@ -29,6 +30,7 @@ int main()
 
 void loop(int & score, sf::RenderWindow & window)
 {
+	Bullet * bullet = nullptr;
 	#pragma region event
 	// Process events
 	sf::Event event;
@@ -41,6 +43,7 @@ void loop(int & score, sf::RenderWindow & window)
 		{
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 				window.close();
+			else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
 		}
 	}	
 	#pragma endregion
