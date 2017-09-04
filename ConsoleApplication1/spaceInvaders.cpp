@@ -4,59 +4,17 @@
 	Recreate arcade game space invaders
 */
 #include "stdafx.h"
-#include <SFML/Graphics.hpp>
-#include "Bullet.h"
-
-void loop(int &, sf::RenderWindow &);
-void render(sf::RenderWindow &);
+#include <SFML\Graphics\RenderWindow.hpp>
+#include "Game.h"
 
 
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(800, 800), "Space Invaders");
-	int score = 0;
-	
+	sf::RenderWindow window(sf::VideoMode(400, 400), "Space Invaders");
 	window.setFramerateLimit(60);
+
+	Game game(&window);
 	
-	while (window.isOpen())
-	{
-		loop(score, window);
-		render(window);
-	}
-
-	return 0;
-}
-
-
-void loop(int & score, sf::RenderWindow & window)
-{
-	Bullet * bullet = nullptr;
-	#pragma region event
-	// Process events
-	sf::Event event;
-	while (window.pollEvent(event))
-	{
-		// Close window: exit
-		if (event.type == sf::Event::Closed)
-			window.close();
-		else if (event.type == sf::Event::KeyPressed)
-		{
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
-				window.close();
-			else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
-		}
-	}	
-	#pragma endregion
-
-	return;
-}
-
-
-void render(sf::RenderWindow & window)
-{	
-	window.clear();
-
-	//draw objects
-
-	window.display();
+	while (game.loop())
+		game.render();		
 }

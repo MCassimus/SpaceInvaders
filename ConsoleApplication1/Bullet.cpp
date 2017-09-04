@@ -6,21 +6,23 @@
 Bullet::Bullet(sf::Vector2i pos, sf::RenderWindow * renderWindow)
 {
 	window = renderWindow;
-	rectangle = new sf::RectangleShape(sf::Vector2f(1, 3));
-	rectangle->setPosition(pos.x, pos.y);
-	rectangle->setFillColor(sf::Color::Green);
+	rectangle = sf::RectangleShape(sf::Vector2f(1, 3));
+	rectangle.setPosition(pos.x, pos.y);
+	rectangle.setFillColor(sf::Color::Green);
 }
 
 
 Bullet::~Bullet()
 {
-	delete rectangle;
 }
 
 
 bool Bullet::collide()
 {
-	if (rectangle->getGlobalBounds().intersects(rectangle->getGlobalBounds()))
+	/*if (rectangle.getGlobalBounds().intersects(rectangle.getGlobalBounds()))
+		return true;
+	return false;*/
+	if (rectangle.getPosition().y < 0)
 		return true;
 	return false;
 }
@@ -28,11 +30,19 @@ bool Bullet::collide()
 
 void Bullet::update()
 {
-	rectangle->setPosition(rectangle->getPosition() + velocity);
+	rectangle.setPosition(rectangle.getPosition() + velocity);
 }
 
 
 void Bullet::render()
 {
-	window->draw(*rectangle);
+	window->draw(rectangle);
+}
+
+
+void Bullet::setTexture(std::string texture)
+{
+	sf::Texture textureTemp;
+	textureTemp.loadFromFile("../Textures/" + texture + ".png");
+	rectangle.setTexture(&textureTemp);
 }

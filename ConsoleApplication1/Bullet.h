@@ -1,16 +1,18 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+//#include "Ship.h"
 
 class Bullet
 {
 public:
 	Bullet(sf::Vector2i, sf::RenderWindow *);
 	~Bullet();
-	bool collide();
+	bool collide(/*Ship */);
 	void update();
 	void render();
+	void setTexture(std::string);
 private: 
-	sf::RectangleShape * rectangle;
-	sf::Vector2f velocity = sf::Vector2f(0, 2);
+	sf::RectangleShape rectangle;
+	sf::Vector2f velocity = sf::Vector2f(0, -4);
 	sf::RenderWindow * window;
 };
