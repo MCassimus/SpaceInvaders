@@ -33,6 +33,7 @@
     <ClInclude Include="Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -42,6 +43,8 @@
     <ClInclude Include="Small.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+=======
+>>>>>>> 627f213b056e8323b2db83b33b48248756e703fa
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -59,6 +62,7 @@
     <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -68,5 +72,7 @@
     <ClCompile Include="Small.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+=======
+>>>>>>> 627f213b056e8323b2db83b33b48248756e703fa
   </ItemGroup>
 </Project>

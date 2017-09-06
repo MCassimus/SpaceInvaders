@@ -1,7 +1,17 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ConsoleApplication1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+<<<<<<< HEAD
   Player.cpp
 c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\player.cpp(11): error C2059: syntax error: '}'
 c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\player.cpp(24): error C2556: 'bool Player::shoot(void)': overloaded function differs only by return type from 'void Player::shoot(void)'
   c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\player.h(12): note: see declaration of 'Player::shoot'
 c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\player.cpp(23): error C2371: 'Player::shoot': redefinition; different basic types
   c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\player.h(12): note: see declaration of 'Player::shoot'
+=======
+  spaceInvaders.cpp
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\bullet.h(3): fatal error C1083: Cannot open include file: 'Ship.h': No such file or directory
+  Game.cpp
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\bullet.h(3): fatal error C1083: Cannot open include file: 'Ship.h': No such file or directory
+  Bullet.cpp
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\bullet.h(3): fatal error C1083: Cannot open include file: 'Ship.h': No such file or directory
+  Generating Code...
+>>>>>>> 627f213b056e8323b2db83b33b48248756e703fa

@@ -16,8 +16,9 @@ Player::~Player()
 {
 }
 
-bool Player::move(bool)
+bool Player::move(bool )
 {
+	if
 	return false;
 }
 

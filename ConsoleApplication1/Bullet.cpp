@@ -17,33 +17,20 @@ Bullet::~Bullet()
 }
 
 
-bool Bullet::collide()
+bool Bullet::collide(Ship * other)
 {
-	/*if (rectangle.getGlobalBounds().intersects(rectangle.getGlobalBounds()))
-		return true;
-	return false;*/
-	if (rectangle.getPosition().y < 0)
-		return true;
+	if (rectangle.getPosition().y >= 0 || rectangle.getPosition().y <= window->getSize().y)
+		if (rectangle.getGlobalBounds().intersects(other.getGlobalBounds()))
+			return true;
 	return false;
 }
 
 
 bool Bullet::collide(Shield * other)
 {
-	if (rectangle.getGlobalBounds().intersects(other->getRectangle()->getGlobalBounds()))
-	{
-		textureTemp = other->getRectangle()->getTexture()->copyToImage();
-		if (textureTemp.getPixel(rectangle.getPosition().x, 0) != sf::Color::Transparent)
-		{
-			textureTemp.setPixel(rectangle.getPosition().x, rectangle.getPosition().y, sf::Color::Transparent);
-			other->setTexture(textureTemp);
+	if (rectangle.getPosition().y >= 0 || rectangle.getPosition().y <= window->getSize().y)
+		if(rectangle.getGlobalBounds().intersects(other->getRectangle()->getGlobalBounds()))
 			return true;
-		}
-		else
-			return false;
-	}
-	else if(rectangle.getPosition().y < 0)
-		return true;
 	return false;
 }
 
