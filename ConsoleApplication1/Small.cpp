@@ -6,9 +6,9 @@
 const  int FINDLATER = 5;
 
 
-Small::Small(int y, sf::RenderWindow * wndw)
+Small::Small(int x, sf::RenderWindow * wndw)
 {
-	rectangle = sf::Rect<int>(FINDLATER*y + FINDLATER, FINDLATER, FINDLATER, FINDLATER);
+	rectangle = sf::Rect<int>(FINDLATER*x + FINDLATER, FINDLATER, FINDLATER, FINDLATER);
 	points = 40;
 	window = wndw;
 }
