@@ -4,7 +4,7 @@ class Medium :
 	public Ship
 {
 public:
-	Medium(int,sf::RenderWindow*);
+	Medium(int, bool,sf::RenderWindow*);
 	~Medium();
 	virtual bool move(bool);
 	virtual void shoot();

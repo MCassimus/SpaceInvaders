@@ -10,8 +10,11 @@
 
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(400, 400), "Space Invaders");
+	sf::RenderWindow window(sf::VideoMode(434, 496), "Space Invaders");
 	window.setFramerateLimit(60);
+
+	sf::View view(sf::Rect<float>(0, 0, 217, 248));
+	window.setView(view);
 
 	Game game(&window);
 	

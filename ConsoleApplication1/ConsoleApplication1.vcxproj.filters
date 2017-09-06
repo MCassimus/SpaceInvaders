@@ -10,6 +10,8 @@
     <ClCompile Include="Shield.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="Medium.cpp" />
+    <ClCompile Include="Large.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bullet.h" />
@@ -21,6 +23,8 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="Medium.h" />
+    <ClInclude Include="Large.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />

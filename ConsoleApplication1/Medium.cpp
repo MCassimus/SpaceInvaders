@@ -1,24 +1,24 @@
 #include "stdafx.h"
-#include "Small.h"
+#include "Medium.h"
 #include "Bullet.h"
 
 
 const  int FINDLATER = 5;
 
 
-Small::Small(int y, sf::RenderWindow * wndw)
+Medium::Medium(int x, bool top, sf::RenderWindow * wndw)
 {
-	rectangle = sf::Rect<int>(FINDLATER*y + FINDLATER, FINDLATER, FINDLATER, FINDLATER);
-	points = 40;
+	rectangle = sf::Rect<int>(FINDLATER*x + FINDLATER, top?FINDLATER:FINDLATER, FINDLATER, FINDLATER);
+	points = 20;
 	window = wndw;
 }
 
 
-Small::~Small()
+Medium::~Medium()
 {
 }
 
-bool Small::move(bool dir)
+bool Medium::move(bool dir)
 {
 	if (activeShot != nullptr)
 		if (activeShot->collide())
@@ -45,16 +45,16 @@ bool Small::move(bool dir)
 	return false;
 }
 
-void Small::shoot()
+void Medium::shoot()
 {
 	sf::Vector2i pos(rectangle.left + FINDLATER, rectangle.top + FINDLATER);
 	activeShot = new Bullet(pos, window);
 }
 
-void Small::render()
+void Medium::render()
 {
 	sf::Texture texture;
-	texture.loadFromFile("SmallTexture.PNG", sf::Rect<int>(0, 0, FINDLATER, FINDLATER));
+	texture.loadFromFile("MediumTexture.PNG", sf::Rect<int>(0, 0, FINDLATER, FINDLATER));
 	sf::Sprite sprite;
 	sprite.setTexture(texture);
 	sprite.setPosition(sf::Vector2f(rectangle.left, rectangle.top));
@@ -62,7 +62,7 @@ void Small::render()
 
 	if (activeShot != nullptr)
 	{
-		texture.loadFromFile("smallBullet.PNG", sf::Rect<int>(0, 0, FINDLATER, FINDLATER));
+		texture.loadFromFile("MediumBullet.PNG", sf::Rect<int>(0, 0, FINDLATER, FINDLATER));
 		activeShot->render();
 	}
 
