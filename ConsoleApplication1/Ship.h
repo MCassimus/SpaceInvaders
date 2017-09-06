@@ -1,18 +1,16 @@
 #pragma once
+#include "GameObject.h"
 #include <SFML/Graphics.hpp>
 #include "Bullet.h"
-class Ship
+class Ship : public GameObject
 {
 public:
-	Ship();
+	Ship(sf::RenderWindow *);
 	~Ship();
 	virtual bool move(bool) = 0;
 	virtual void shoot() = 0;
 protected:
-	sf::Rect<int> rectangle;
-	sf::RenderWindow * window;
 	int lives = 1;
 	int points;
 	Bullet * activeShot = nullptr;
 };
-

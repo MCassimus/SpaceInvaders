@@ -1,20 +1,10 @@
 #pragma once
+#include "GameObject.h"
 #include <SFML/Graphics.hpp>
-#include "Shield.h"
 
-class Bullet
+class Bullet : public GameObject
 {
 public:
 	Bullet(sf::Vector2i, sf::RenderWindow *);
 	~Bullet();
-	bool collide();
-	bool collide(Shield *);
-	void update();
-	void render();
-	void setTexture(std::string);
-private: 
-	sf::RectangleShape rectangle;
-	sf::Vector2f velocity = sf::Vector2f(0, -4);
-	sf::RenderWindow * window;
-	sf::Image textureTemp;
 };
