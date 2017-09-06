@@ -142,19 +142,21 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Desktop\C++ Projects\SpaceInvaders-master\ConsoleApplication1\Ship.h" />
-    <ClInclude Include="..\..\..\..\Desktop\C++ Projects\SpaceInvaders-master\ConsoleApplication1\Small.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="Shield.h" />
+    <ClInclude Include="Ship.h" />
+    <ClInclude Include="Small.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Desktop\C++ Projects\SpaceInvaders-master\ConsoleApplication1\Ship.cpp" />
-    <ClCompile Include="..\..\..\..\Desktop\C++ Projects\SpaceInvaders-master\ConsoleApplication1\Small.cpp" />
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Ship.cpp" />
+    <ClCompile Include="Small.cpp" />
     <ClCompile Include="spaceInvaders.cpp" />
     <ClCompile Include="Shield.cpp" />
     <ClCompile Include="stdafx.cpp">
