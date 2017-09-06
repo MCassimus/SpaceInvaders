@@ -1,6 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-//#include "Ship.h"
+#include "Ship.h"
 #include "Shield.h"
 
 class Bullet
@@ -8,7 +8,7 @@ class Bullet
 public:
 	Bullet(sf::Vector2i, sf::RenderWindow *);
 	~Bullet();
-	bool collide(/*Ship */);
+	bool collide(Ship *);
 	bool collide(Shield *);
 	void update();
 	void render();
