@@ -33,6 +33,12 @@
     <ClInclude Include="Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\Desktop\C++ Projects\SpaceInvaders-master\ConsoleApplication1\Small.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Desktop\C++ Projects\SpaceInvaders-master\ConsoleApplication1\Ship.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -48,6 +54,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Desktop\C++ Projects\SpaceInvaders-master\ConsoleApplication1\Ship.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Desktop\C++ Projects\SpaceInvaders-master\ConsoleApplication1\Small.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
