@@ -2,7 +2,6 @@
 #include "Bullet.h"
 #include <SFML\Graphics.hpp>
 
-
 Bullet::Bullet(sf::Vector2i pos, sf::RenderWindow * renderWindow)
 {
 	window = renderWindow;
