@@ -9,7 +9,7 @@ public:
 	void update();
 	bool collide(GameObject *);
 	void setTexture(std::string);
-private:
+protected:
 	sf::RenderWindow *  window = nullptr;
 	sf::RectangleShape rectangle;
 };

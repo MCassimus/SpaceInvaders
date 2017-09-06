@@ -1,43 +1,50 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ConsoleApplication1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  spaceInvaders.cpp
-<<<<<<< HEAD
   Small.cpp
-c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\small.cpp(60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Ship.cpp
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\small.cpp(10): error C2512: 'Ship': no appropriate default constructor available
+  c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\ship.h(5): note: see declaration of 'Ship'
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\small.cpp(11): error C2679: binary '=': no operator found which takes a right-hand operand of type 'sf::Rect<int>' (or there is no acceptable conversion)
+  c:\sfml-2.4.2\include\sfml\graphics\rectangleshape.hpp(103): note: could be 'sf::RectangleShape &sf::RectangleShape::operator =(sf::RectangleShape &&)'
+  c:\sfml-2.4.2\include\sfml\graphics\rectangleshape.hpp(103): note: or       'sf::RectangleShape &sf::RectangleShape::operator =(const sf::RectangleShape &)'
+  c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\small.cpp(11): note: while trying to match the argument list '(sf::RectangleShape, sf::Rect<int>)'
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\small.cpp(29): error C2039: 'top': is not a member of 'sf::RectangleShape'
+  c:\sfml-2.4.2\include\sfml\graphics\rectangleshape.hpp(41): note: see declaration of 'sf::RectangleShape'
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\small.cpp(34): error C2039: 'left': is not a member of 'sf::RectangleShape'
+  c:\sfml-2.4.2\include\sfml\graphics\rectangleshape.hpp(41): note: see declaration of 'sf::RectangleShape'
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\small.cpp(35): error C2039: 'left': is not a member of 'sf::RectangleShape'
+  c:\sfml-2.4.2\include\sfml\graphics\rectangleshape.hpp(41): note: see declaration of 'sf::RectangleShape'
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\small.cpp(40): error C2039: 'left': is not a member of 'sf::RectangleShape'
+  c:\sfml-2.4.2\include\sfml\graphics\rectangleshape.hpp(41): note: see declaration of 'sf::RectangleShape'
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\small.cpp(42): error C2039: 'left': is not a member of 'sf::RectangleShape'
+  c:\sfml-2.4.2\include\sfml\graphics\rectangleshape.hpp(41): note: see declaration of 'sf::RectangleShape'
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\small.cpp(50): error C2039: 'left': is not a member of 'sf::RectangleShape'
+  c:\sfml-2.4.2\include\sfml\graphics\rectangleshape.hpp(41): note: see declaration of 'sf::RectangleShape'
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\small.cpp(50): error C2039: 'top': is not a member of 'sf::RectangleShape'
+  c:\sfml-2.4.2\include\sfml\graphics\rectangleshape.hpp(41): note: see declaration of 'sf::RectangleShape'
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\small.cpp(60): error C2039: 'left': is not a member of 'sf::RectangleShape'
+  c:\sfml-2.4.2\include\sfml\graphics\rectangleshape.hpp(41): note: see declaration of 'sf::RectangleShape'
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\small.cpp(60): error C2039: 'top': is not a member of 'sf::RectangleShape'
+  c:\sfml-2.4.2\include\sfml\graphics\rectangleshape.hpp(41): note: see declaration of 'sf::RectangleShape'
   Player.cpp
-c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(22): error C2059: syntax error: 'return'
-c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(26): error C2556: 'bool Player::shoot(void)': overloaded function differs only by return type from 'void Player::shoot(void)'
-  c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.h(13): note: see declaration of 'Player::shoot'
-c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(25): error C2371: 'Player::shoot': redefinition; different basic types
-  c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.h(13): note: see declaration of 'Player::shoot'
-  Game.cpp
-c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\game.cpp(23): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-  Bullet.cpp
-c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\bullet.cpp(9): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\bullet.cpp(19): error C2065: 'Ship': undeclared identifier
-c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\bullet.cpp(19): error C2065: 'other': undeclared identifier
-c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\bullet.cpp(19): error C2350: 'Bullet::collide' is not a static member
-  c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\bullet.cpp(19): note: see declaration of 'Bullet::collide'
-c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\bullet.cpp(20): error C2448: 'Bullet::collide': function-style initializer appears to be a function definition
-=======
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\bullet.h(10): error C2061: syntax error: identifier 'Ship'
-  Small.cpp
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\bullet.h(10): error C2061: syntax error: identifier 'Ship'
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\small.cpp(60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Ship.cpp
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\bullet.h(10): error C2061: syntax error: identifier 'Ship'
-  Player.cpp
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\bullet.h(10): error C2061: syntax error: identifier 'Ship'
-  Game.cpp
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\bullet.h(10): error C2061: syntax error: identifier 'Ship'
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(23): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-  Bullet.cpp
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\bullet.h(10): error C2061: syntax error: identifier 'Ship'
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\bullet.cpp(10): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\bullet.cpp(20): error C2065: 'Ship': undeclared identifier
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\bullet.cpp(20): error C2065: 'other': undeclared identifier
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\bullet.cpp(20): error C2350: 'Bullet::collide' is not a static member
-  c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\bullet.cpp(20): note: see declaration of 'Bullet::collide'
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\bullet.cpp(21): error C2448: 'Bullet::collide': function-style initializer appears to be a function definition
->>>>>>> dbe0081bf2df894eeebe8d04d2f4aade59f1870f
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(9): error C2512: 'Ship': no appropriate default constructor available
+  c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\ship.h(5): note: see declaration of 'Ship'
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(11): error C2679: binary '=': no operator found which takes a right-hand operand of type 'sf::Rect<int>' (or there is no acceptable conversion)
+  c:\sfml-2.4.2\include\sfml\graphics\rectangleshape.hpp(103): note: could be 'sf::RectangleShape &sf::RectangleShape::operator =(sf::RectangleShape &&)'
+  c:\sfml-2.4.2\include\sfml\graphics\rectangleshape.hpp(103): note: or       'sf::RectangleShape &sf::RectangleShape::operator =(const sf::RectangleShape &)'
+  c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(11): note: while trying to match the argument list '(sf::RectangleShape, sf::Rect<int>)'
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(23): error C2660: 'GameObject::collide': function does not take 0 arguments
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(27): error C2039: 'left': is not a member of 'sf::RectangleShape'
+  c:\sfml-2.4.2\include\sfml\graphics\rectangleshape.hpp(41): note: see declaration of 'sf::RectangleShape'
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(28): error C2039: 'left': is not a member of 'sf::RectangleShape'
+  c:\sfml-2.4.2\include\sfml\graphics\rectangleshape.hpp(41): note: see declaration of 'sf::RectangleShape'
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(31): error C2039: 'left': is not a member of 'sf::RectangleShape'
+  c:\sfml-2.4.2\include\sfml\graphics\rectangleshape.hpp(41): note: see declaration of 'sf::RectangleShape'
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(32): error C2039: 'left': is not a member of 'sf::RectangleShape'
+  c:\sfml-2.4.2\include\sfml\graphics\rectangleshape.hpp(41): note: see declaration of 'sf::RectangleShape'
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(42): error C2039: 'left': is not a member of 'sf::RectangleShape'
+  c:\sfml-2.4.2\include\sfml\graphics\rectangleshape.hpp(41): note: see declaration of 'sf::RectangleShape'
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(42): error C2440: '<function-style-cast>': cannot convert from 'const int' to 'sf::Vector2i'
+  c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(42): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(42): error C2664: 'Bullet::Bullet(const Bullet &)': cannot convert argument 1 from 'sf::RenderWindow *' to 'const Bullet &'
+  c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(42): note: Reason: cannot convert from 'sf::RenderWindow *' to 'const Bullet'
+  c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(42): note: No constructor could take the source type, or constructor overload resolution was ambiguous
   Generating Code...

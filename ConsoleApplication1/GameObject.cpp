@@ -27,7 +27,7 @@ void GameObject::update()
 
 bool GameObject::collide(GameObject * other)
 {
-	if (other->rectangle.getGlobalBounds().intersects(rectangle.getGlobalBounds))
+	if (other->rectangle.getGlobalBounds().intersects(rectangle.getGlobalBounds()))
 		return true;
 	return false;
 }

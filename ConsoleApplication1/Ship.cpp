@@ -2,7 +2,7 @@
 #include "Ship.h"
 
 
-Ship::Ship()
+Ship::Ship(sf::RenderWindow * renderWindow) : GameObject(renderWindow)
 {
 }
 

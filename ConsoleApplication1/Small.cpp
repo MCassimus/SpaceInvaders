@@ -21,7 +21,7 @@ Small::~Small()
 bool Small::move(bool dir)
 {
 	if (activeShot != nullptr)
-		if (activeShot->collide())
+		if (activeShot->collide(this))
 			activeShot = nullptr;
 	static bool lastdir = true;
 	if (dir != lastdir)
