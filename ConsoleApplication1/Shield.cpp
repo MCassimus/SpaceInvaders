@@ -19,6 +19,7 @@ Shield::~Shield()
 
 void Shield::update()
 {
+	rectangle.setTexture(&texture);
 	return;
 }
 
@@ -26,4 +27,16 @@ void Shield::update()
 void Shield::render()
 {
 	window->draw(rectangle);
+}
+
+
+sf::RectangleShape * Shield::getRectangle()
+{
+	return &rectangle;
+}
+
+
+void Shield::setTexture(sf::Image newTexture)
+{
+	//texture.loadFromImage(newTexture);
 }

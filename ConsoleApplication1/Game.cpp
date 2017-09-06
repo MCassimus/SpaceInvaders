@@ -20,7 +20,7 @@ Game::Game(sf::RenderWindow * renderWindow)
 	rectangle = sf::RectangleShape(sf::Vector2f(20, 12));
 	rectangle.setTexture(&texture);
 	rectangle.setOrigin(rectangle.getSize().x / 2, 0);
-	rectangle.setPosition(window->getSize().x / 2, window->getSize().y - 75);
+	rectangle.setPosition(window->getSize().x / 2, window->getSize().y - 70);
 }
 
 
@@ -49,7 +49,7 @@ bool Game::loop()
 	if (bullet != nullptr)
 	{
 		bullet->update();
-		if (bullet->collide())
+		if (bullet->collide(shield))
 		{
 			delete bullet;
 			bullet = nullptr;
@@ -86,25 +86,32 @@ void Game::render()
 
 void Game::processKeyboard()
 {
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
-	{
-		rectangle.move(-1, 0);
-	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+		window->close();
+
+	//if (player1 != nullptr)
+	//{
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+		{
+			rectangle.move(-1, 0);
+		}
 		//std::cout << "Player 1  - MOVE LEFT\n";
-	//player1.move(false);
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-	{
-		rectangle.move(1, 0);
-	}
+		//player1.move(false);
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+		{
+			rectangle.move(1, 0);
+		}
 		//std::cout << "Player 1 - MOVE RIGHT\n";
-	//player1.move(true);
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
-	{
-		if(bullet == nullptr)
-			bullet = new Bullet(sf::Vector2i(rectangle.getPosition()), window);
-	}
+		//player1.move(true);
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+		{
+			if (bullet == nullptr)
+				bullet = new Bullet(sf::Vector2i(rectangle.getPosition()), window);
+		}
 		//std::cout << "Player 1 - FIRE\n";
-	//player1.shoot();
+		//player1.shoot();
+	//}
+	
 
 	//if (player2 != nullptr)
 	//{
@@ -118,7 +125,4 @@ void Game::processKeyboard()
 			std::cout << "Player 2 - FIRE\n";
 		//player2.shoot();
 	//}
-
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Return))
-			window->setSize(sf::Vector2u(600, 600));
 }

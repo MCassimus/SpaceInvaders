@@ -7,6 +7,8 @@ public:
 	~Shield();
 	void update();
 	void render();
+	sf::RectangleShape * getRectangle();
+	void setTexture(sf::Image);
 private:
 	sf::RenderWindow * window;
 	sf::RectangleShape rectangle;
