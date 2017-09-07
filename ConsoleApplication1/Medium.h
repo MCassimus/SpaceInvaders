@@ -4,10 +4,10 @@ class Medium :
 	public Ship
 {
 public:
-	Medium(int, bool,sf::RenderWindow*);
+	Medium(int, sf::RenderWindow*);
 	~Medium();
-	virtual bool move(bool);
-	virtual void shoot();
-	virtual void render();
+	void render();
+	void update();
+	void move(bool);
+	void shoot();
 };
-

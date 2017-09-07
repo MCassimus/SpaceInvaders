@@ -37,5 +37,5 @@ void GameObject::setTexture(std::string fileName)
 {
 	sf::Texture textureTemp;
 	textureTemp.loadFromFile("../Textures/" + fileName);
-	rectangle.setTexture(&textureTemp);
+	rectangle.setTexture(&textureTemp, true);
 }

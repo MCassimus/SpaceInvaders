@@ -4,10 +4,10 @@ class Large :
 	public Ship
 {
 public:
-	Large(int, bool,sf::RenderWindow*);
+	Large(int,sf::RenderWindow*);
 	~Large();
-	virtual bool move(bool);
-	virtual void shoot();
-	virtual void render();
+	void render();
+	void update();
+	void move(bool);
+	void shoot();
 };
-

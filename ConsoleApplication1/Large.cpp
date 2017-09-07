@@ -6,64 +6,90 @@
 const  int FINDLATER = 5;
 
 
-Large::Large(int x, bool top, sf::RenderWindow * wndw)
+Large::Large(int x, sf::RenderWindow * wndw) : Ship(wndw)
 {
-	rectangle = sf::Rect<int>(FINDLATER*x + FINDLATER, top?FINDLATER:FINDLATER, FINDLATER, FINDLATER);
-	points = 20;
-	window = wndw;
+	setTexture("largeShip.png");
+	points = 40;
 }
 
 
 Large::~Large()
 {
-}
-
-bool Large::move(bool dir)
-{
 	if (activeShot != nullptr)
-		if (activeShot->collide())
-			activeShot = nullptr;
-	static bool lastdir = true;
-	if (dir != lastdir)
-	{
-		rectangle.top += FINDLATER;
-		lastdir = dir;
-	}
-	else if (dir)
-	{
-		rectangle.left += FINDLATER;
-		if (rectangle.left >= FINDLATER)
-			return true;
-	}
-	else
-	{
-		rectangle.left -= FINDLATER;
-
-		if (rectangle.left <= FINDLATER)
-			return true;
-	}
-	return false;
+		delete activeShot;
 }
 
-void Large::shoot()
-{
-	sf::Vector2i pos(rectangle.left + FINDLATER, rectangle.top + FINDLATER);
-	activeShot = new Bullet(pos, window);
-}
 
 void Large::render()
 {
-	sf::Texture texture;
-	texture.loadFromFile("LargeTexture.PNG", sf::Rect<int>(0, 0, FINDLATER, FINDLATER));
-	sf::Sprite sprite;
-	sprite.setTexture(texture);
-	sprite.setPosition(sf::Vector2f(rectangle.left, rectangle.top));
-	window->draw(sprite);
+	window->draw(rectangle);
 
 	if (activeShot != nullptr)
-	{
-		texture.loadFromFile("LargeBullet.PNG", sf::Rect<int>(0, 0, FINDLATER, FINDLATER));
 		activeShot->render();
-	}
-
 }
+
+
+void Large::update()
+{
+	//check bullet collision
+}
+
+
+void Large::move(bool dir)
+{
+	return;
+}
+
+
+void Large::shoot()
+{
+	if (activeShot != nullptr)
+	{
+		activeShot = new Bullet(sf::Vector2i(rectangle.getPosition()), window);
+		activeShot->setTexture("largeBullet.png");
+	}
+}
+
+//bool Large::move(bool dir)
+//{
+//	if (activeShot != nullptr)
+//		if (activeShot->collide())
+//			activeShot = nullptr;
+//	static bool lastdir = true;
+//	if (dir != lastdir)
+//	{
+//		rectangle.top += FINDLATER;
+//		lastdir = dir;
+//	}
+//	else if (dir)
+//	{
+//		rectangle.left += FINDLATER;
+//		if (rectangle.left >= FINDLATER)
+//			return true;
+//	}
+//	else
+//	{
+//		rectangle.left -= FINDLATER;
+//
+//		if (rectangle.left <= FINDLATER)
+//			return true;
+//	}
+//	return false;
+//}
+//
+//void Large::shoot()
+//{
+//	sf::Vector2i pos(rectangle.left + FINDLATER, rectangle.top + FINDLATER);
+//	activeShot = new Bullet(pos, window);
+//}
+//
+//void Large::render()
+//{
+//	window->draw(rectangle);
+//
+//	if (activeShot != nullptr)
+//	{
+//		activeShot->setTexture("largeBullet.png");
+//		activeShot->render();
+//	}
+//}

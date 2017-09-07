@@ -1,15 +1,13 @@
 #pragma once
 #include "Ship.h"
-#include "SFML/Graphics.hpp"
-
 class Player :
 	public Ship
 {
 public:
-	Player(sf::RenderWindow *);
+	Player(int, sf::RenderWindow*);
 	~Player();
-
-	virtual bool move(bool);
-	virtual void shoot();
+	void render();
+	void update();
+	void move(bool);
+	void shoot();
 };
-

@@ -6,8 +6,8 @@ class Small :
 public:
 	Small(int,sf::RenderWindow*);
 	~Small();
-	virtual bool move(bool);
-	virtual void shoot();
-	virtual void render();
+	void render();
+	void update();
+	void move(bool);
+	void shoot();
 };
-
