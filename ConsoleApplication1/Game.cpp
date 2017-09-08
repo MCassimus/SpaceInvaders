@@ -8,19 +8,6 @@ Game::Game(sf::RenderWindow * renderWindow)
 {
 	window = renderWindow;
 	shield = new Shield(window);
-	//display score information
-	arcadeFont.loadFromFile("../ArcadeFont.otf");
-	scorePrompt = sf::RectangleShape(sf::Vector2f(400, 16));
-	scorePromptTexture.loadFromFile("../Textures/scorePrompt.png");
-	scorePrompt.setTexture(&scorePromptTexture);
-	scorePrompt.setPosition(scorePrompt.getPosition().x, 5);
-
-
-	texture.loadFromFile("../Textures/player.png");
-	rectangle = sf::RectangleShape(sf::Vector2f(20, 12));
-	rectangle.setTexture(&texture);
-	rectangle.setOrigin(rectangle.getSize().x / 2, 0);
-	rectangle.setPosition(window->getSize().x / 2, window->getSize().y - 70);
 }
 
 
@@ -43,25 +30,7 @@ bool Game::loop()
 
 	processKeyboard();
 
-	shield->update();
 	
-	
-	if (bullet != nullptr)
-	{
-		bullet->update();
-		if (bullet->collide(shield))
-		{
-			delete bullet;
-			bullet = nullptr;
-		}
-	}
-
-	/*
-	for(int x = 0; x < ENEMYARRSIZEX; x++)
-		for(int y = 0; y < ENEMYARRSIZEY; y++)
-			enemies[x][y]->
-	*/
-
 	if(window->isOpen()/* && player1 != nullptr || player2 != nullptr*/ )
 		return true;//return true while players are alive & game open
 	return false;
@@ -71,14 +40,6 @@ bool Game::loop()
 void Game::render()
 {
 	window->clear();
-
-	//draw point display
-	window->draw(scorePrompt);
-	window->draw(rectangle);
-	//draw shields
-	shield->render();
-	if(bullet != nullptr)
-		bullet->render();
 
 	window->display();
 }
@@ -105,8 +66,7 @@ void Game::processKeyboard()
 		//player1.move(true);
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
 		{
-			if (bullet == nullptr)
-				bullet = new Bullet(sf::Vector2i(rectangle.getPosition()), window);
+
 		}
 		//std::cout << "Player 1 - FIRE\n";
 		//player1.shoot();
