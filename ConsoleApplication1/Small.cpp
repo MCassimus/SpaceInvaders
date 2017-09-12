@@ -10,6 +10,7 @@ Small::Small(int x, sf::RenderWindow * wndw) : Ship(wndw)
 {
 	setTexture("smallShip.png");
 	points = 40;
+	rectangle.setPosition(16*x+40,)
 }
 
 
