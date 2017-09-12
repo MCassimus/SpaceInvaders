@@ -7,7 +7,6 @@
 Game::Game(sf::RenderWindow * renderWindow)
 {
 	window = renderWindow;
-	shield = new Shield(window);
 }
 
 
@@ -54,22 +53,19 @@ void Game::processKeyboard()
 	//{
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
 		{
-			rectangle.move(-1, 0);
+			//std::cout << "Player 1  - MOVE LEFT\n";
+			//player1.move(false);
 		}
-		//std::cout << "Player 1  - MOVE LEFT\n";
-		//player1.move(false);
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
 		{
-			rectangle.move(1, 0);
+			//std::cout << "Player 1 - MOVE RIGHT\n";
+			//player1.move(true);
 		}
-		//std::cout << "Player 1 - MOVE RIGHT\n";
-		//player1.move(true);
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
 		{
-
+			//std::cout << "Player 1 - FIRE\n";
+			//player1.shoot();
 		}
-		//std::cout << "Player 1 - FIRE\n";
-		//player1.shoot();
 	//}
 	
 
