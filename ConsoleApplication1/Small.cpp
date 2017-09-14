@@ -10,7 +10,8 @@ Small::Small(int x, sf::RenderWindow * wndw) : Ship(wndw)
 {
 	setTexture("smallShip.png");
 	points = 40;
-	rectangle.setPosition(16*x+40,)
+	rectangle.setPosition(16 * x + 40, 40);
+	rectangle.setSize(sf::Vector2f(8, 8));
 }
 
 
@@ -51,32 +52,34 @@ void Small::shoot()
 	}
 }
 
-//bool Small::move(bool dir)
-//{
-//	if (activeShot != nullptr)
-//		if (activeShot->collide(this))
-//			activeShot = nullptr;
-//	static bool lastdir = true;
-//	if (dir != lastdir)
-//	{
-//		rectangle.top += FINDLATER;
-//		lastdir = dir;
-//	}
-//	else if (dir)
-//	{
-//		rectangle.left += FINDLATER;
-//		if (rectangle.left >= FINDLATER)
-//			return true;
-//	}
-//	else
-//	{
-//		rectangle.left -= FINDLATER;
-//
-//		if (rectangle.left <= FINDLATER)
-//			return true;
-//	}
-//	return false;
-//}
+bool Small::move(bool dir)
+{
+	if (activeShot != nullptr)
+		if (activeShot->collide(this))
+			activeShot = nullptr;
+	static bool lastdir = true;
+	sf::Vector2f position = rectangle.getPosition();
+	if (dir != lastdir)
+	{
+		position.y += 8;
+		lastdir = dir;
+	}
+	else if (dir)
+	{
+		position.x += 2;
+		rectangle.setPosition(position);
+		if(position>=207)
+			return true;
+	}
+	else
+	{
+		rectangle.left -= FINDLATER;
+
+		if (rectangle.left <= FINDLATER)
+			return true;
+	}
+	return false;
+}
 //
 //void Small::shoot()
 //{
