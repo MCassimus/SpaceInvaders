@@ -19,3 +19,8 @@ void Bullet::update()
 {
 	return;
 }
+
+void Bullet::setVelocity(sf::Vector2f newVelocity)
+{
+	velocity = newVelocity;
+}

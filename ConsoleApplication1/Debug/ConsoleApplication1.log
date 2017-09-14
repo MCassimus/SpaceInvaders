@@ -2,9 +2,5 @@
   Game.cpp
 c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\game.cpp(54): warning C4018: '<': signed/unsigned mismatch
 c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\game.cpp(67): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-  Compiling...
-  spaceInvaders.cpp
-  Generating Code...
   ConsoleApplication1.vcxproj -> C:\Users\18mac03\Documents\GitHub\SpaceInvaders\Debug\Space Invaders.exe
   ConsoleApplication1.vcxproj -> C:\Users\18mac03\Documents\GitHub\SpaceInvaders\Debug\Space Invaders.pdb (Partial PDB)

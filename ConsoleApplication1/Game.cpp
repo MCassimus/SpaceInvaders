@@ -76,15 +76,10 @@ void Game::processKeyboard()
 				playerTemp->shoot();
 			}
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
-			{
-				std::cout << "Player 1  - MOVE LEFT\n";
+
 				playerTemp->move(false);
-			}
 			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-			{
-				std::cout << "Player 1 - MOVE RIGHT\n";
 				playerTemp->move(true);
-			}
 		}
 		else if (playerTemp->player == "Player 2")
 		{
@@ -94,15 +89,9 @@ void Game::processKeyboard()
 				playerTemp->shoot();
 			}
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-			{
-				std::cout << "Player 2  - MOVE LEFT\n";
 				playerTemp->move(false);
-			}
 			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-			{
-				std::cout << "Player 2 - MOVE RIGHT\n";
 				playerTemp->move(true);
-			}
 		}
 	}
 }
