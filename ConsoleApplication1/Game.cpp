@@ -2,13 +2,22 @@
 #include "Game.h"
 #include "Shield.h"
 #include "Player.h"
+#include "Small.h"
+#include "Medium.h"
+#include "Large.h"
 #include <iostream>
 
 
-Game::Game(sf::RenderWindow * renderWindow)
+Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
 {
 	window = renderWindow;
 	gameData[0].push_back(new Player(100, window));
+	if(twoPlayer)
+		gameData[0].push_back(new Player(100, window, "Player 2"));
+	gameData[1].push_back(new Small(25, window));
+	gameData[1].push_back(new Medium(100, window));
+	gameData[1].push_back(new Large(175, window));
+
 }
 
 
@@ -61,20 +70,38 @@ void Game::processKeyboard()
 
 		if (playerTemp->player == "Player 1")
 		{
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+			{
+				std::cout << "Player 1 - FIRE\n";
+				playerTemp->shoot();
+			}
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
 			{
 				std::cout << "Player 1  - MOVE LEFT\n";
 				playerTemp->move(false);
 			}
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
 			{
 				std::cout << "Player 1 - MOVE RIGHT\n";
 				playerTemp->move(true);
 			}
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+		}
+		else if (playerTemp->player == "Player 2")
+		{
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 			{
-				std::cout << "Player 1 - FIRE\n";
+				std::cout << "Player 2 - FIRE\n";
 				playerTemp->shoot();
+			}
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+			{
+				std::cout << "Player 2  - MOVE LEFT\n";
+				playerTemp->move(false);
+			}
+			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+			{
+				std::cout << "Player 2 - MOVE RIGHT\n";
+				playerTemp->move(true);
 			}
 		}
 	}

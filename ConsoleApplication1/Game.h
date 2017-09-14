@@ -4,7 +4,7 @@
 class Game
 {
 public:
-	Game(sf::RenderWindow *);
+	Game(sf::RenderWindow *, bool = false);
 	~Game();
 	bool loop();
 	void render();

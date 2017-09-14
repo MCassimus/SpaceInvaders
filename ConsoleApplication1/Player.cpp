@@ -10,7 +10,7 @@ Player::Player(int x, sf::RenderWindow * wndw, char * name) : Ship(wndw)
 {
 	setTexture("player.png");
 	points = 40;
-	rectangle.setPosition(window->getView().getCenter());
+	rectangle.setPosition(sf::Vector2f(x, wndw->getView().getSize().y - 20));
 	player = name;
 }
 
