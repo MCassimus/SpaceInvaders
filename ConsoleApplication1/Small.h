@@ -6,7 +6,6 @@ class Small :
 public:
 	Small(int,sf::RenderWindow*);
 	~Small();
-	void render();
 	void update();
 	void move(bool);
 	void shoot();

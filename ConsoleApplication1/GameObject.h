@@ -5,11 +5,12 @@ class GameObject
 public:
 	GameObject(sf::RenderWindow *);
 	~GameObject();
-	void render();
-	void update();
+	virtual void render();
+	virtual void update() = 0;
 	bool collide(GameObject *);
-	void setTexture(std::string);
+	virtual void setTexture(std::string);
 protected:
 	sf::RenderWindow *  window = nullptr;
 	sf::RectangleShape rectangle;
+	sf::Texture texture;
 };

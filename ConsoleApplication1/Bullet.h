@@ -7,4 +7,5 @@ class Bullet : public GameObject
 public:
 	Bullet(sf::Vector2i, sf::RenderWindow *);
 	~Bullet();
+	void update();
 };

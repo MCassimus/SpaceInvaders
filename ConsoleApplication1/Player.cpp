@@ -6,10 +6,12 @@
 const  int FINDLATER = 5;
 
 
-Player::Player(int x, sf::RenderWindow * wndw) : Ship(wndw)
+Player::Player(int x, sf::RenderWindow * wndw, char * name) : Ship(wndw)
 {
 	setTexture("player.png");
 	points = 40;
+	rectangle.setPosition(window->getView().getCenter());
+	player = name;
 }
 
 
@@ -17,15 +19,6 @@ Player::~Player()
 {
 	if (activeShot != nullptr)
 		delete activeShot;
-}
-
-
-void Player::render()
-{
-	window->draw(rectangle);
-
-	if (activeShot != nullptr)
-		activeShot->render();
 }
 
 

@@ -6,7 +6,6 @@ class Medium :
 public:
 	Medium(int, sf::RenderWindow*);
 	~Medium();
-	void render();
 	void update();
 	void move(bool);
 	void shoot();

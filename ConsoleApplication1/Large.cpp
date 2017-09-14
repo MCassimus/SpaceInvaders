@@ -20,15 +20,6 @@ Large::~Large()
 }
 
 
-void Large::render()
-{
-	window->draw(rectangle);
-
-	if (activeShot != nullptr)
-		activeShot->render();
-}
-
-
 void Large::update()
 {
 	//check bullet collision

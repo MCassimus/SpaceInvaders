@@ -20,15 +20,6 @@ Medium::~Medium()
 }
 
 
-void Medium::render()
-{
-	window->draw(rectangle);
-
-	if (activeShot != nullptr)
-		activeShot->render();
-}
-
-
 void Medium::update()
 {
 	//check bullet collision
