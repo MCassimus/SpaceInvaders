@@ -31,14 +31,16 @@ bool Game::loop()
 	// Process events
 	sf::Event event;
 	while (window->pollEvent(event))
-	{
 		// Close window: exit
 		if (event.type == sf::Event::Closed)
 			window->close();
-	}
 
 	processKeyboard();
 
+	//update and apply any changes to all game objects
+	for (int i = 0; i < 3; i++)
+		for (int j = 0; j < gameData[i].size(); j++)
+			gameData[i].at(j)->update();
 	
 	if(window->isOpen() && !gameData[0].empty())
 		return true;//return true while players are alive & game open
@@ -71,12 +73,9 @@ void Game::processKeyboard()
 		if (playerTemp->player == "Player 1")
 		{
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
-			{
-				std::cout << "Player 1 - FIRE\n";
 				playerTemp->shoot();
-			}
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
 
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
 				playerTemp->move(false);
 			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
 				playerTemp->move(true);
@@ -84,10 +83,8 @@ void Game::processKeyboard()
 		else if (playerTemp->player == "Player 2")
 		{
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-			{
-				std::cout << "Player 2 - FIRE\n";
 				playerTemp->shoot();
-			}
+
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 				playerTemp->move(false);
 			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))

@@ -18,3 +18,9 @@ void Ship::render()
 	if (activeShot != nullptr)
 		activeShot->render();
 }
+
+
+void Ship::update()
+{
+
+}

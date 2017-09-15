@@ -10,6 +10,7 @@ Medium::Medium(int x, sf::RenderWindow * wndw) : Ship(wndw)
 {
 	setTexture("mediumShip.png");
 	points = 40;
+	rectangle.setPosition(x, 50);
 }
 
 

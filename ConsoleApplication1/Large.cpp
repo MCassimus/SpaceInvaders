@@ -10,6 +10,7 @@ Large::Large(int x, sf::RenderWindow * wndw) : Ship(wndw)
 {
 	setTexture("largeShip.png");
 	points = 40;
+	rectangle.setPosition(x, 50);
 }
 
 

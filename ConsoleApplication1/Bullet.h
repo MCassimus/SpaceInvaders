@@ -9,6 +9,7 @@ public:
 	~Bullet();
 	void update();
 	void setVelocity(sf::Vector2f);
+	bool offScreen();	
 private:
-	sf::Vector2f velocity = sf::Vector2f(0, -2);
+	sf::Vector2f velocity = sf::Vector2f(0, 2);
 };
