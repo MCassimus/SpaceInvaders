@@ -12,4 +12,24 @@ Bullet::Bullet(sf::Vector2i pos, sf::RenderWindow * renderWindow) : GameObject(r
 
 Bullet::~Bullet()
 {
+	std::printf("working\n");
+}
+
+
+void Bullet::update()
+{
+	rectangle.move(velocity);
+}
+
+void Bullet::setVelocity(sf::Vector2f newVelocity)
+{
+	velocity = newVelocity;
+}
+
+
+bool Bullet::offScreen()
+{
+	if (rectangle.getPosition().y < 0 || (rectangle.getPosition().y >= window->getView().getSize().y))
+		return true;
+	return false;
 }

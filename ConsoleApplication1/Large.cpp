@@ -10,6 +10,7 @@ Large::Large(int x, sf::RenderWindow * wndw) : Ship(wndw)
 {
 	setTexture("largeShip.png");
 	points = 40;
+	rectangle.setPosition(x, 50);
 }
 
 
@@ -17,15 +18,6 @@ Large::~Large()
 {
 	if (activeShot != nullptr)
 		delete activeShot;
-}
-
-
-void Large::render()
-{
-	window->draw(rectangle);
-
-	if (activeShot != nullptr)
-		activeShot->render();
 }
 
 

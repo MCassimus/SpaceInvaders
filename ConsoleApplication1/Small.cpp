@@ -10,8 +10,13 @@ Small::Small(int x, sf::RenderWindow * wndw) : Ship(wndw)
 {
 	setTexture("smallShip.png");
 	points = 40;
+<<<<<<< HEAD
 	rectangle.setPosition(16 * x + 40, 40);
 	rectangle.setSize(sf::Vector2f(8, 8));
+=======
+	//rectangle.setPosition(16 * x + 40, 100);
+	rectangle.setPosition(x, 50);
+>>>>>>> daae9c566b1b1151ffc45f9ad388d15643bc6b05
 }
 
 
@@ -19,15 +24,6 @@ Small::~Small()
 {
 	if (activeShot != nullptr)
 		delete activeShot;
-}
-
-
-void Small::render()
-{
-	window->draw(rectangle);
-
-	if (activeShot != nullptr)
-		activeShot->render();
 }
 
 

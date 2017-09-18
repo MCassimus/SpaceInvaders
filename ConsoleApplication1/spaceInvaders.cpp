@@ -12,11 +12,12 @@ int main()
 {
 	sf::RenderWindow window(sf::VideoMode(434, 496), "Space Invaders");
 	window.setFramerateLimit(60);
+	window.setKeyRepeatEnabled(true);
 
 	sf::View view(sf::Rect<float>(0, 0, 217, 248));
 	window.setView(view);
 
-	Game game(&window);
+	Game game(&window, true);
 	
 	while (game.loop())
 		game.render();		

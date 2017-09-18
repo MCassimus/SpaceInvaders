@@ -4,10 +4,10 @@ class Player :
 	public Ship
 {
 public:
-	Player(int, sf::RenderWindow*);
+	Player(int, sf::RenderWindow*, char * = "Player 1");
 	~Player();
-	void render();
 	void update();
 	void move(bool);
 	void shoot();
+	char * player = nullptr;
 };

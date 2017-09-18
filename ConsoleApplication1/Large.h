@@ -6,7 +6,6 @@ class Large :
 public:
 	Large(int,sf::RenderWindow*);
 	~Large();
-	void render();
 	void update();
 	void move(bool);
 	void shoot();

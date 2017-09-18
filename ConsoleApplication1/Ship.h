@@ -7,9 +7,9 @@ class Ship : public GameObject
 public:
 	Ship(sf::RenderWindow *);
 	~Ship();
-	virtual void move() = 0;
-	virtual void update() = 0;
-	virtual void render() = 0;
+	virtual void move(bool) = 0;
+	void update();
+	void render();
 	virtual void shoot() = 0;
 protected:
 	int lives = 1;

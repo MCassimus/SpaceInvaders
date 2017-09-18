@@ -29,9 +29,7 @@
     <ClCompile Include="Small.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="spaceInvaders.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
+    <ClCompile Include="spaceInvaders.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />

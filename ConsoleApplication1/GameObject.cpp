@@ -35,7 +35,10 @@ bool GameObject::collide(GameObject * other)
 
 void GameObject::setTexture(std::string fileName)
 {
-	sf::Texture textureTemp;
-	textureTemp.loadFromFile("../Textures/" + fileName);
-	rectangle.setTexture(&textureTemp, true);
+	if (texture.loadFromFile("../Textures/" + fileName))
+	{
+		rectangle.setTexture(&texture);
+		rectangle.setSize(sf::Vector2f(texture.getSize()));
+		rectangle.setOrigin(rectangle.getSize().x /2, rectangle.getSize().y / 2);
+	}
 }
