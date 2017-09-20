@@ -27,12 +27,6 @@ void Large::update()
 }
 
 
-void Large::move(bool dir)
-{
-	return;
-}
-
-
 void Large::shoot()
 {
 	if (activeShot != nullptr)
@@ -42,32 +36,34 @@ void Large::shoot()
 	}
 }
 
-//bool Large::move(bool dir)
-//{
-//	if (activeShot != nullptr)
-//		if (activeShot->collide())
-//			activeShot = nullptr;
-//	static bool lastdir = true;
-//	if (dir != lastdir)
-//	{
-//		rectangle.top += FINDLATER;
-//		lastdir = dir;
-//	}
-//	else if (dir)
-//	{
-//		rectangle.left += FINDLATER;
-//		if (rectangle.left >= FINDLATER)
-//			return true;
-//	}
-//	else
-//	{
-//		rectangle.left -= FINDLATER;
-//
-//		if (rectangle.left <= FINDLATER)
-//			return true;
-//	}
-//	return false;
-//}
+bool Large::move(bool dir)
+{
+	if (activeShot != nullptr)
+		if (activeShot->collide(this))
+			activeShot = nullptr;
+	static bool lastdir = true;
+	sf::Vector2f position = rectangle.getPosition();
+	if (dir != lastdir)
+	{
+		position.y += 8;
+		lastdir = dir;
+	}
+	else if (dir)
+	{
+		position.x += 2;
+		rectangle.setPosition(position);
+		if (position.x >= 206)
+			return true;
+	}
+	else
+	{
+		position.x -= 2;
+		rectangle.setPosition(position);
+		if (position.x <= 0)
+			return true;
+	}
+	return false;
+}
 //
 //void Large::shoot()
 //{
