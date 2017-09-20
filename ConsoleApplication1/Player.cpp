@@ -43,14 +43,14 @@ void Player::update(std::vector<GameObject *> other)
 }
 
 
-bool Player::move(bool dir)
+bool Player::move(int dir)
 {
-	if (dir)//if true, move right
+	if (dir == 1)//if 1, move right
 	{
 		if ((rectangle.getPosition().x + rectangle.getSize().x / 2) < window->getView().getSize().x)
 			rectangle.move(2, 0);
 	}
-	else//if false, move left
+	else//if 2, move left
 	{
 		if ((rectangle.getPosition().x - rectangle.getSize().x / 2) > 0)
 			rectangle.move(-2, 0);
