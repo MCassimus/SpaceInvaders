@@ -14,9 +14,13 @@ Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
 	gameData[0].push_back(new Player(100, window));
 	if(twoPlayer)
 		gameData[0].push_back(new Player(100, window, "Player 2"));
-	gameData[1].push_back(new Small(25, window));
-	gameData[1].push_back(new Medium(100, window));
-	gameData[1].push_back(new Large(175, window));
+	for(int i = 0; i<11; i++)
+		gameData[1].push_back(new Small(i, window));
+	for (int i = 0; i < 22; i++)
+	{
+		gameData[1].push_back(new Medium(i, window));
+		gameData[1].push_back(new Large(i, window));
+	}
 
 }
 

@@ -7,6 +7,6 @@ public:
 	Large(int,sf::RenderWindow*);
 	~Large();
 	void update();
-	bool move(bool);
+	bool move(int);
 	void shoot();
 };

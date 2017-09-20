@@ -9,8 +9,8 @@ const  int FINDLATER = 5;
 Large::Large(int x, sf::RenderWindow * wndw) : Ship(wndw)
 {
 	setTexture("largeShip.png");
-	points = 40;
-	rectangle.setPosition(x, 50);
+	points = 10;
+	rectangle.setPosition(16*(x%11)+28, (x>=11)?88:104);
 }
 
 
@@ -36,19 +36,19 @@ void Large::shoot()
 	}
 }
 
-bool Large::move(bool dir)
+bool Large::move(int dir)
 {
 	if (activeShot != nullptr)
 		if (activeShot->collide(this))
 			activeShot = nullptr;
 	static bool lastdir = true;
 	sf::Vector2f position = rectangle.getPosition();
-	if (dir != lastdir)
+	if (dir == 0)
 	{
 		position.y += 8;
 		lastdir = dir;
 	}
-	else if (dir)
+	else if (dir == 1)
 	{
 		position.x += 2;
 		rectangle.setPosition(position);

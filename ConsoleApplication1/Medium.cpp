@@ -9,8 +9,8 @@ const  int FINDLATER = 5;
 Medium::Medium(int x, sf::RenderWindow * wndw) : Ship(wndw)
 {
 	setTexture("mediumShip.png");
-	points = 40;
-	rectangle.setPosition(x, 50);
+	points = 20;
+	rectangle.setPosition(16 * (x % 11) + 28, x >= 11 ? 56 : 72);
 }
 
 
@@ -36,19 +36,19 @@ void Medium::shoot()
 	}
 }
 
-bool Medium::move(bool dir)
+bool Medium::move(int dir)
 {
 	if (activeShot != nullptr)
 		if (activeShot->collide(this))
 			activeShot = nullptr;
 	static bool lastdir = true;
 	sf::Vector2f position = rectangle.getPosition();
-	if (dir != lastdir)
+	if (dir == 0)
 	{
 		position.y += 8;
 		lastdir = dir;
 	}
-	else if (dir)
+	else if (dir == 1)
 	{
 		position.x += 2;
 		rectangle.setPosition(position);
