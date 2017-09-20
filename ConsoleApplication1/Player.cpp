@@ -30,7 +30,14 @@ void Player::update(std::vector<GameObject *> other)
 	{
 		for (int i = 0; i < other.size(); i++)
 			if (activeShot->collide(other.at(i)))
-				std::cout << typeid(*other.at(i)).name();
+			{
+				std::string type = typeid(*other.at(i)).name();
+
+				if (type == "Large" || type == "Medium" || type == "Small")
+				{
+					takeLife();
+				}
+			}
 
 		activeShot->update();
 
