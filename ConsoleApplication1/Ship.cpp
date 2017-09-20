@@ -19,16 +19,6 @@ void Ship::render()
 		activeShot->render();
 }
 
-int Ship::getLife() const
-{
-	return lives;
-}
-
-void Ship::takeLife()
-{
-	lives--;
-}
-
 
 void Ship::update()
 {

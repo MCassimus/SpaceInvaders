@@ -26,9 +26,6 @@ Small::~Small()
 
 void Small::update()
 {
-	static bool dir;
-	if (move(dir))
-		dir = !dir;
 	//check bullet collision
 }
 
