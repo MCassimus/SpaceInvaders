@@ -21,7 +21,6 @@ Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
 		gameData[1].push_back(new Medium(i, window));
 		gameData[1].push_back(new Large(i, window));
 	}
-
 }
 
 

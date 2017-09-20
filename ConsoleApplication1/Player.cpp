@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "Player.h"
 #include "Bullet.h"
+#include <iostream>
+#include <typeinfo>
 
 const  int FINDLATER = 5;
 
@@ -27,8 +29,8 @@ void Player::update(std::vector<GameObject *> other)
 	if (activeShot != nullptr)
 	{
 		for (int i = 0; i < other.size(); i++)
-			if(activeShot->collide(other.at(i)))
-				//setLife
+			if (activeShot->collide(other.at(i)))
+				std::cout << typeid(*other.at(i)).name();
 
 		activeShot->update();
 
