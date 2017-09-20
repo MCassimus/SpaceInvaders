@@ -38,7 +38,7 @@ void Player::update()
 }
 
 
-void Player::move(bool dir)
+bool Player::move(bool dir)
 {
 	if (dir)//if true, move right
 	{
@@ -50,6 +50,7 @@ void Player::move(bool dir)
 		if ((rectangle.getPosition().x - rectangle.getSize().x / 2) > 0)
 			rectangle.move(-2, 0);
 	}
+	return true;
 }
 
 

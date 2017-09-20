@@ -10,13 +10,10 @@ Small::Small(int x, sf::RenderWindow * wndw) : Ship(wndw)
 {
 	setTexture("smallShip.png");
 	points = 40;
-<<<<<<< HEAD
 	rectangle.setPosition(16 * x + 40, 40);
 	rectangle.setSize(sf::Vector2f(8, 8));
-=======
 	//rectangle.setPosition(16 * x + 40, 100);
-	rectangle.setPosition(x, 50);
->>>>>>> daae9c566b1b1151ffc45f9ad388d15643bc6b05
+	//rectangle.setPosition(x, 50);
 }
 
 
@@ -30,12 +27,6 @@ Small::~Small()
 void Small::update()
 {
 	//check bullet collision
-}
-
-
-void Small::move(bool dir)
-{
-	return;
 }
 
 
@@ -64,14 +55,14 @@ bool Small::move(bool dir)
 	{
 		position.x += 2;
 		rectangle.setPosition(position);
-		if(position>=207)
+		if(position.x>=206)
 			return true;
 	}
 	else
 	{
-		rectangle.left -= FINDLATER;
-
-		if (rectangle.left <= FINDLATER)
+		position.x -= 2;
+		rectangle.setPosition(position);
+		if (position.x <= 0)
 			return true;
 	}
 	return false;

@@ -1,7 +1,18 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ConsoleApplication1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Medium.cpp
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\medium.cpp(13): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\medium.cpp(31): error C2556: 'void Medium::move(bool)': overloaded function differs only by return type from 'bool Medium::move(bool)'
+  c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\medium.h(10): note: see declaration of 'Medium::move'
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\medium.cpp(30): error C2371: 'Medium::move': redefinition; different basic types
+  c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\medium.h(10): note: see declaration of 'Medium::move'
+  Large.cpp
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\large.cpp(13): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\large.cpp(31): error C2556: 'void Large::move(bool)': overloaded function differs only by return type from 'bool Large::move(bool)'
+  c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\large.h(10): note: see declaration of 'Large::move'
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\large.cpp(30): error C2371: 'Large::move': redefinition; different basic types
+  c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\large.h(10): note: see declaration of 'Large::move'
   Game.cpp
-c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(42): warning C4018: '<': signed/unsigned mismatch
-c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(56): warning C4018: '<': signed/unsigned mismatch
-c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(69): warning C4018: '<': signed/unsigned mismatch
-  ConsoleApplication1.vcxproj -> C:\Users\18mac03\Documents\SpaceInvaders\Debug\Space Invaders.exe
-  ConsoleApplication1.vcxproj -> C:\Users\18mac03\Documents\SpaceInvaders\Debug\Space Invaders.pdb (Partial PDB)
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(42): warning C4018: '<': signed/unsigned mismatch
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(56): warning C4018: '<': signed/unsigned mismatch
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(69): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
