@@ -11,6 +11,8 @@ public:
 	void update();
 	void render();
 	virtual void shoot() = 0;
+	int getLife() const;
+	void takeLife();
 protected:
 	int lives = 1;
 	int points;
