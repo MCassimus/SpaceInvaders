@@ -41,6 +41,14 @@ bool Game::loop()
 
 	processKeyboard();
 
+	//update player & check collision of bullet
+	for (int i = 0; i < gameData[0].size(); i++)
+	{
+		Player * playerTemp = dynamic_cast<Player*> (gameData[0].at(i));
+		playerTemp->update(gameData[1]);
+		playerTemp->update(gameData[2]);
+	}
+
 	//update and apply any changes to all game objects
 	for (int i = 0; i < 3; i++)
 		for (int j = 0; j < gameData[i].size(); j++)
