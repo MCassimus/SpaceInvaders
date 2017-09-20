@@ -21,12 +21,15 @@ Player::~Player()
 }
 
 
-void Player::update()
+void Player::update(std::vector<GameObject *> other)
 {
 	//check bullet collision
-
 	if (activeShot != nullptr)
 	{
+		for (int i = 0; i < other.size(); i++)
+			if(activeShot->collide(other.at(i)))
+				//setLife
+
 		activeShot->update();
 
 		if (activeShot->offScreen())
