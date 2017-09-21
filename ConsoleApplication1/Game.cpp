@@ -5,17 +5,13 @@
 #include "Small.h"
 #include "Medium.h"
 #include "Large.h"
+#include <string>
 
 
 Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
 {
 	window = renderWindow;
-
-	//create text display for players score
-	font.loadFromFile("../ArcadeFont.otf");
-	player1Score.setFont(font);
-	player1Score.setCharacterSize(10);
-
+	
 	//create players
 	gameData[0].push_back(new Player(100, window));//player 1
 	if(twoPlayer)
@@ -62,14 +58,10 @@ bool Game::loop()
 			if (dynamic_cast<Ship *>(gameData[i].at(j))->getLife() <= 0)
 				gameData[i].erase(j + gameData[i].begin());
 
-
-	//update text displays for players
+	//update text displays for player score
 	for (int i = 0; i < gameData[0].size(); i++)
 	{
 		Player * playerTemp = dynamic_cast<Player *>(gameData[0].at(i));
-
-		if(playerTemp->player == "Player 1")
-			player1Score.setString(std::to_string(playerTemp->getScore()));
 	}
 
 
@@ -87,8 +79,6 @@ void Game::render()
 	for (int i = 0; i < 3; i++)
 		for (int j = 0; j < gameData[i].size(); j++)
 			gameData[i].at(j)->render();
-	
-	window->draw(player1Score);	
 
 	window->display();
 }

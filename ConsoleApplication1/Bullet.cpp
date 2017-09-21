@@ -28,7 +28,7 @@ void Bullet::setVelocity(sf::Vector2f newVelocity)
 
 bool Bullet::offScreen()
 {
-	if (rectangle.getPosition().y < 40 || (rectangle.getPosition().y >= window->getView().getSize().y))
+	if (rectangle.getPosition().y < 0 || (rectangle.getPosition().y >= window->getView().getSize().y))
 		return true;
 	return false;
 }

@@ -1,16 +1,27 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ConsoleApplication1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Bullet.cpp
-c:\users\18mac03\documents\spaceinvaders\consoleapplication1\bullet.cpp(8): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  spaceInvaders.cpp
   Small.cpp
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\small.cpp(13): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Ship.cpp
-  Shield.cpp
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\ship.cpp(50): warning C4018: '<': signed/unsigned mismatch
   Player.cpp
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\player.cpp(14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\player.cpp(38): warning C4018: '<': signed/unsigned mismatch
   Medium.cpp
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\medium.cpp(13): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Large.cpp
-  GameObject.cpp
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\large.cpp(13): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Game.cpp
-  ConsoleApplication1.vcxproj -> C:\Users\18mac03\Documents\SpaceInvaders\Debug\Space Invaders.exe
-  ConsoleApplication1.vcxproj -> C:\Users\18mac03\Documents\SpaceInvaders\Debug\Space Invaders.pdb (Partial PDB)
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(16): error C2259: 'Player': cannot instantiate abstract class
+  c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(16): note: due to following members:
+  c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(16): note: 'void GameObject::update(void)': is abstract
+  c:\users\18mac03\documents\spaceinvaders\consoleapplication1\gameobject.h(9): note: see declaration of 'GameObject::update'
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(18): error C2259: 'Player': cannot instantiate abstract class
+  c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(18): note: due to following members:
+  c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(18): note: 'void GameObject::update(void)': is abstract
+  c:\users\18mac03\documents\spaceinvaders\consoleapplication1\gameobject.h(9): note: see declaration of 'GameObject::update'
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(48): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(57): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(62): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(80): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(94): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
