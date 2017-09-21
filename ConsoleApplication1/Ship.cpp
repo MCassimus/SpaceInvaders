@@ -29,6 +29,11 @@ void Ship::takeLife()
 	lives--;
 }
 
+int Ship::getPoints() const
+{
+	return points;
+}
+
 
 void Ship::update()
 {

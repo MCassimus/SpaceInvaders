@@ -10,4 +10,7 @@ public:
 	bool move(int);
 	void shoot();
 	char * player = nullptr;
+	int getScore() const;
+private:
+	int score = 0;
 };

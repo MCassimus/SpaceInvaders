@@ -44,6 +44,7 @@ void Player::update(std::vector<GameObject *> other)
 					if (type == "class Large" || type == "class Medium" || type == "class Small")
 					{
 						Ship * shipTemp = dynamic_cast<Ship *>(other.at(i));
+						score += shipTemp->getPoints();
 						shipTemp->takeLife();
 						bulletDeath = true;
 					}
@@ -67,12 +68,12 @@ bool Player::move(int dir)
 	if (dir == 1)//if 1, move right
 	{
 		if ((rectangle.getPosition().x + rectangle.getSize().x / 2) < window->getView().getSize().x)
-			rectangle.move(2, 0);
+			rectangle.move(1, 0);
 	}
 	else//if 2, move left
 	{
 		if ((rectangle.getPosition().x - rectangle.getSize().x / 2) > 0)
-			rectangle.move(-2, 0);
+			rectangle.move(-1, 0);
 	}
 	return true;
 }
@@ -85,4 +86,9 @@ void Player::shoot()
 		activeShot = new Bullet(sf::Vector2i(rectangle.getPosition()), window);
 		activeShot->setVelocity(sf::Vector2f(0, -2));
 	}
+}
+
+int Player::getScore() const
+{
+	return score;
 }

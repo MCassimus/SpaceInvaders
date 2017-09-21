@@ -12,4 +12,7 @@ public:
 private:
 	sf::RenderWindow * window;
 	std::vector<GameObject *> gameData[3];
+	sf::Font font;
+	sf::Text player1Score;
+	sf::Text player2Score;
 };

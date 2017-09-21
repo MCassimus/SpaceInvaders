@@ -13,8 +13,9 @@ public:
 	virtual void shoot() = 0;
 	int getLife() const;
 	void takeLife();
+	int getPoints() const;
 protected:
 	int lives = 1;
-	int points;
+	int points = 0;
 	Bullet * activeShot = nullptr;
 };
