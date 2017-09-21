@@ -1,8 +1,8 @@
 #include "stdafx.h"
 #include "Player.h"
 #include "Bullet.h"
-#include <iostream>
 #include <typeinfo>
+#include <iostream>
 
 const  int FINDLATER = 5;
 
@@ -25,27 +25,39 @@ Player::~Player()
 
 void Player::update(std::vector<GameObject *> other)
 {
+	bool bulletDeath = false;
+
 	//check bullet collision
 	if (activeShot != nullptr)
 	{
-		for (int i = 0; i < other.size(); i++)
-			if (activeShot->collide(other.at(i)))
-			{
-				std::string type = typeid(*other.at(i)).name();
+		if (activeShot->offScreen())
+			bulletDeath = true;
 
-				if (type == "Large" || type == "Medium" || type == "Small")
+		if(!bulletDeath)
+		{
+			for (int i = 0; i < other.size(); i++)
+			{
+				if (activeShot->collide(other.at(i)))
 				{
-					takeLife();
+					std::string type = typeid(*other.at(i)).name();
+
+					if (type == "class Large" || type == "class Medium" || type == "class Small")
+					{
+						Ship * shipTemp = dynamic_cast<Ship *>(other.at(i));
+						shipTemp->takeLife();
+						bulletDeath = true;
+					}
 				}
 			}
+		}
 
-		activeShot->update();
-
-		if (activeShot->offScreen())
+		if (bulletDeath)
 		{
 			delete activeShot;
 			activeShot = nullptr;
 		}
+		else
+			activeShot->update();
 	}
 }
 
