@@ -36,36 +36,6 @@ void Medium::shoot()
 	}
 }
 
-bool Medium::move(int dir)
-{
-	if (activeShot != nullptr)
-		if (activeShot->collide(this))
-			activeShot = nullptr;
-	sf::Vector2f position = rectangle.getPosition();
-	if (lives > 0)
-	{
-		if (dir == 0)
-		{
-			position.y += 8;
-		}
-		else if (dir == 1)
-		{
-			position.x += 2;
-			rectangle.setPosition(position);
-			if (position.x >= 206)
-				return true;
-		}
-		else
-		{
-			position.x -= 2;
-			rectangle.setPosition(position);
-			if (position.x <= 0)
-				return true;
-		}
-		return false;
-	}
-}
-
 //void Medium::shoot()
 //{
 //	sf::Vector2i pos(rectangle.left + FINDLATER, rectangle.top + FINDLATER);

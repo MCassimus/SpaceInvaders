@@ -6,6 +6,7 @@
 #include "Medium.h"
 #include "Large.h"
 #include <string>
+#include <iostream>
 
 
 Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
@@ -35,6 +36,9 @@ Game::~Game()
 
 bool Game::loop()
 {
+	static int ticks = 0;
+	ticks++;
+
 	// Process events
 	sf::Event event;
 	while (window->pollEvent(event))
@@ -57,24 +61,30 @@ bool Game::loop()
 		for (int j = 0; j < gameData[i].size(); j++)
 			gameData[i].at(j)->update();
 
-	static int dir = 1;
-	if (dir == 0 || dir == 3)
+	if (ticks % 10 == 0)
 	{
-		for (int i = 0; i < gameData[1].size(); i++)
-			dynamic_cast<Ship*>(gameData[1].at(i))->move(0);
-		dir = 2 - (dir / 3);
-	}
-	else if (dir == 1)
-	{
-		for (int i = 0; i < gameData[1].size(); i++)
-			if (dynamic_cast<Ship*>(gameData[1].at(i))->move(1))
-				dir = 0;
-	}
-	else
-	{
-		for (int i = 0; i < gameData[1].size(); i++)
-			if (dynamic_cast<Ship*>(gameData[1].at(i))->move(1))
-				dir = 3;
+		static int dir = 1;
+		if (dir == 0 || dir == 3)
+		{
+			for (int i = 0; i < gameData[1].size(); i++)
+				dynamic_cast<Ship*>(gameData[1].at(i))->move(0);
+			if (dir == 0)
+				dir = 2;
+			else
+				dir = 1;
+		}
+		else if (dir == 1)
+		{
+			for (int i = 0; i < gameData[1].size(); i++)
+				if (dynamic_cast<Ship*>(gameData[1].at(i))->move(1))
+					dir = 0;
+		}
+		else
+		{
+			for (int i = 0; i < gameData[1].size(); i++)
+				if (dynamic_cast<Ship*>(gameData[1].at(i))->move(2))
+					dir = 3;
+		}
 	}
 
 	//update text displays for player score

@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Small.h"
 #include "Bullet.h"
+#include <iostream>
 
 
 const  int FINDLATER = 5;
@@ -36,37 +37,6 @@ void Small::shoot()
 	{
 		activeShot = new Bullet(sf::Vector2i(rectangle.getPosition()), window);
 		activeShot->setTexture("smallBullet.png");
-	}
-}
-
-bool Small::move(int dir)
-{
-	if (activeShot != nullptr)
-		if (activeShot->collide(this))
-			activeShot = nullptr;
-	sf::Vector2f position = rectangle.getPosition();
-	if (lives > 0)
-	{
-		if (dir == 0)
-		{
-			position.y += 8;
-			rectangle.setPosition(position);
-		}
-		else if (dir == 1)
-		{
-			position.x += 2;
-			rectangle.setPosition(position);
-			if (position.x >= 206)
-				return true;
-		}
-		else
-		{
-			position.x -= 2;
-			rectangle.setPosition(position);
-			if (position.x <= 0)
-				return true;
-		}
-		return false;
 	}
 }
 //

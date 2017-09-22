@@ -7,6 +7,5 @@ public:
 	Medium(int, sf::RenderWindow*);
 	~Medium();
 	void update();
-	bool move(int);
 	void shoot();
 };
