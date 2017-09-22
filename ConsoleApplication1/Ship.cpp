@@ -38,40 +38,79 @@ int Ship::getPoints() const
 
 void Ship::update(std::vector<GameObject *> other)
 {
-	bool bulletDeath = false;
-
-	//check bullet collision
-	if (activeShot != nullptr)
+	if (lives > 0)
 	{
-		if (activeShot->offScreen())
-			bulletDeath = true;
+		bool bulletDeath = false;
 
-		if (!bulletDeath)
+		//check bullet collision
+		if (activeShot != nullptr)
 		{
-			for (int i = 0; i < other.size(); i++)
-			{
-				if (activeShot->collide(other.at(i)))
-				{
-					std::string type = typeid(*other.at(i)).name();
+			if (activeShot->offScreen())
+				bulletDeath = true;
 
-					if (type == "class Player")
+			if (!bulletDeath)
+			{
+				for (int i = 0; i < other.size(); i++)
+				{
+					if (activeShot->collide(other.at(i)))
 					{
-						Ship * shipTemp = dynamic_cast<Ship *>(other.at(i));
-						shipTemp->takeLife();
-						bulletDeath = true;
+						std::string type = typeid(*other.at(i)).name();
+
+						if (type == "class Player")
+						{
+							Ship * shipTemp = dynamic_cast<Ship *>(other.at(i));
+							shipTemp->takeLife();
+							bulletDeath = true;
+						}
 					}
 				}
 			}
-		}
 
-		if (bulletDeath)
-		{
-			delete activeShot;
+			if (bulletDeath)
+			{
+				delete activeShot;
+				activeShot = nullptr;
+			}
+			else
+				activeShot->update();
+		}
+	}
+}
+
+bool Ship::move(int dir)
+{
+	if (activeShot != nullptr)
+		if (activeShot->collide(this))
 			activeShot = nullptr;
+	sf::Vector2f position = rectangle.getPosition();
+	if (lives > 0)
+	{
+		if (dir == 0)
+		{
+			position.y += 8;
+			rectangle.setPosition(position);
+		}
+		else if (dir == 1)
+		{
+			position.x += 2;
+			rectangle.setPosition(position);
+			if (position.x >= 212)
+				return true;
 		}
 		else
-			activeShot->update();
+		{
+			position.x -= 2;
+			rectangle.setPosition(position);
+			if (position.x <= 6)
+				return true;
+		}
 	}
+	else
+	{
+		position.y = window->getView().getSize().y;
+		rectangle.setPosition(position);
+	}
+	return false;
 }
 
 

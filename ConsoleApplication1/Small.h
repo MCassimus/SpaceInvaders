@@ -7,6 +7,5 @@ public:
 	Small(int,sf::RenderWindow*);
 	~Small();
 	void update();
-	bool move(int);
 	void shoot();
 };
