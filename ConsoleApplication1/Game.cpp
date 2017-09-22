@@ -53,6 +53,26 @@ bool Game::loop()
 	for (int i = 0; i < 3; i++)
 		for (int j = 0; j < gameData[i].size(); j++)
 			gameData[i].at(j)->update();
+
+	static int dir = 1;
+	if (dir == 0 || dir == 3)
+	{
+		for (int i = 0; i < gameData[1].size(); i++)
+			dynamic_cast<Ship*>(gameData[1].at(i))->move(0);
+		dir = 2 - (dir / 3);
+	}
+	else if (dir == 1)
+	{
+		for (int i = 0; i < gameData[1].size(); i++)
+			if (dynamic_cast<Ship*>(gameData[1].at(i))->move(1))
+				dir = 0;
+	}
+	else
+	{
+		for (int i = 0; i < gameData[1].size(); i++)
+			if (dynamic_cast<Ship*>(gameData[1].at(i))->move(1))
+				dir = 3;
+	}
 	
 	if(window->isOpen() && !gameData[0].empty())
 		return true;//return true while players are alive & game open

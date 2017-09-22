@@ -41,12 +41,10 @@ bool Large::move(int dir)
 	if (activeShot != nullptr)
 		if (activeShot->collide(this))
 			activeShot = nullptr;
-	static bool lastdir = true;
 	sf::Vector2f position = rectangle.getPosition();
 	if (dir == 0)
 	{
 		position.y += 8;
-		lastdir = dir;
 	}
 	else if (dir == 1)
 	{
