@@ -30,6 +30,9 @@ Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
 		gameData[1].push_back(new Large(i, window));
 	}
 
+	for (int i = 0; i < 4; i++)
+		gameData[2].push_back(new Shield(window));
+
 	srand(time(NULL));
 }
 
@@ -67,10 +70,11 @@ bool Game::loop()
 		shipTemp->update(gameData[0]);
 	}
 
-	//test for death in ships (player & enemy)
-	/*for (int i = 0; i < 2; i++)
-		for (int j = 0; j < gameData[i].size(); j++)
-			gameData[i].at(j)->update();*/
+	for (int i = 0; i < gameData[2].size(); i++)
+	{
+		Shield * shieldTemp = dynamic_cast<Shield *>(gameData[2].at(i));
+		shieldTemp->update();
+	}
 
 	if (ticks % 10 == 0)
 	{

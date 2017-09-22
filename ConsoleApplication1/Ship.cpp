@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Ship.h"
+#include "Shield.h"
 #include <iostream>
 
 
@@ -60,6 +61,11 @@ void Ship::update(std::vector<GameObject *> other)
 						Ship * shipTemp = dynamic_cast<Ship *>(other.at(i));
 						shipTemp->takeLife();
 						bulletDeath = true;
+					}
+					else if (type == "class Shield")
+					{
+						Shield * shieldTemp = dynamic_cast<Shield *>(other.at(i));
+						shieldTemp->takeHealth();
 					}
 				}
 			}
