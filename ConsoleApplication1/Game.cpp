@@ -76,9 +76,6 @@ bool Game::loop()
 			if (dynamic_cast<Ship*>(gameData[1].at(i))->move(1))
 				dir = 3;
 	}
-	
-			if (dynamic_cast<Ship *>(gameData[i].at(j))->getLife() <= 0)
-				gameData[i].erase(j + gameData[i].begin());
 
 	//update text displays for player score
 	for (int i = 0; i < gameData[0].size(); i++)

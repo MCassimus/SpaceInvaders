@@ -14,7 +14,8 @@ Ship::~Ship()
 
 void Ship::render()
 {
-	window->draw(rectangle);
+	if(lives>0)
+		window->draw(rectangle);
 	if (activeShot != nullptr)
 		activeShot->render();
 }

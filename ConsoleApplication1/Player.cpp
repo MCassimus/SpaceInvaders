@@ -63,6 +63,9 @@ void Player::update(std::vector<GameObject *> other)
 }
 
 
+void Player::update() {};
+
+
 bool Player::move(int dir)
 {
 	if (dir == 1)//if 1, move right
