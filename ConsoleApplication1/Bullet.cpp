@@ -12,7 +12,6 @@ Bullet::Bullet(sf::Vector2i pos, sf::RenderWindow * renderWindow) : GameObject(r
 
 Bullet::~Bullet()
 {
-	std::printf("working\n");
 }
 
 

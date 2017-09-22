@@ -13,4 +13,5 @@ protected:
 	sf::RenderWindow *  window = nullptr;
 	sf::RectangleShape rectangle;
 	sf::Texture texture;
+	std::string textureName = "default";
 };

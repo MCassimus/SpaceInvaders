@@ -8,13 +8,14 @@ public:
 	Ship(sf::RenderWindow *);
 	~Ship();
 	virtual bool move(int) = 0;
-	void update();
+	virtual void update(std::vector<GameObject *>);
 	void render();
-	virtual void shoot() = 0;
+	virtual void shoot();
 	int getLife() const;
 	void takeLife();
+	int getPoints() const;
 protected:
 	int lives = 1;
-	int points;
+	int points = 0;
 	Bullet * activeShot = nullptr;
 };

@@ -35,6 +35,7 @@ bool GameObject::collide(GameObject * other)
 
 void GameObject::setTexture(std::string fileName)
 {
+	textureName = fileName;
 	if (texture.loadFromFile("../Textures/" + fileName))
 	{
 		rectangle.setTexture(&texture);
