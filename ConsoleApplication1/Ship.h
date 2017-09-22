@@ -9,8 +9,9 @@ public:
 	~Ship();
 	virtual bool move(int);
 	virtual void update(std::vector<GameObject *>);
+	void update();
 	void render();
-	virtual void shoot();
+	bool shoot();
 	int getLife() const;
 	void takeLife();
 	int getPoints() const;

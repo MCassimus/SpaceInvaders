@@ -10,7 +10,7 @@ Large::Large(int x, sf::RenderWindow * wndw) : Ship(wndw)
 {
 	setTexture("largeShip.png");
 	points = 10;
-	rectangle.setPosition(16*(x%11)+28, (x>=11)?88:104);
+	rectangle.setPosition(16*(x%11)+28, (x>=11)?104:88);
 }
 
 
@@ -20,13 +20,7 @@ Large::~Large()
 		delete activeShot;
 }
 
-
-void Large::update()
-{
-	//check bullet collision
-}
-
-
+/*
 void Large::shoot()
 {
 	if (activeShot != nullptr)
@@ -34,7 +28,7 @@ void Large::shoot()
 		activeShot = new Bullet(sf::Vector2i(rectangle.getPosition()), window);
 		activeShot->setTexture("largeBullet.png");
 	}
-}
+}*/
 //
 //void Large::shoot()
 //{

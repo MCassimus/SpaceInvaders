@@ -6,6 +6,4 @@ class Large :
 public:
 	Large(int,sf::RenderWindow*);
 	~Large();
-	void update();
-	void shoot();
 };

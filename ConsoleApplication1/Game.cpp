@@ -24,8 +24,13 @@ Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
 	for (int i = 0; i < 22; i++)
 	{
 		gameData[1].push_back(new Medium(i, window));
+	}
+	for (int i = 0; i < 22; i++)
+	{
 		gameData[1].push_back(new Large(i, window));
 	}
+
+	srand(time(NULL));
 }
 
 
@@ -56,10 +61,16 @@ bool Game::loop()
 		playerTemp->update(gameData[2]);
 	}
 
+	for (int i = 0; i < gameData[1].size(); i++)
+	{
+		Ship * shipTemp = dynamic_cast<Ship*> (gameData[1].at(i));
+		shipTemp->update(gameData[0]);
+	}
+
 	//test for death in ships (player & enemy)
-	for (int i = 0; i < 2; i++)
+	/*for (int i = 0; i < 2; i++)
 		for (int j = 0; j < gameData[i].size(); j++)
-			gameData[i].at(j)->update();
+			gameData[i].at(j)->update();*/
 
 	if (ticks % 10 == 0)
 	{
@@ -87,11 +98,19 @@ bool Game::loop()
 		}
 	}
 
-	//update text displays for player score
-	for (int i = 0; i < gameData[0].size(); i++)
+
+	for (int i = 0; i < 11; i++)
 	{
-		Player * playerTemp = dynamic_cast<Player *>(gameData[0].at(i));
+		if (rand() % 200 == 0)
+		{
+			int j = 44 + i;
+			while (j >= 0 && !dynamic_cast<Ship*>(gameData[1].at(j))->shoot())
+			{
+				j -= 11;
+			}
+		}
 	}
+
 	if(window->isOpen() && !gameData[0].empty())
 		return true;//return true while players are alive & game open
 	return false;

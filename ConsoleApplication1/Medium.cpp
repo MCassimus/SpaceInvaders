@@ -10,7 +10,7 @@ Medium::Medium(int x, sf::RenderWindow * wndw) : Ship(wndw)
 {
 	setTexture("mediumShip.png");
 	points = 20;
-	rectangle.setPosition(16 * (x % 11) + 28, x >= 11 ? 56 : 72);
+	rectangle.setPosition(16 * (x % 11) + 28, x >= 11 ? 72 : 56);
 }
 
 
@@ -19,13 +19,7 @@ Medium::~Medium()
 	if (activeShot != nullptr)
 		delete activeShot;
 }
-
-
-void Medium::update()
-{
-	//check bullet collision
-}
-
+/*
 
 void Medium::shoot()
 {
@@ -34,7 +28,7 @@ void Medium::shoot()
 		activeShot = new Bullet(sf::Vector2i(rectangle.getPosition()), window);
 		activeShot->setTexture("mediumBullet.png");
 	}
-}
+}*/
 
 //void Medium::shoot()
 //{

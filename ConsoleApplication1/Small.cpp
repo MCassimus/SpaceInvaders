@@ -23,14 +23,7 @@ Small::~Small()
 	if (activeShot != nullptr)
 		delete activeShot;
 }
-
-
-void Small::update()
-{
-	//check bullet collision
-}
-
-
+/*
 void Small::shoot()
 {
 	if (activeShot != nullptr)
@@ -38,7 +31,7 @@ void Small::shoot()
 		activeShot = new Bullet(sf::Vector2i(rectangle.getPosition()), window);
 		activeShot->setTexture("smallBullet.png");
 	}
-}
+}*/
 //
 //void Small::shoot()
 //{
