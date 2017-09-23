@@ -95,7 +95,7 @@ void Player::shoot()
 	if (activeShot == nullptr)
 	{
 		activeShot = new Bullet(sf::Vector2i(rectangle.getPosition()), window);
-		activeShot->setVelocity(sf::Vector2f(0, -1.25));
+		activeShot->setVelocity(sf::Vector2f(0, -1));
 	}
 }
 

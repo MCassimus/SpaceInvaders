@@ -4,7 +4,7 @@
 
 Bullet::Bullet(sf::Vector2i pos, sf::RenderWindow * renderWindow) : GameObject(renderWindow)
 {
-	rectangle = sf::RectangleShape(sf::Vector2f(1, 3));
+	rectangle = sf::RectangleShape(sf::Vector2f(1, 7));
 	rectangle.setPosition(pos.x, pos.y);
 	rectangle.setFillColor(sf::Color::Green);
 }
