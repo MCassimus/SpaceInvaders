@@ -3,6 +3,7 @@
 #include "Bullet.h"
 #include <typeinfo>
 #include <iostream>
+#include "Shield.h"
 
 const  int FINDLATER = 5;
 
@@ -13,6 +14,7 @@ Player::Player(int x, sf::RenderWindow * wndw, char * name) : Ship(wndw)
 	points = 40;
 	rectangle.setPosition(sf::Vector2f(x, wndw->getView().getSize().y - 20));
 	player = name;
+	lives = 3;
 }
 
 
@@ -46,6 +48,12 @@ void Player::update(std::vector<GameObject *> other)
 						Ship * shipTemp = dynamic_cast<Ship *>(other.at(i));
 						score += shipTemp->getPoints();
 						shipTemp->takeLife();
+						bulletDeath = true;
+					}
+					else if (type == "class Shield")
+					{
+						Shield * shieldTemp = dynamic_cast<Shield *>(other.at(i));
+						shieldTemp->takeHealth();
 						bulletDeath = true;
 					}
 				}

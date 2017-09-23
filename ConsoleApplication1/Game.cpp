@@ -31,7 +31,7 @@ Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
 	}
 
 	for (int i = 0; i < 4; i++)
-		gameData[2].push_back(new Shield(window));
+		gameData[2].push_back(new Shield(i , window));
 
 	srand(time(NULL));
 }
@@ -56,26 +56,32 @@ bool Game::loop()
 
 	processKeyboard();
 
-	//update player & check collision of bullet
+	//update player
 	for (int i = 0; i < gameData[0].size(); i++)
 	{
 		Player * playerTemp = dynamic_cast<Player*> (gameData[0].at(i));
-		playerTemp->update(gameData[1]);
-		playerTemp->update(gameData[2]);
+		playerTemp->update(gameData[1]);//update with enemy param
+		playerTemp->update(gameData[2]);//update with shile param
 	}
 
+	//update enemy
 	for (int i = 0; i < gameData[1].size(); i++)
 	{
 		Ship * shipTemp = dynamic_cast<Ship*> (gameData[1].at(i));
-		shipTemp->update(gameData[0]);
+		shipTemp->update(gameData[0]);//update with player param
+		shipTemp->update(gameData[2]);//update with shield param
 	}
 
+	//update shield
 	for (int i = 0; i < gameData[2].size(); i++)
 	{
 		Shield * shieldTemp = dynamic_cast<Shield *>(gameData[2].at(i));
 		shieldTemp->update();
+		if (shieldTemp->getHealth() <= 0)//if shield is dead
+			gameData[2].erase(gameData[2].begin() + i);//remove from vector
 	}
 
+	//enemy movement
 	if (ticks % 10 == 0)
 	{
 		static int dir = 1;
@@ -102,7 +108,7 @@ bool Game::loop()
 		}
 	}
 
-
+	//random enemy shooting
 	for (int i = 0; i < 11; i++)
 	{
 		if (rand() % 200 == 0)

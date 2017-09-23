@@ -66,6 +66,7 @@ void Ship::update(std::vector<GameObject *> other)
 					{
 						Shield * shieldTemp = dynamic_cast<Shield *>(other.at(i));
 						shieldTemp->takeHealth();
+						bulletDeath = true;
 					}
 				}
 			}
