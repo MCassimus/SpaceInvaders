@@ -52,10 +52,10 @@ void Ship::update(std::vector<GameObject *> other)
 		{
 			for (int i = 0; i < other.size(); i++)
 			{
+				std::string type = typeid(*other.at(i)).name();
+
 				if (activeShot->collide(other.at(i)))
 				{
-					std::string type = typeid(*other.at(i)).name();
-
 					if (type == "class Player")
 					{
 						Ship * shipTemp = dynamic_cast<Ship *>(other.at(i));
@@ -70,6 +70,7 @@ void Ship::update(std::vector<GameObject *> other)
 					}
 				}
 			}
+			
 		}
 
 		if (bulletDeath)
@@ -126,6 +127,15 @@ bool Ship::shoot()
 		sf::Vector2i pos = sf::Vector2i(rectangle.getPosition());
 		pos.y += 4;
 		activeShot = new Bullet(pos, window);
+		switch (rand() % 3)
+		{
+		case 0:
+			activeShot->setTexture("bullet1.png");
+			break;
+		default:
+			activeShot->setTexture("bullet2.png");
+			break;
+		}
 	}
 	return lives > 0;
 }

@@ -17,7 +17,7 @@ int main()
 	sf::View view(sf::Rect<float>(0, 0, 217, 248));
 	window.setView(view);
 
-	Game game(&window);
+	Game game(&window, true);
 	
 	while (game.loop())
 		game.render();	

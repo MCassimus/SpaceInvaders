@@ -1,5 +1,20 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ConsoleApplication1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Large.cpp
-c:\users\18mac03\documents\spaceinvaders\consoleapplication1\large.cpp(13): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Player.cpp
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\player.cpp(20): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\player.cpp(45): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Compiling...
+  Game.cpp
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(36): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(63): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(71): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(79): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(95): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(104): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(110): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(117): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(169): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(183): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
   ConsoleApplication1.vcxproj -> C:\Users\18mac03\Documents\SpaceInvaders\Debug\Space Invaders.exe
   ConsoleApplication1.vcxproj -> C:\Users\18mac03\Documents\SpaceInvaders\Debug\Space Invaders.pdb (Partial PDB)

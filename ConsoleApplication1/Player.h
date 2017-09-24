@@ -13,5 +13,6 @@ public:
 	char * player = nullptr;
 	int getScore() const;
 private:
-	int score = 0;
+	unsigned int score = 0;
+	unsigned int shotCount = 0;
 };
