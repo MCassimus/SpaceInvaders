@@ -44,7 +44,7 @@ void GameObject::setTexture(std::string fileName)
 	}
 }
 
-std::string GameObject::getTexture() const
+std::string GameObject::getTexture()
 {
 	return textureName;
 }

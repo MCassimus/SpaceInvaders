@@ -17,12 +17,17 @@ Bullet::~Bullet()
 
 void Bullet::update()
 {
+
 	if (rectangle.getPosition().y >= window->getView().getSize().y - 60)
 	{
 		rectangle.setFillColor(sf::Color::Green);
 	}
 
-
+	//bullet movement animation
+	if (getTexture() == "bullet1frame1.png")
+		setTexture("bullet2.png");
+	else if (getTexture() == "bullet2.png")
+		setTexture("bullet1frame1.png");
 
 	rectangle.move(velocity);
 }
