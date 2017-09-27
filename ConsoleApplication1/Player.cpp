@@ -20,6 +20,10 @@ Player::Player(int x, sf::RenderWindow * wndw, char * name) : Ship(wndw)
 	rectangle.setPosition(sf::Vector2f(x, wndw->getView().getSize().y - 20));
 	rectangle.setOrigin(rectangle.getOrigin().x, 0);//set origin to top of player for bullet to spawn correctly
 	lives = 3;
+
+	extraLives = new Ship(wndw);
+	extraLives->setTexture("player.png");
+	extraLives->setFillColor(rectangle.getFillColor());
 }
 
 
@@ -97,10 +101,10 @@ bool Player::move(int dir)
 
 void Player::shoot()
 {
-	if (activeShot == nullptr)
+	if (activeShot == nullptr&&lives>0)
 	{
 		activeShot = new Bullet(sf::Vector2i(rectangle.getPosition()), window);
-		activeShot->setVelocity(sf::Vector2f(0, -1));
+		activeShot->setVelocity(sf::Vector2f(0, -.75));
 		shotCount++;
 	}
 }
@@ -108,4 +112,13 @@ void Player::shoot()
 int Player::getScore() const
 {
 	return score;
+}
+
+void Player::renderLives()
+{
+	for (int i = 1; i < lives; i++)
+	{
+		extraLives->setPosition(sf::Vector2f(player == "Player 1" ? i * 16 - 8 : 224 - i * 16, 240));
+		extraLives->render();
+	}
 }

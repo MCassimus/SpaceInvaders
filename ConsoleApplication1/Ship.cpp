@@ -6,6 +6,7 @@
 
 Ship::Ship(sf::RenderWindow * renderWindow) : GameObject(renderWindow)
 {
+	window = renderWindow;
 }
 
 
@@ -20,6 +21,8 @@ void Ship::render()
 		window->draw(rectangle);
 	if (activeShot != nullptr)
 		activeShot->render();
+	if (lives > 1)
+		this->renderLives();
 }
 
 int Ship::getLife() const
@@ -35,6 +38,10 @@ void Ship::takeLife()
 int Ship::getPoints() const
 {
 	return points;
+}
+
+void Ship::renderLives()
+{
 }
 
 

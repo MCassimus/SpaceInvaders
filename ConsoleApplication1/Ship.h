@@ -15,6 +15,7 @@ public:
 	int getLife() const;
 	void takeLife();
 	int getPoints() const;
+	virtual void renderLives();
 protected:
 	int lives = 1;
 	int points = 0;
