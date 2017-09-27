@@ -16,5 +16,5 @@ public:
 private:
 	unsigned int score = 0;
 	unsigned int shotCount = 0;
-	Ship * extraLives;
+	Ship * extraLives = nullptr;
 };

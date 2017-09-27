@@ -137,7 +137,7 @@ bool Ship::shoot()
 		switch (rand() % 3)
 		{
 		case 0:
-			activeShot->setTexture("bullet1frame1.png");
+			activeShot->setTexture("bullet1.png");
 			break;
 		default:
 			activeShot->setTexture("bullet2.png");

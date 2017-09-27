@@ -7,6 +7,7 @@ Bullet::Bullet(sf::Vector2i pos, sf::RenderWindow * renderWindow) : GameObject(r
 	rectangle = sf::RectangleShape(sf::Vector2f(1, 6));
 	rectangle.setPosition(pos.x, pos.y);
 	rectangle.setFillColor(sf::Color::White);
+	
 }
 
 
@@ -23,11 +24,8 @@ void Bullet::update()
 		rectangle.setFillColor(sf::Color::Green);
 	}
 
-	//bullet movement animation
-	if (getTexture() == "bullet1frame1.png")
-		setTexture("bullet2.png");
-	else if (getTexture() == "bullet2.png")
-		setTexture("bullet1frame1.png");
+	//rectangle.scale(-1, 1);
+
 
 	rectangle.move(velocity);
 }

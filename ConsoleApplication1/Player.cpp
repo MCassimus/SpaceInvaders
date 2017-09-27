@@ -104,7 +104,7 @@ void Player::shoot()
 	if (activeShot == nullptr&&lives>0)
 	{
 		activeShot = new Bullet(sf::Vector2i(rectangle.getPosition()), window);
-		activeShot->setVelocity(sf::Vector2f(0, -.75));
+		activeShot->setVelocity(sf::Vector2f(0, -1.5));
 		shotCount++;
 	}
 }
