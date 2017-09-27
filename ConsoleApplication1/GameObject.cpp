@@ -43,3 +43,8 @@ void GameObject::setTexture(std::string fileName)
 		rectangle.setOrigin(rectangle.getSize().x /2, rectangle.getSize().y / 2);
 	}
 }
+
+std::string GameObject::getTexture() const
+{
+	return textureName;
+}

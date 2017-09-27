@@ -11,5 +11,5 @@ public:
 	void setVelocity(sf::Vector2f);
 	bool offScreen();
 private:
-	sf::Vector2f velocity = sf::Vector2f(0, 1.25);
+	sf::Vector2f velocity = sf::Vector2f(0, .75);
 };

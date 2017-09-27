@@ -9,6 +9,7 @@ public:
 	virtual void update() = 0;
 	bool collide(GameObject *);
 	virtual void setTexture(std::string);
+	virtual std::string getTexture();
 protected:
 	sf::RenderWindow *  window = nullptr;
 	sf::RectangleShape rectangle;
