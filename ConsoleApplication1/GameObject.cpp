@@ -44,6 +44,7 @@ void GameObject::setTexture(std::string fileName)
 	}
 }
 
+<<<<<<< HEAD
 void GameObject::setPosition(sf::Vector2f pos)
 {
 	rectangle.setPosition(pos);
@@ -52,4 +53,9 @@ void GameObject::setPosition(sf::Vector2f pos)
 void GameObject::setFillColor(sf::Color clr)
 {
 	rectangle.setFillColor(clr);
+=======
+std::string GameObject::getTexture() const
+{
+	return textureName;
+>>>>>>> 574fc9f39151f339e2034c683fb78f622ee5a535
 }

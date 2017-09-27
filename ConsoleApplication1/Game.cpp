@@ -13,6 +13,7 @@ Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
 {
 	window = renderWindow;
 	
+	#pragma region createObjects
 	//create players
 	gameData[0].push_back(new Player(100, window));//player 1
 	if(twoPlayer)
@@ -30,8 +31,10 @@ Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
 		gameData[1].push_back(new Large(i, window));
 	}
 
+	//create shields
 	for (int i = 0; i < 4; i++)
 		gameData[2].push_back(new Shield(i , window));
+	#pragma endregion
 
 	srand(time(NULL));
 }
