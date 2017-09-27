@@ -12,7 +12,9 @@ public:
 	void shoot();
 	char * player = nullptr;
 	int getScore() const;
+	void renderLives();
 private:
 	unsigned int score = 0;
 	unsigned int shotCount = 0;
+	Ship * extraLives;
 };

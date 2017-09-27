@@ -43,3 +43,13 @@ void GameObject::setTexture(std::string fileName)
 		rectangle.setOrigin(rectangle.getSize().x /2, rectangle.getSize().y / 2);
 	}
 }
+
+void GameObject::setPosition(sf::Vector2f pos)
+{
+	rectangle.setPosition(pos);
+}
+
+void GameObject::setFillColor(sf::Color clr)
+{
+	rectangle.setFillColor(clr);
+}

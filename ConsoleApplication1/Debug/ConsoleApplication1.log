@@ -1,5 +1,7 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ConsoleApplication1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  spaceInvaders.cpp
-  LINK : C:\Users\18dcb01\Documents\GitHub\SpaceInvaders\Debug\Space Invaders.exe not found or not built by the last incremental link; performing full link
+  Player.cpp
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\player.cpp(20): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\player.cpp(49): warning C4018: '<': signed/unsigned mismatch
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\player.cpp(121): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   ConsoleApplication1.vcxproj -> C:\Users\18dcb01\Documents\GitHub\SpaceInvaders\Debug\Space Invaders.exe
   ConsoleApplication1.vcxproj -> C:\Users\18dcb01\Documents\GitHub\SpaceInvaders\Debug\Space Invaders.pdb (Partial PDB)
