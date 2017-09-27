@@ -30,6 +30,9 @@ Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
 		gameData[1].push_back(new Large(i, window));
 	}
 
+	for (int i = 0; i < 4; i++)
+		gameData[2].push_back(new Shield(i , window));
+
 	srand(time(NULL));
 }
 
@@ -44,6 +47,7 @@ bool Game::loop()
 	static int ticks = 0;
 	ticks++;
 
+	#pragma region eventProcessing
 	// Process events
 	sf::Event event;
 	while (window->pollEvent(event))
@@ -52,27 +56,38 @@ bool Game::loop()
 			window->close();
 
 	processKeyboard();
+	#pragma endregion
 
-	//update player & check collision of bullet
+	#pragma region updateObjects
+	//update player
 	for (int i = 0; i < gameData[0].size(); i++)
 	{
 		Player * playerTemp = dynamic_cast<Player*> (gameData[0].at(i));
-		playerTemp->update(gameData[1]);
-		playerTemp->update(gameData[2]);
+		playerTemp->update(gameData[1]);//update with enemy param
+		playerTemp->update(gameData[2]);//update with shile param
 	}
 
+	//update enemy
 	for (int i = 0; i < gameData[1].size(); i++)
 	{
 		Ship * shipTemp = dynamic_cast<Ship*> (gameData[1].at(i));
-		shipTemp->update(gameData[0]);
+		shipTemp->update(gameData[0]);//update with player param
+		shipTemp->update(gameData[2]);//update with shield param
 	}
 
-	//test for death in ships (player & enemy)
-	/*for (int i = 0; i < 2; i++)
-		for (int j = 0; j < gameData[i].size(); j++)
-			gameData[i].at(j)->update();*/
+	//update shield
+	for (int i = 0; i < gameData[2].size(); i++)
+	{
+		Shield * shieldTemp = dynamic_cast<Shield *>(gameData[2].at(i));
+		shieldTemp->update();
+		if (shieldTemp->getHealth() <= 0)//if shield is dead
+			gameData[2].erase(gameData[2].begin() + i);//remove from vector
+	}
+	#pragma endregion
 
-	if (ticks % 10 == 0)
+	#pragma region enemyMovement
+	//enemy movement
+	if (ticks % 20 == 0)
 	{
 		static int dir = 1;
 		if (dir == 0 || dir == 3)
@@ -98,7 +113,35 @@ bool Game::loop()
 		}
 	}
 
+	//update enemy texture
+	for (int i = 0; i < gameData[1].size(); i++)
+	{
+		if (ticks % 40 == 0)
+		{
+			std::string type = typeid(*gameData[1].at(i)).name();
 
+			if (type == "class Small")
+				gameData[1].at(i)->setTexture("smallShip0.png");
+			else if (type == "class Medium")
+				gameData[1].at(i)->setTexture("mediumShip0.png");
+			else if (type == "class Large")
+				gameData[1].at(i)->setTexture("largeShip0.png");
+		}
+		else if(ticks % 20 == 0)
+		{
+			std::string type = typeid(*gameData[1].at(i)).name();
+
+			if (type == "class Small")
+				gameData[1].at(i)->setTexture("smallShip1.png");
+			else if (type == "class Medium")
+				gameData[1].at(i)->setTexture("mediumShip1.png");
+			else if (type == "class Large")
+				gameData[1].at(i)->setTexture("largeShip1.png");
+		}
+	}
+	#pragma endregion 
+
+	//random enemy shooting
 	for (int i = 0; i < 11; i++)
 	{
 		if (rand() % 200 == 0)

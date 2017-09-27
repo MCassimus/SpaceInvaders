@@ -4,10 +4,11 @@
 class Shield : public GameObject
 {
 public:
-	Shield(sf::RenderWindow *);
+	Shield(int, sf::RenderWindow *);
 	~Shield();
 	void update();
 	void takeHealth();
+	int getHealth() const;
 private:
 	int health = 15;
 };

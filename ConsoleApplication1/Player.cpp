@@ -3,16 +3,23 @@
 #include "Bullet.h"
 #include <typeinfo>
 #include <iostream>
+#include "Shield.h"
 
 const  int FINDLATER = 5;
 
 
 Player::Player(int x, sf::RenderWindow * wndw, char * name) : Ship(wndw)
 {
+	player = name;
+	if (player == "Player 1")
+		rectangle.setFillColor(sf::Color::Green);
+	else if (name == "Player 2")
+		rectangle.setFillColor(sf::Color::White);
 	setTexture("player.png");
 	points = 40;
 	rectangle.setPosition(sf::Vector2f(x, wndw->getView().getSize().y - 20));
-	player = name;
+	rectangle.setOrigin(rectangle.getOrigin().x, 0);//set origin to top of player for bullet to spawn correctly
+	lives = 3;
 }
 
 
@@ -46,6 +53,12 @@ void Player::update(std::vector<GameObject *> other)
 						Ship * shipTemp = dynamic_cast<Ship *>(other.at(i));
 						score += shipTemp->getPoints();
 						shipTemp->takeLife();
+						bulletDeath = true;
+					}
+					else if (type == "class Shield")
+					{
+						Shield * shieldTemp = dynamic_cast<Shield *>(other.at(i));
+						shieldTemp->takeHealth();
 						bulletDeath = true;
 					}
 				}
@@ -87,7 +100,8 @@ void Player::shoot()
 	if (activeShot == nullptr)
 	{
 		activeShot = new Bullet(sf::Vector2i(rectangle.getPosition()), window);
-		activeShot->setVelocity(sf::Vector2f(0, -1.25));
+		activeShot->setVelocity(sf::Vector2f(0, -1));
+		shotCount++;
 	}
 }
 
