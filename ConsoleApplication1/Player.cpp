@@ -4,6 +4,7 @@
 #include <typeinfo>
 #include <iostream>
 #include "Shield.h"
+#include "Animation.h"
 
 const  int FINDLATER = 5;
 
@@ -71,6 +72,28 @@ void Player::update(std::vector<GameObject *> other)
 
 		if (bulletDeath)
 		{
+			std::vector<std::string> frameFiles;
+			frameFiles.push_back("bulletExplosion/bulletExplosion0.png");
+			frameFiles.push_back("bulletExplosion/bulletExplosion0.png");
+			frameFiles.push_back("bulletExplosion/bulletExplosion1.png");
+			frameFiles.push_back("bulletExplosion/bulletExplosion1.png");
+			frameFiles.push_back("bulletExplosion/bulletExplosion2.png");
+			frameFiles.push_back("bulletExplosion/bulletExplosion2.png");
+			frameFiles.push_back("bulletExplosion/bulletExplosion3.png");
+			frameFiles.push_back("bulletExplosion/bulletExplosion3.png");
+
+			if (activeShot->offScreen())
+				rectangle.setPosition(rectangle.getPosition().x, 0);
+
+			Animation animationTemp(rectangle.getPosition(), frameFiles, window);
+
+			for (int i = 0; i < frameFiles.size(); i++)
+			{
+				window->clear();
+				animationTemp.render();
+				window->display();
+			}
+
 			delete activeShot;
 			activeShot = nullptr;
 		}

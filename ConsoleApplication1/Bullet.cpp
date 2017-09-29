@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Bullet.h"
 #include <SFML\Graphics.hpp>
+#include "Animation.h"
 
 Bullet::Bullet(sf::Vector2i pos, sf::RenderWindow * renderWindow) : GameObject(renderWindow)
 {
