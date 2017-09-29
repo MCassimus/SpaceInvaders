@@ -12,4 +12,6 @@ public:
 	bool offScreen();
 private:
 	sf::Vector2f velocity = sf::Vector2f(0, .75);
+	int textureScale = 1;
+	int flipTick = 1;
 };
