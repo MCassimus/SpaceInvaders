@@ -11,5 +11,6 @@ public:
 	void processKeyboard();
 private:
 	sf::RenderWindow * window;
-	std::vector<GameObject *> gameData[3];
+	std::vector<GameObject *> gameData[4];
+	int level;
 };

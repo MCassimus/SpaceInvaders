@@ -7,6 +7,7 @@
 #include "Large.h"
 #include <string>
 #include <iostream>
+#include "Word.h"
 
 
 Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
@@ -37,6 +38,8 @@ Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
 	#pragma endregion
 
 	srand(time(NULL));
+
+	level = 1;
 }
 
 
@@ -49,6 +52,8 @@ bool Game::loop()
 {
 	static int ticks = 0;
 	ticks++;
+
+	static int endticks = -10000;
 
 	#pragma region eventProcessing
 	// Process events
@@ -90,7 +95,7 @@ bool Game::loop()
 
 	#pragma region enemyMovement
 	//enemy movement
-	if (ticks % 20 == 0)
+	if (ticks % 20 == 0 &&ticks>endticks+100)
 	{
 		static int dir = 1;
 		if (dir == 0 || dir == 3)
@@ -157,19 +162,40 @@ bool Game::loop()
 		}
 	}
 
-	//check if no more enemies
-	int i = 0;
-	while (i < gameData[1].size() && dynamic_cast<Ship*>(gameData[1].at(i))->getLife()==0)
+	//check if no more enemies, then displays next level
+	if (ticks > endticks + 100)
 	{
-		i++;
+		int i = 0;
+		while (i < gameData[1].size() && dynamic_cast<Ship*>(gameData[1].at(i))->getLife() == 0)
+		{
+			i++;
+		}
+		if (i == gameData[1].size())
+		{
+			level++;
+			endticks = ticks;
+			gameData[3].push_back(new Word(window, "LEVEL " + level));
+			gameData[3].back()->setPosition(sf::Vector2f(40, 40));
+			gameData[3].back()->setFillColor(sf::Color::White);
+			gameData[3].back()->update();
+		}
 	}
-	if (i == gameData[1].size())
+
+	if (ticks == endticks + 100)
 	{
 		for (int j = 0; j < gameData[1].size(); j++)
 		{
 			delete gameData[1].at(j);
 		}
 		gameData[1].clear();
+
+
+		for (int j = 0; j < gameData[2].size(); j++)
+		{
+			delete gameData[2].at(j);
+		}
+		gameData[2].clear();
+
 
 
 		for (int j = 0; j<11; j++)
@@ -182,6 +208,12 @@ bool Game::loop()
 		{
 			gameData[1].push_back(new Large(j, window));
 		}
+
+
+
+		for (int i = 0; i < 4; i++)
+			gameData[2].push_back(new Shield(i, window));
+
 	}
 
 	if(window->isOpen() && !gameData[0].empty())
@@ -195,7 +227,7 @@ void Game::render()
 	window->clear();
 
 	//render every index in game data
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < 4; i++)
 		for (int j = 0; j < gameData[i].size(); j++)
 			gameData[i].at(j)->render();
 
@@ -228,6 +260,22 @@ void Game::processKeyboard()
 			//D Key move right
 			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
 				playerTemp->move(1);
+
+			//E key cheat code
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::E))
+			{
+				int i = 0;
+				while (i < gameData[1].size() && dynamic_cast<Ship*>(gameData[1].at(i))->getLife() == 0)
+				{
+					i++;
+				}
+
+				if (i < gameData[1].size())
+				{
+					dynamic_cast<Ship*>(gameData[1].at(i))->takeLife();
+				}
+				
+			}
 		}
 		//if current index is for player 2 process player 2 controls
 		else if (playerTemp->player == "Player 2")

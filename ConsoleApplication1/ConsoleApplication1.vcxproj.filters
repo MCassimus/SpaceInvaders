@@ -30,6 +30,7 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="spaceInvaders.cpp" />
+    <ClCompile Include="Word.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -61,6 +62,7 @@
     <ClInclude Include="Small.h">
       <Filter>Headers</Filter>
     </ClInclude>
+    <ClInclude Include="Word.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />

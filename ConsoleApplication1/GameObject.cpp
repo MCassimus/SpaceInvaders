@@ -61,3 +61,8 @@ std::string GameObject::getTexture() const
 {
 	return textureName;
 }
+
+sf::Vector2f GameObject::getPosition()
+{
+	return rectangle.getPosition();
+}
