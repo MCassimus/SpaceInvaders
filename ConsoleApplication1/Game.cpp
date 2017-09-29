@@ -157,6 +157,33 @@ bool Game::loop()
 		}
 	}
 
+	//check if no more enemies
+	int i = 0;
+	while (i < gameData[1].size() && dynamic_cast<Ship*>(gameData[1].at(i))->getLife()==0)
+	{
+		i++;
+	}
+	if (i == gameData[1].size())
+	{
+		for (int j = 0; j < gameData[1].size(); j++)
+		{
+			delete gameData[1].at(j);
+		}
+		gameData[1].clear();
+
+
+		for (int j = 0; j<11; j++)
+			gameData[1].push_back(new Small(j, window));
+		for (int j = 0; j < 22; j++)
+		{
+			gameData[1].push_back(new Medium(j, window));
+		}
+		for (int j = 0; j < 22; j++)
+		{
+			gameData[1].push_back(new Large(j, window));
+		}
+	}
+
 	if(window->isOpen() && !gameData[0].empty())
 		return true;//return true while players are alive & game open
 	return false;
