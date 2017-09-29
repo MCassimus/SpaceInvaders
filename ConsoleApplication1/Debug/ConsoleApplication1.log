@@ -1,7 +1,13 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ConsoleApplication1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+<<<<<<< HEAD
   Bullet.cpp
 c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\bullet.cpp(9): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\bullet.cpp(31): warning C4018: '<': signed/unsigned mismatch
 c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\bullet.cpp(50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   ConsoleApplication1.vcxproj -> C:\Users\18mac03\Documents\GitHub\SpaceInvaders\Debug\Space Invaders.exe
   ConsoleApplication1.vcxproj -> C:\Users\18mac03\Documents\GitHub\SpaceInvaders\Debug\Space Invaders.pdb (Partial PDB)
+=======
+  Word.cpp
+  ConsoleApplication1.vcxproj -> C:\Users\18dcb01\Documents\GitHub\SpaceInvaders\Debug\Space Invaders.exe
+  ConsoleApplication1.vcxproj -> C:\Users\18dcb01\Documents\GitHub\SpaceInvaders\Debug\Space Invaders.pdb (Partial PDB)
+>>>>>>> 5ff07236488ffa410335a06a7a5ca5d38bb86c6a

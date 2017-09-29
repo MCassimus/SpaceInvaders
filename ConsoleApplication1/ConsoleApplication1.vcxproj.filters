@@ -30,9 +30,13 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="spaceInvaders.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="Animation.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+=======
+    <ClCompile Include="Word.cpp" />
+>>>>>>> 5ff07236488ffa410335a06a7a5ca5d38bb86c6a
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -64,9 +68,13 @@
     <ClInclude Include="Small.h">
       <Filter>Headers</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Animation.h">
       <Filter>Headers</Filter>
     </ClInclude>
+=======
+    <ClInclude Include="Word.h" />
+>>>>>>> 5ff07236488ffa410335a06a7a5ca5d38bb86c6a
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />

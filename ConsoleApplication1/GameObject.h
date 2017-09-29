@@ -12,6 +12,7 @@ public:
 	void setPosition(sf::Vector2f);
 	void setFillColor(sf::Color);
 	virtual std::string getTexture() const;
+	sf::Vector2f getPosition();
 protected:
 	sf::RenderWindow *  window = nullptr;
 	sf::RectangleShape rectangle;
