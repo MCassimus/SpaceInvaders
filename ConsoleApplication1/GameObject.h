@@ -6,7 +6,7 @@ public:
 	GameObject(sf::RenderWindow *);
 	~GameObject();
 	virtual void render();
-	virtual void update() = 0;
+	virtual void update();
 	bool collide(GameObject *);
 	virtual void setTexture(std::string);
 	void setPosition(sf::Vector2f);

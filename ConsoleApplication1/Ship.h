@@ -2,6 +2,7 @@
 #include "GameObject.h"
 #include <SFML/Graphics.hpp>
 #include "Bullet.h"
+#include "Animation.h"
 class Ship : public GameObject
 {
 public:
@@ -20,4 +21,5 @@ protected:
 	int lives = 1;
 	int points = 0;
 	Bullet * activeShot = nullptr;
+	std::vector<Animation *> animation;
 };

@@ -5,7 +5,7 @@
 Shield::Shield(int id, sf::RenderWindow * renderWindow) : GameObject(renderWindow)
 {
 	setTexture("/Shields/shield15.png");
-	rectangle.setPosition((window->getView().getSize().x / 4) * id, window->getView().getSize().y - 40);
+	rectangle.setPosition((window->getView().getSize().x / 4) * id, window->getView().getSize().y - 55);
 	rectangle.move(window->getView().getSize().x / 8, 0);
 }
 

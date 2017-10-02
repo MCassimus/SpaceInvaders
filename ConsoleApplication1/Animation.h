@@ -10,5 +10,6 @@ public:
 	bool isDone();
 private:
 	int frame = 0;
+	int frameDelay = 1;
 	std::vector<std::string> frameFiles;
 };

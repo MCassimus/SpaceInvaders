@@ -12,5 +12,7 @@ public:
 private:
 	sf::RenderWindow * window;
 	std::vector<GameObject *> gameData[4];
+	sf::RectangleShape lifeSeperator;
 	int level;
+	bool pause = false;
 };

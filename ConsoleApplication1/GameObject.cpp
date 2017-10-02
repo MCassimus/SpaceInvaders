@@ -21,7 +21,6 @@ void GameObject::render()
 
 void GameObject::update()
 {
-
 }
 
 

@@ -15,11 +15,15 @@ Animation::~Animation()
 
 void Animation::update()
 {
-	if (frame < frameFiles.size())
+
+	if (frame < frameFiles.size() && frameDelay % 8 == 0)
 	{
 		setTexture(frameFiles.at(frame));
 		frame++;
+		frameDelay = 1;
 	}
+	else
+		frameDelay++;
 }
 
 bool Animation::isDone()

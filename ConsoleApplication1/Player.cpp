@@ -18,7 +18,7 @@ Player::Player(int x, sf::RenderWindow * wndw, char * name) : Ship(wndw)
 		rectangle.setFillColor(sf::Color::White);
 	setTexture("player.png");
 	points = 40;
-	rectangle.setPosition(sf::Vector2f(x, wndw->getView().getSize().y - 20));
+	rectangle.setPosition(sf::Vector2f(x, wndw->getView().getSize().y - 40));
 	rectangle.setOrigin(rectangle.getOrigin().x, 0);//set origin to top of player for bullet to spawn correctly
 	lives = 3;
 
@@ -74,31 +74,30 @@ void Player::update(std::vector<GameObject *> other)
 		{
 			std::vector<std::string> frameFiles;
 			frameFiles.push_back("bulletExplosion/bulletExplosion0.png");
-			frameFiles.push_back("bulletExplosion/bulletExplosion0.png");
-			frameFiles.push_back("bulletExplosion/bulletExplosion1.png");
 			frameFiles.push_back("bulletExplosion/bulletExplosion1.png");
 			frameFiles.push_back("bulletExplosion/bulletExplosion2.png");
-			frameFiles.push_back("bulletExplosion/bulletExplosion2.png");
-			frameFiles.push_back("bulletExplosion/bulletExplosion3.png");
 			frameFiles.push_back("bulletExplosion/bulletExplosion3.png");
 
 			if (activeShot->offScreen())
-				rectangle.setPosition(rectangle.getPosition().x, 0);
+				activeShot->setPosition(sf::Vector2f(activeShot->getPosition().x, 8));
 
-			Animation animationTemp(rectangle.getPosition(), frameFiles, window);
-
-			for (int i = 0; i < frameFiles.size(); i++)
-			{
-				window->clear();
-				animationTemp.render();
-				window->display();
-			}
+			animation.push_back(new Animation(activeShot->getPosition(), frameFiles, window));
 
 			delete activeShot;
 			activeShot = nullptr;
 		}
 		else
 			activeShot->update();
+	}
+	if (!animation.empty())
+	{
+		for (int i = 0; i < animation.size(); i++)
+		{
+			if (animation.at(i)->isDone())
+				animation.erase(animation.begin() + i);
+			else
+				animation.at(i)->update();
+		}
 	}
 }
 
@@ -141,7 +140,7 @@ void Player::renderLives()
 {
 	for (int i = 1; i < lives; i++)
 	{
-		extraLives->setPosition(sf::Vector2f(player == "Player 1" ? i * 16 - 8 : 224 - i * 16, 240));
+		extraLives->setPosition(sf::Vector2f(player == "Player 1" ? i * 16 - 8 : 224 - i * 16, window->getView().getSize().y - 8));
 		extraLives->render();
 	}
 }

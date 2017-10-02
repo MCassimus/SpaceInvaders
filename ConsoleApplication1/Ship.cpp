@@ -23,6 +23,9 @@ void Ship::render()
 		activeShot->render();
 	if (lives > 1)
 		this->renderLives();
+	if (!animation.empty())
+		for(int i = 0; i < animation.size(); i++)
+			animation.at(i)->render();
 }
 
 int Ship::getLife() const
@@ -76,8 +79,7 @@ void Ship::update(std::vector<GameObject *> other)
 						bulletDeath = true;
 					}
 				}
-			}
-			
+			}	
 		}
 
 		if (bulletDeath)
@@ -87,6 +89,16 @@ void Ship::update(std::vector<GameObject *> other)
 		}
 		else
 			activeShot->update();
+	}
+	if (!animation.empty())
+	{
+		for (int i = 0; i < animation.size(); i++)
+		{
+			if (animation.at(i)->isDone())
+				animation.erase(animation.begin() + i);
+			else
+				animation.at(i)->update();
+		}
 	}
 }
 
@@ -132,7 +144,7 @@ bool Ship::shoot()
 	if (activeShot == nullptr&&lives>0)
 	{
 		sf::Vector2i pos = sf::Vector2i(rectangle.getPosition());
-		pos.y += 4;
+		pos.y += 8;
 		activeShot = new Bullet(pos, window);
 		switch (rand() % 3)
 		{
