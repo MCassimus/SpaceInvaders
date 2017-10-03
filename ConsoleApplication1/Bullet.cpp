@@ -23,7 +23,7 @@ void Bullet::update()
 		rectangle.setFillColor(sf::Color::Green);
 	}
 
-	if (flipTick % 20 == 0)
+	if (flipTick % 10 == 0)
 	{
 		flipTick = 1;
 		rectangle.scale(textureScale, 1);
@@ -43,7 +43,7 @@ void Bullet::setVelocity(sf::Vector2f newVelocity)
 
 bool Bullet::offScreen()
 {
-	if (rectangle.getPosition().y < 0 || (rectangle.getPosition().y >= window->getView().getSize().y))
+	if (rectangle.getPosition().y < 0 || (rectangle.getPosition().y >= window->getView().getSize().y - 18))
 		return true;
 	return false;
 }
