@@ -119,7 +119,7 @@ bool Ship::move(int dir)
 		{
 			position.x += 2;
 			rectangle.setPosition(position);
-			if (position.x >= 212)
+			if (position.x >= window->getView().getSize().x - 6)
 				return true;
 		}
 		else

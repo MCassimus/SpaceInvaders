@@ -18,10 +18,8 @@ Bullet::~Bullet()
 
 void Bullet::update()
 {
-	if (rectangle.getPosition().y >= window->getView().getSize().y - 60)
-	{
+	if (rectangle.getPosition().y >= window->getView().getSize().y - 65)
 		rectangle.setFillColor(sf::Color::Green);
-	}
 
 	if (flipTick % 10 == 0)
 	{
