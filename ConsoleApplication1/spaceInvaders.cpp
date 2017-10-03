@@ -16,7 +16,7 @@ int main()
 	window.setKeyRepeatEnabled(true);
 
 	sf::View view(sf::Rect<float>(0, 0, 217, 248));
-	//window.setView(view);
+	window.setView(view);
 
 	GameObject menu(&window);
 	menu.setTexture("mainMenu.png");
