@@ -1,90 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="Bullet.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Large.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Medium.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Shield.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Ship.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Small.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="Large.cpp" />
+    <ClCompile Include="Medium.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Ship.cpp" />
+    <ClCompile Include="Small.cpp" />
     <ClCompile Include="spaceInvaders.cpp" />
-<<<<<<< HEAD
-    <ClCompile Include="Animation.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-=======
+    <ClCompile Include="Shield.cpp" />
+    <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="Word.cpp" />
->>>>>>> 5ff07236488ffa410335a06a7a5ca5d38bb86c6a
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="Bullet.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="Large.h" />
+    <ClInclude Include="Medium.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Shield.h" />
+    <ClInclude Include="Ship.h" />
+    <ClInclude Include="Small.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="Bullet.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Large.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Medium.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Shield.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Ship.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Small.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-<<<<<<< HEAD
-    <ClInclude Include="Animation.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-=======
     <ClInclude Include="Word.h" />
->>>>>>> 5ff07236488ffa410335a06a7a5ca5d38bb86c6a
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Filter Include="Headers">
-      <UniqueIdentifier>{96064e47-73bc-4a50-80a2-2ed83009b3b4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source">
-      <UniqueIdentifier>{df83b261-82be-4821-89f1-16750d9b8c59}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
 </Project>

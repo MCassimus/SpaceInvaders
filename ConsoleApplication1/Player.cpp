@@ -5,6 +5,7 @@
 #include <iostream>
 #include "Shield.h"
 #include "Animation.h"
+//#include "SFML/Audio.hpp"
 
 const  int FINDLATER = 5;
 
@@ -125,6 +126,11 @@ void Player::shoot()
 {
 	if (activeShot == nullptr&&lives>0)
 	{
+		/*sf::SoundBuffer buffer;
+		buffer.loadFromFile("../Audio/bullet.mp3");
+		sf::Sound sound;
+		sound.setBuffer(buffer);
+		sound.play();*/
 		activeShot = new Bullet(sf::Vector2i(rectangle.getPosition()), window);
 		activeShot->setVelocity(sf::Vector2f(0, -1.5));
 		shotCount++;
