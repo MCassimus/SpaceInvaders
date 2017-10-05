@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML\Graphics.hpp>
 #include "GameObject.h"
+#include <SFML\Audio.hpp>
 class Game
 {
 public:
@@ -15,4 +16,6 @@ private:
 	sf::RectangleShape lifeSeperator;
 	int level;
 	bool pause = false;
+	sf::SoundBuffer sounds;
+	sf::Sound enemyMoveSound;
 };

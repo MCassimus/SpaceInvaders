@@ -40,6 +40,10 @@ Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
 		gameData[2].push_back(new Shield(i , window));
 	#pragma endregion
 
+	//ititalize sounds for enemy movement
+	sounds.loadFromFile("../Sounds/EnemyMove/enemyMove1.wav");
+	enemyMoveSound.setBuffer(sounds);
+
 	srand(time(NULL));
 
 	level = 1;
@@ -111,7 +115,7 @@ bool Game::loop()
 		#pragma endregion
 
 		#pragma region enemyMovement
-		//enemy movement
+		//enemy movement & sound
 		if (ticks % 20 == 0 &&ticks>endticks+100)
 		{
 			static int dir = 1;
@@ -136,6 +140,28 @@ bool Game::loop()
 					if (dynamic_cast<Ship*>(gameData[1].at(i))->move(2))
 						dir = 3;
 			}
+
+			static int sound = 0;
+			switch (sound)
+			{
+			case 0:
+				sounds.loadFromFile("../Sounds/EnemyMove/enemyMove1.wav");
+				sound++;
+				break;
+			case 1:
+				sounds.loadFromFile("../Sounds/EnemyMove/enemyMove2.wav");
+				sound++;
+				break;
+			case 2:
+				sounds.loadFromFile("../Sounds/EnemyMove/enemyMove3.wav");
+				sound++;
+				break;
+			case 3:
+				sounds.loadFromFile("../Sounds/EnemyMove/enemyMove4.wav");
+				sound = 0;
+				break;
+			}
+			enemyMoveSound.play();
 		}
 
 		//update enemy texture
