@@ -1,8 +1,8 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ConsoleApplication1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   Word.cpp
 c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\word.cpp(20): warning C4244: 'argument': conversion from 'const float' to 'unsigned int', possible loss of data
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\word.cpp(22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\word.cpp(44): warning C4244: 'argument': conversion from 'const float' to 'unsigned int', possible loss of data
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\word.cpp(22): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\word.cpp(47): warning C4244: 'argument': conversion from 'const float' to 'unsigned int', possible loss of data
   Game.cpp
 c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(43): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data

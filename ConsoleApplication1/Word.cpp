@@ -20,7 +20,7 @@ Word::Word(sf::RenderWindow *renderWindow, std::string str) : GameObject(renderW
 	text.setCharacterSize(rectangle.getSize().x);
 
 	sf::Vector2i halfTextSize(text.getLocalBounds().width / 2, text.getLocalBounds().height / 2);
-	text.setOrigin(sf::);
+	text.setOrigin(sf::Vector2f(halfTextSize));
 
 	window = renderWindow;
 }
