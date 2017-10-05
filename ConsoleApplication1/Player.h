@@ -1,5 +1,7 @@
 #pragma once
 #include "Ship.h"
+#include <SFML\Audio.hpp>
+
 class Player :
 	public Ship
 {
@@ -17,4 +19,6 @@ private:
 	unsigned int score = 0;
 	unsigned int shotCount = 0;
 	Ship * extraLives = nullptr;
+	sf::SoundBuffer buffer;
+	sf::Sound bulletFire;
 };

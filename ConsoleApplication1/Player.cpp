@@ -5,7 +5,6 @@
 #include <iostream>
 #include "Shield.h"
 #include "Animation.h"
-//#include "SFML/Audio.hpp"
 
 const  int FINDLATER = 5;
 
@@ -22,6 +21,9 @@ Player::Player(int x, sf::RenderWindow * wndw, char * name) : Ship(wndw)
 	rectangle.setPosition(sf::Vector2f(x, wndw->getView().getSize().y - 40));
 	rectangle.setOrigin(rectangle.getOrigin().x, 0);//set origin to top of player for bullet to spawn correctly
 	lives = 3;
+
+	buffer.loadFromFile("../Sounds/bullet.wav");
+	bulletFire.setBuffer(buffer);
 
 	extraLives = new Ship(wndw);
 	extraLives->setTexture("player.png");
@@ -126,11 +128,7 @@ void Player::shoot()
 {
 	if (activeShot == nullptr&&lives>0)
 	{
-		/*sf::SoundBuffer buffer;
-		buffer.loadFromFile("../Audio/bullet.mp3");
-		sf::Sound sound;
-		sound.setBuffer(buffer);
-		sound.play();*/
+		bulletFire.play();
 		activeShot = new Bullet(sf::Vector2i(rectangle.getPosition()), window);
 		activeShot->setVelocity(sf::Vector2f(0, -1.5));
 		shotCount++;
