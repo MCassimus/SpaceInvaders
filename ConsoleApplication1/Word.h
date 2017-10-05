@@ -11,5 +11,6 @@ public:
 	void setTexture(std::string);//changes string
 private:
 	sf::Text text;
+	sf::Font font;
 };
 

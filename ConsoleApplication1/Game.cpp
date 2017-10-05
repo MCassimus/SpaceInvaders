@@ -196,8 +196,9 @@ bool Game::loop()
 			{
 				level++;
 				endticks = ticks;
-				gameData[3].push_back(new Word(window, "LEVEL " + level));
-				gameData[3].back()->setPosition(sf::Vector2f(40, 40));
+				gameData[3].push_back(new Word(window, "LEVEL " + std::to_string(level)));
+				sf::Vector2f oldsize(window->getView().getSize());
+				gameData[3].back()->setPosition(sf::Vector2f(oldsize.x,(3*oldsize.y)/4));
 				gameData[3].back()->setFillColor(sf::Color::White);
 				gameData[3].back()->update();
 			}
@@ -205,6 +206,7 @@ bool Game::loop()
 
 		if (ticks == endticks + 100)
 		{
+			gameData[3].pop_back();
 			for (int j = 0; j < gameData[1].size(); j++)
 			{
 				delete gameData[1].at(j);
