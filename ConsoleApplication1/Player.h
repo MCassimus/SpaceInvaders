@@ -19,6 +19,9 @@ private:
 	unsigned int score = 0;
 	unsigned int shotCount = 0;
 	Ship * extraLives = nullptr;
-	sf::SoundBuffer buffer;
-	sf::Sound bulletFire;
+	sf::SoundBuffer bulletBuffer;
+	sf::Sound bulletSound;
+	sf::SoundBuffer enemyDeathBuffer;
+	sf::Sound enemyDeath;
+
 };

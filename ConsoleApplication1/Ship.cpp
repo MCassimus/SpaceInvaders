@@ -141,7 +141,7 @@ bool Ship::move(int dir)
 
 bool Ship::shoot()
 {
-	if (activeShot == nullptr&&lives>0)
+	if (activeShot == nullptr && lives>0)
 	{
 		sf::Vector2i pos = sf::Vector2i(rectangle.getPosition());
 		pos.y += 8;

@@ -17,5 +17,5 @@ private:
 	int level;
 	bool pause = false;
 	sf::SoundBuffer sounds;
-	sf::Sound enemyMoveSound;
+	sf::Sound soundPlayer;
 };

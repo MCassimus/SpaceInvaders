@@ -40,9 +40,12 @@ Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
 		gameData[2].push_back(new Shield(i , window));
 	#pragma endregion
 
+	gameData[3].push_back(new Word(window, "0 Score <1> ------- Score <2>  0"));
+	gameData[3].front()->setPosition(sf::Vector2f(window->getView().getSize().x / 2, 0));
+
 	//ititalize sounds for enemy movement
 	sounds.loadFromFile("../Sounds/EnemyMove/enemyMove1.wav");
-	enemyMoveSound.setBuffer(sounds);
+	soundPlayer.setBuffer(sounds);
 
 	srand(time(NULL));
 
@@ -61,7 +64,7 @@ bool Game::loop()
 	ticks++;
 
 	static int endticks = -10000;
-	
+
 	sf::Event event;
 	while (window->pollEvent(event))
 	{
@@ -87,21 +90,41 @@ bool Game::loop()
 		//process events
 		processKeyboard();
 
-		#pragma region updateObjects
+#pragma region updateObjects
 		//update player
 		for (int i = 0; i < gameData[0].size(); i++)
 		{
 			Player * playerTemp = dynamic_cast<Player*> (gameData[0].at(i));
 			playerTemp->update(gameData[1]);//update with enemy param
-			playerTemp->update(gameData[2]);//update with shile param
+			playerTemp->update(gameData[2]);//update with shield param
 		}
 
+		int liveEnemies = 0;
 		//update enemy
 		for (int i = 0; i < gameData[1].size(); i++)
 		{
 			Ship * shipTemp = dynamic_cast<Ship*> (gameData[1].at(i));
-			shipTemp->update(gameData[0]);//update with player param
-			shipTemp->update(gameData[2]);//update with shield param
+			if (shipTemp != nullptr)
+			{
+				liveEnemies++;
+				shipTemp->update(gameData[0]);//update with player param
+				shipTemp->update(gameData[2]);//update with shield param
+				if (shipTemp->getLife() == 0)
+				{
+					std::vector<std::string> frameFiles;
+					frameFiles.push_back("enemyDeath/enemyDeath0.png");
+					frameFiles.push_back("enemyDeath/enemyDeath1.png");
+					frameFiles.push_back("transparent.png");
+					gameData[1].at(i) = new Animation(shipTemp->getPosition(), frameFiles, window);
+				}
+			}
+			else
+			{
+				//update animations
+				Animation * animationTemp = dynamic_cast<Animation*>(gameData[1].at(i));
+				animationTemp->update();
+			}
+
 		}
 
 		//update shield
@@ -112,35 +135,25 @@ bool Game::loop()
 			if (shieldTemp->getHealth() <= 0)//if shield is dead
 				gameData[2].erase(gameData[2].begin() + i);//remove from vector
 		}
-		#pragma endregion
 
-		#pragma region enemyMovement
-		//enemy movement & sound
-		if (ticks % 20 == 0 &&ticks>endticks+100)
+		//update the score display
+		int player1Score = 0, player2Score = 0;
+		for (int i = 0; i < gameData[0].size(); i++)
 		{
-			static int dir = 1;
-			if (dir == 0 || dir == 3)
-			{
-				for (int i = 0; i < gameData[1].size(); i++)
-					dynamic_cast<Ship*>(gameData[1].at(i))->move(0);
-				if (dir == 0)
-					dir = 2;
-				else
-					dir = 1;
-			}
-			else if (dir == 1)
-			{
-				for (int i = 0; i < gameData[1].size(); i++)
-					if (dynamic_cast<Ship*>(gameData[1].at(i))->move(1))
-						dir = 0;
-			}
+			if (dynamic_cast<Player *>(gameData[0].at(i))->player == "Player 1")
+				player1Score = dynamic_cast<Player *>(gameData[0].at(i))->getScore();
 			else
-			{
-				for (int i = 0; i < gameData[1].size(); i++)
-					if (dynamic_cast<Ship*>(gameData[1].at(i))->move(2))
-						dir = 3;
-			}
+				player2Score = dynamic_cast<Player *>(gameData[0].at(i))->getScore();
+		}
 
+		gameData[3].front()->setTexture(std::to_string(player1Score) + "   Score <1>  Score <2>   " + std::to_string(player2Score));
+		gameData[3].front()->update();
+#pragma endregion
+
+#pragma region enemyMovement
+		//enemy movement & sound
+		if (ticks % 20 == 0 && ticks > endticks + 100 && liveEnemies > 0)
+		{
 			static int sound = 0;
 			switch (sound)
 			{
@@ -161,7 +174,62 @@ bool Game::loop()
 				sound = 0;
 				break;
 			}
-			enemyMoveSound.play();
+			soundPlayer.play();
+
+			static int dir = 1;
+			if (dir == 0 || dir == 3)
+			{
+				for (int i = 0; i < gameData[1].size(); i++)
+					if (dynamic_cast<Ship *>(gameData[1].at(i)) != nullptr)
+						dynamic_cast<Ship*>(gameData[1].at(i))->move(0);
+					else
+						dynamic_cast<Animation*>(gameData[1].at(i))->move(0);
+				if (dir == 0)
+					dir = 2;
+				else
+					dir = 1;
+			}
+			else if (dir == 1)
+			{
+				for (int i = 0; i < gameData[1].size(); i++)
+				{
+					if (dynamic_cast<Ship *>(gameData[1].at(i)) != nullptr)
+					{
+
+						if (dynamic_cast<Ship*>(gameData[1].at(i))->move(1))
+						{
+							dir = 0;
+						}
+					}
+					else
+					{
+						if (dynamic_cast<Animation*>(gameData[1].at(i))->move(1))
+						{
+							dir = 0;
+						}
+					}
+				}
+			}
+			else
+			{
+				for (int i = 0; i < gameData[1].size(); i++)
+				{
+					if (dynamic_cast<Ship*>(gameData[1].at(i)) != nullptr)
+					{
+						if (dynamic_cast<Ship*>(gameData[1].at(i))->move(2))
+						{
+							dir = 3;
+						}
+					}
+					else
+					{
+						if (dynamic_cast<Animation*>(gameData[1].at(i))->move(2))
+						{
+							dir = 3;
+						}
+					}
+				}
+			}
 		}
 
 		//update enemy texture
@@ -178,7 +246,7 @@ bool Game::loop()
 				else if (type == "class Large")
 					gameData[1].at(i)->setTexture("largeShip0.png");
 			}
-			else if(ticks % 20 == 0)
+			else if (ticks % 20 == 0)
 			{
 				std::string type = typeid(*gameData[1].at(i)).name();
 
@@ -190,7 +258,7 @@ bool Game::loop()
 					gameData[1].at(i)->setTexture("largeShip1.png");
 			}
 		}
-		#pragma endregion 
+#pragma endregion 
 
 		//check player death
 		for (int i = 0; i < gameData[0].size(); i++)
@@ -200,12 +268,16 @@ bool Game::loop()
 		//random enemy shooting
 		for (int i = 0; i < 11; i++)
 		{
-			if (rand() % 200 == 0)
+			if (rand() % 300 == 0)
 			{
 				int j = 44 + i;
-				while (j >= 0 && !dynamic_cast<Ship*>(gameData[1].at(j))->shoot())
+				Ship * shipTemp = dynamic_cast<Ship*>(gameData[1].at(j));
+				if (shipTemp != nullptr)
 				{
-					j -= 11;
+					while (j >= 0 && !shipTemp->shoot())
+					{
+						j -= 11;
+					}
 				}
 			}
 		}
@@ -213,18 +285,13 @@ bool Game::loop()
 		//check if no more enemies, then displays next level
 		if (ticks > endticks + 100)
 		{
-			int i = 0;
-			while (i < gameData[1].size() && dynamic_cast<Ship*>(gameData[1].at(i))->getLife() == 0)
-			{
-				i++;
-			}
-			if (i == gameData[1].size())
+			if(liveEnemies == 0)
 			{
 				level++;
 				endticks = ticks;
 				gameData[3].push_back(new Word(window, "LEVEL " + std::to_string(level)));
 				sf::Vector2f oldsize(window->getView().getSize());
-				gameData[3].back()->setPosition(sf::Vector2f(oldsize.x,(3*oldsize.y)/4));
+				gameData[3].back()->setPosition(sf::Vector2f(oldsize.x, (3 * oldsize.y) / 4));
 				gameData[3].back()->setFillColor(sf::Color::White);
 				gameData[3].back()->update();
 			}
@@ -245,7 +312,7 @@ bool Game::loop()
 			}
 			gameData[2].clear();
 
-			for (int j = 0; j<11; j++)
+			for (int j = 0; j < 11; j++)
 				gameData[1].push_back(new Small(j, window));
 			for (int j = 0; j < 22; j++)
 			{
@@ -284,7 +351,17 @@ void Game::render()
 
 void Game::processKeyboard()
 {
+	//E key cheat code
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::E))
+	{
+		Ship * shipTemp = nullptr;
+		for (int i = 0; i < gameData[1].size() && shipTemp == nullptr; i++)
+			shipTemp = dynamic_cast<Ship *>(gameData[1].at(i));
 
+		while (shipTemp != nullptr && shipTemp->getLife() != 0)
+			shipTemp->takeLife();
+
+	}
 
 	//for each player in game data
 	for (int i = 0; i < gameData[0].size(); i++)
@@ -305,22 +382,6 @@ void Game::processKeyboard()
 			//D Key move right
 			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
 				playerTemp->move(1);
-
-			//E key cheat code
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::E))
-			{
-				int i = 0;
-				while (i < gameData[1].size() && dynamic_cast<Ship*>(gameData[1].at(i))->getLife() == 0)
-				{
-					i++;
-				}
-
-				if (i < gameData[1].size())
-				{
-					dynamic_cast<Ship*>(gameData[1].at(i))->takeLife();
-				}
-				
-			}
 		}
 		//if current index is for player 2 process player 2 controls
 		else if (playerTemp->player == "Player 2")

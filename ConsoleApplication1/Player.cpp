@@ -22,8 +22,13 @@ Player::Player(int x, sf::RenderWindow * wndw, char * name) : Ship(wndw)
 	rectangle.setOrigin(rectangle.getOrigin().x, 0);//set origin to top of player for bullet to spawn correctly
 	lives = 3;
 
-	buffer.loadFromFile("../Sounds/bullet.wav");
-	bulletFire.setBuffer(buffer);
+	//initialize bullet sounds
+	bulletBuffer.loadFromFile("../Sounds/bullet.wav");
+	bulletSound.setBuffer(bulletBuffer);
+
+	//intialize enemy death sounds
+	enemyDeathBuffer.loadFromFile("../Sounds/enemyDeath.wav");
+	enemyDeath.setBuffer(enemyDeathBuffer);
 
 	extraLives = new Ship(wndw);
 	extraLives->setTexture("player.png");
@@ -46,7 +51,18 @@ void Player::update(std::vector<GameObject *> other)
 	if (activeShot != nullptr)
 	{
 		if (activeShot->offScreen())
+		{
+			std::vector<std::string> frameFiles;
+			frameFiles.push_back("bulletExplosion/bulletExplosion0.png");
+			frameFiles.push_back("bulletExplosion/bulletExplosion1.png");
+			frameFiles.push_back("bulletExplosion/bulletExplosion2.png");
+			frameFiles.push_back("bulletExplosion/bulletExplosion3.png");
+
+			activeShot->setPosition(sf::Vector2f(activeShot->getPosition().x, 8));
+			animation.push_back(new Animation(activeShot->getPosition(), frameFiles, window));
+
 			bulletDeath = true;
+		}
 
 		if(!bulletDeath)
 		{
@@ -61,6 +77,18 @@ void Player::update(std::vector<GameObject *> other)
 						Ship * shipTemp = dynamic_cast<Ship *>(other.at(i));
 						score += shipTemp->getPoints();
 						shipTemp->takeLife();
+
+						//animmation and sound for enemy death
+						/*std::vector<std::string> frameFiles;
+
+						frameFiles.push_back("enemyDeath/enemyDeath0.png");
+						frameFiles.push_back("enemyDeath/enemyDeath1.png");
+						frameFiles.push_back("enemyDeath/enemyDeath2.png");
+
+						animation.push_back(new Animation(other.at(i)->getPosition(), frameFiles, window));*/
+
+						enemyDeath.play();
+
 						bulletDeath = true;
 					}
 					else if (type == "class Shield")
@@ -75,17 +103,6 @@ void Player::update(std::vector<GameObject *> other)
 
 		if (bulletDeath)
 		{
-			std::vector<std::string> frameFiles;
-			frameFiles.push_back("bulletExplosion/bulletExplosion0.png");
-			frameFiles.push_back("bulletExplosion/bulletExplosion1.png");
-			frameFiles.push_back("bulletExplosion/bulletExplosion2.png");
-			frameFiles.push_back("bulletExplosion/bulletExplosion3.png");
-
-			if (activeShot->offScreen())
-				activeShot->setPosition(sf::Vector2f(activeShot->getPosition().x, 8));
-
-			animation.push_back(new Animation(activeShot->getPosition(), frameFiles, window));
-
 			delete activeShot;
 			activeShot = nullptr;
 		}
@@ -126,9 +143,9 @@ bool Player::move(int dir)
 
 void Player::shoot()
 {
-	if (activeShot == nullptr&&lives>0)
+	if (activeShot == nullptr && lives>0 && bulletSound.getStatus() == bulletSound.Stopped)
 	{
-		bulletFire.play();
+		bulletSound.play();
 		activeShot = new Bullet(sf::Vector2i(rectangle.getPosition()), window);
 		activeShot->setVelocity(sf::Vector2f(0, -1.5));
 		shotCount++;

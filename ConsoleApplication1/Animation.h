@@ -8,6 +8,7 @@ public:
 	~Animation();
 	void update();
 	bool isDone();
+	bool move(int);
 private:
 	int frame = 0;
 	int frameDelay = 1;
