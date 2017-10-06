@@ -4,7 +4,7 @@
 #include <string>
 
 
-Word::Word(sf::RenderWindow *renderWindow, std::string str) : GameObject(renderWindow)
+Word::Word(sf::RenderWindow *renderWindow, std::string str, float textSize) : GameObject(renderWindow)
 {
 	text.setString(str);
 	if (!font.loadFromFile("ArcadeFont.ttf"))
@@ -15,7 +15,7 @@ Word::Word(sf::RenderWindow *renderWindow, std::string str) : GameObject(renderW
 
 	text.setFont(font);
 
-	rectangle.setSize(sf::Vector2f(14,12));
+	rectangle.setSize(sf::Vector2f(textSize,12));
 
 	text.setCharacterSize(rectangle.getSize().x);
 
@@ -40,14 +40,33 @@ void Word::render()
 	window->setView(oldView);
 }
 
+
 void Word::update()
 {
 	text.setPosition(rectangle.getPosition());
 	text.setFillColor(rectangle.getFillColor());
 	text.setCharacterSize(rectangle.getSize().x);
+
+	text.setCharacterSize(rectangle.getSize().x);
+
+	sf::Vector2i halfTextSize(text.getLocalBounds().width / 2, text.getLocalBounds().height / 2);
+	text.setOrigin(sf::Vector2f(halfTextSize));
 }
+
 
 void Word::setTexture(std::string str)
 {
 	text.setString(str);
+}
+
+
+void Word::setPosition(sf::Vector2f pos)
+{
+	rectangle.setPosition(pos);
+}
+
+
+void Word::setCharacterSize(float size)
+{
+	rectangle.setSize(sf::Vector2f(rectangle.getSize().x, size));
 }

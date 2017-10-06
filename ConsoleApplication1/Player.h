@@ -8,7 +8,7 @@ class Player :
 public:
 	Player(int, sf::RenderWindow*, char * = "Player 1");
 	~Player();
-	void update(std::vector<GameObject*>);
+	void update(std::vector<GameObject*>&);
 	void update();
 	bool move(int);
 	void shoot();

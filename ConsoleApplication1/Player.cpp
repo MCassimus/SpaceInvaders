@@ -25,10 +25,12 @@ Player::Player(int x, sf::RenderWindow * wndw, char * name) : Ship(wndw)
 	//initialize bullet sounds
 	bulletBuffer.loadFromFile("Sounds/bullet.wav");
 	bulletSound.setBuffer(bulletBuffer);
+	bulletSound.setVolume(10);
 
 	//intialize enemy death sounds
 	enemyDeathBuffer.loadFromFile("Sounds/enemyDeath.wav");
 	enemyDeath.setBuffer(enemyDeathBuffer);
+	enemyDeath.setVolume(10);
 
 	extraLives = new Ship(wndw);
 	extraLives->setTexture("player.png");
@@ -43,7 +45,7 @@ Player::~Player()
 }
 
 
-void Player::update(std::vector<GameObject *> other)
+void Player::update(std::vector<GameObject *> & other)
 {
 	bool bulletDeath = false;
 
@@ -58,7 +60,6 @@ void Player::update(std::vector<GameObject *> other)
 			frameFiles.push_back("bulletExplosion/bulletExplosion2.png");
 			frameFiles.push_back("bulletExplosion/bulletExplosion3.png");
 
-			activeShot->setPosition(sf::Vector2f(activeShot->getPosition().x, 8));
 			animation.push_back(new Animation(activeShot->getPosition(), frameFiles, window));
 
 			bulletDeath = true;
@@ -79,6 +80,12 @@ void Player::update(std::vector<GameObject *> other)
 						shipTemp->takeLife();
 
 						//sound for enemy death
+						std::vector<std::string> frameFiles;
+						frameFiles.push_back("enemyDeath/enemyDeath0.png");
+						frameFiles.push_back("enemyDeath/enemyDeath1.png");
+						frameFiles.push_back("transparent.png");
+						other.at(i) = new Animation(shipTemp->getPosition(), frameFiles, window);
+
 						enemyDeath.play();
 
 						bulletDeath = true;
@@ -87,6 +94,18 @@ void Player::update(std::vector<GameObject *> other)
 					{
 						Shield * shieldTemp = dynamic_cast<Shield *>(other.at(i));
 						shieldTemp->takeHealth();
+						bulletDeath = true;
+					}
+					else if (type == "class UFO")
+					{
+						Ship * shipTemp = dynamic_cast<Ship *>(other.at(i));
+						if (shotCount != 23 || shotCount - 23 % 15 == 0)
+							score += 300;
+						else
+							score += shipTemp->getPoints();
+
+						shipTemp->takeLife();
+
 						bulletDeath = true;
 					}
 				}
@@ -139,7 +158,7 @@ void Player::shoot()
 	{
 		bulletSound.play();
 		activeShot = new Bullet(sf::Vector2i(rectangle.getPosition()), window);
-		activeShot->setVelocity(sf::Vector2f(0, -1.5));
+		activeShot->setVelocity(sf::Vector2f(0, -2));
 		shotCount++;
 	}
 }

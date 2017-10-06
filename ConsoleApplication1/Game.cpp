@@ -8,6 +8,7 @@
 #include <string>
 #include <iostream>
 #include "Word.h"
+#include "UFO.h"
 
 
 Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
@@ -40,9 +41,7 @@ Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
 		gameData[2].push_back(new Shield(i , window));
 	#pragma endregion
 
-	gameData[3].push_back(new Word(window, "0 Score <1> ------- Score <2>  0"));
-	gameData[3].front()->setPosition(sf::Vector2f(window->getView().getSize().x / 2, 0));
-	gameData[3].front()->update();
+	gameData[3].push_back(new Word(window, "", 12));
 
 	//ititalize sounds for enemy movement
 	sounds.loadFromFile("Sounds/EnemyMove/enemyMove1.wav");
@@ -113,8 +112,6 @@ bool Game::loop()
 				if (shipTemp->getLife() == 0)
 				{
 					std::vector<std::string> frameFiles;
-					frameFiles.push_back("enemyDeath/enemyDeath0.png");
-					frameFiles.push_back("enemyDeath/enemyDeath1.png");
 					frameFiles.push_back("transparent.png");
 					gameData[1].at(i) = new Animation(shipTemp->getPosition(), frameFiles, window);
 				}
@@ -138,16 +135,25 @@ bool Game::loop()
 		}
 
 		//update the score display
-		int player1Score = 0, player2Score = 0;
+		std::string player1Score = "0", player2Score = "0";
 		for (int i = 0; i < gameData[0].size(); i++)
 		{
 			if (dynamic_cast<Player *>(gameData[0].at(i))->player == "Player 1")
-				player1Score = dynamic_cast<Player *>(gameData[0].at(i))->getScore();
+				player1Score = std::to_string(dynamic_cast<Player *>(gameData[0].at(i))->getScore());
 			else
-				player2Score = dynamic_cast<Player *>(gameData[0].at(i))->getScore();
+				player2Score = std::to_string(dynamic_cast<Player *>(gameData[0].at(i))->getScore());
 		}
 
-		gameData[3].front()->setTexture(std::to_string(player1Score) + "   Score <1>  Score <2>   " + std::to_string(player2Score));
+		while (player1Score.length() < 5)
+			player1Score = "0" + player1Score;
+
+		while (player2Score.length() < 5)
+			player2Score = "0" + player2Score;
+
+		sf::Vector2f oldsize(window->getView().getSize());
+		gameData[3].front()->setTexture("Score <1>  " + player1Score + "                                " + player2Score + "  Score <2>");
+		gameData[3].front()->setPosition(sf::Vector2f(oldsize.x, 16));
+		//gameData[3].front()->setFillColor(sf::Color::White);
 		gameData[3].front()->update();
 #pragma endregion
 
@@ -326,6 +332,8 @@ bool Game::loop()
 			{
 				gameData[1].push_back(new Large(j, window));
 			}
+
+			gameData[1].push_back(new UFO(window));
 
 			for (int i = 0; i < 4; i++)
 				gameData[2].push_back(new Shield(i, window));

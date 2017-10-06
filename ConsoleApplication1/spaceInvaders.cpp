@@ -9,9 +9,10 @@
 #include "GameObject.h"
 #include <Windows.h>
 
+
 int main()
 {
-	FreeConsole();//temp until FINAL release comment if you need console
+	//FreeConsole();//temp until FINAL release comment if you need console
 	sf::RenderWindow window(sf::VideoMode(434, 496), "Space Invaders");
 	window.setFramerateLimit(60);
 	window.setKeyRepeatEnabled(true);

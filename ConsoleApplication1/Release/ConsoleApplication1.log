@@ -1,7 +1,23 @@
-﻿  spaceInvaders.cpp
+﻿  Game.cpp
+Game.cpp(22): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+Game.cpp(50): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+Game.cpp(95): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(104): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(129): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(139): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(190): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(202): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(223): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(244): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(272): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(313): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(319): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(355): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(370): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(379): warning C4018: '<': signed/unsigned mismatch
   Generating code
-  1 of 496 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+  1 of 504 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   ConsoleApplication1.vcxproj -> C:\Users\18mac03\Documents\SpaceInvaders\Release\Space Invaders.exe
