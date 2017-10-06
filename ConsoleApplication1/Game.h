@@ -1,7 +1,8 @@
 #pragma once
-#include <SFML\Graphics.hpp>
 #include "GameObject.h"
+#include <SFML\Graphics.hpp>
 #include <SFML\Audio.hpp>
+
 class Game
 {
 public:
@@ -10,6 +11,7 @@ public:
 	bool loop();
 	void render();
 	void processKeyboard();
+	void playerShoot(sf::Event);
 private:
 	sf::RenderWindow * window;
 	std::vector<GameObject *> gameData[4];

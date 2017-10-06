@@ -1,21 +1,19 @@
 #include "stdafx.h"
+#include <string>
 #include "Game.h"
 #include "Shield.h"
 #include "Player.h"
 #include "Small.h"
 #include "Medium.h"
 #include "Large.h"
-#include <string>
-#include <iostream>
-#include "Word.h"
 #include "UFO.h"
+#include "Word.h"
 
 
 Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
 {
 	window = renderWindow;
 	
-	#pragma region createObjects
 	//create players
 	gameData[0].push_back(new Player(8, window));//player 1
 	if(twoPlayer)
@@ -39,7 +37,6 @@ Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
 	//create shields
 	for (int i = 0; i < 4; i++)
 		gameData[2].push_back(new Shield(i , window));
-	#pragma endregion
 
 	gameData[3].push_back(new Word(window, "", 12));
 
@@ -79,6 +76,8 @@ bool Game::loop()
 			}
 			else if (event.key.code == sf::Keyboard::BackSpace && pause)
 				return false;
+			else if(event.key.code == sf::Keyboard::W || event.key.code == sf::Keyboard::Up)
+				playerShoot(event);
 		}
 		// Close window: exit
 		else if (event.type == sf::Event::Closed)
@@ -90,7 +89,6 @@ bool Game::loop()
 		//process events
 		processKeyboard();
 
-#pragma region updateObjects
 		//update player
 		for (int i = 0; i < gameData[0].size(); i++)
 		{
@@ -155,9 +153,7 @@ bool Game::loop()
 		gameData[3].front()->setPosition(sf::Vector2f(oldsize.x, 16));
 		//gameData[3].front()->setFillColor(sf::Color::White);
 		gameData[3].front()->update();
-#pragma endregion
 
-#pragma region enemyMovement
 		static int difficulty = 40;
 		//enemy movement & sound
 		if (ticks % difficulty == 0 && ticks > endticks + 100 && liveEnemies > 0)
@@ -266,7 +262,6 @@ bool Game::loop()
 					gameData[1].at(i)->setTexture("largeShip1.png");
 			}
 		}
-#pragma endregion 
 
 		//check player death
 		for (int i = 0; i < gameData[0].size(); i++)
@@ -354,11 +349,11 @@ void Game::render()
 	for (int i = 0; i < 4; i++)
 		for (int j = 0; j < gameData[i].size(); j++)
 			gameData[i].at(j)->render();
-
 	window->draw(lifeSeperator);
 
 	window->display();
 }
+
 
 
 void Game::processKeyboard()
@@ -372,7 +367,6 @@ void Game::processKeyboard()
 
 		while (shipTemp != nullptr && shipTemp->getLife() != 0)
 			shipTemp->takeLife();
-
 	}
 
 	//for each player in game data
@@ -384,10 +378,6 @@ void Game::processKeyboard()
 		//if current index is for player 1 process player 1 controls
 		if (playerTemp->player == "Player 1")
 		{
-			//W key shoots
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
-				playerTemp->shoot();
-
 			//A key move left
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
 				playerTemp->move(2);
@@ -398,16 +388,38 @@ void Game::processKeyboard()
 		//if current index is for player 2 process player 2 controls
 		else if (playerTemp->player == "Player 2")
 		{
-			//dpad up Shoots
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-				playerTemp->shoot();
-
 			//dpad left move left
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 				playerTemp->move(2);
 			//dpad right move right
 			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 				playerTemp->move(1);
+		}
+	}
+}
+
+
+void Game::playerShoot(sf::Event event)
+{
+	//for each player in game data
+	for (int i = 0; i < gameData[0].size(); i++)
+	{
+		//convert from GameObject to Player
+		Player * playerTemp = dynamic_cast<Player *> (gameData[0].at(i));
+
+		//if current index is for player 1 process player 1 controls
+		if (playerTemp->player == "Player 1")
+		{
+			//W key shoots
+			if (event.key.code == sf::Keyboard::W)
+				playerTemp->shoot();
+		}
+		//if current index is for player 2 process player 2 controls
+		else if (playerTemp->player == "Player 2")
+		{
+			//dpad up Shoots
+			if (event.key.code == sf::Keyboard::Up)
+				playerTemp->shoot();
 		}
 	}
 }

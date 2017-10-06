@@ -1,9 +1,5 @@
 #include "stdafx.h"
 #include "Medium.h"
-#include "Bullet.h"
-
-
-const  int FINDLATER = 5;
 
 
 Medium::Medium(int x, sf::RenderWindow * wndw) : Ship(wndw)

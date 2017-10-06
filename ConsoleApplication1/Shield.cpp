@@ -28,6 +28,7 @@ void Shield::takeHealth()
 	health--;
 }
 
+
 int Shield::getHealth() const
 {
 	return health;

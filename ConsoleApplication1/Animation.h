@@ -1,6 +1,6 @@
 #pragma once
 #include "GameObject.h"
-#include <SFML\Graphics.hpp>
+
 class Animation : public GameObject
 {
 public:

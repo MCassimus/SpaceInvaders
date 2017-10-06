@@ -1,5 +1,6 @@
 #pragma once
 #include "Ship.h"
+
 class Medium :
 	public Ship
 {

@@ -9,13 +9,14 @@ Animation::Animation(sf::Vector2f pos, std::vector<std::string> frames, sf::Rend
 	update();
 }
 
+
 Animation::~Animation()
 {
 }
 
+
 void Animation::update()
 {
-
 	if (frame < frameFiles.size() && frameDelay % 8 == 0)
 	{
 		setTexture(frameFiles.at(frame));
@@ -25,6 +26,7 @@ void Animation::update()
 	else
 		frameDelay++;
 }
+
 
 bool Animation::isDone()
 {

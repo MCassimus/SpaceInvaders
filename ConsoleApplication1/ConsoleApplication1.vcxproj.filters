@@ -32,7 +32,4 @@
     <ClInclude Include="Word.h" />
     <ClInclude Include="UFO.h" />
   </ItemGroup>
-  <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
 </Project>

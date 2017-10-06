@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "Ship.h"
 #include "Shield.h"
-#include <iostream>
 
 
 Ship::Ship(sf::RenderWindow * renderWindow) : GameObject(renderWindow)
@@ -12,6 +11,8 @@ Ship::Ship(sf::RenderWindow * renderWindow) : GameObject(renderWindow)
 
 Ship::~Ship()
 {
+	if (activeShot != nullptr)
+		delete activeShot;
 }
 
 
@@ -28,20 +29,24 @@ void Ship::render()
 			animation.at(i)->render();
 }
 
+
 int Ship::getLife() const
 {
 	return lives;
 }
+
 
 void Ship::takeLife()
 {
 	lives--;
 }
 
+
 int Ship::getPoints() const
 {
 	return points;
 }
+
 
 void Ship::renderLives()
 {
@@ -101,6 +106,7 @@ void Ship::update(std::vector<GameObject *> other)
 		}
 	}
 }
+
 
 bool Ship::move(int dir)
 {

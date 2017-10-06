@@ -1,7 +1,6 @@
 #include "stdafx.h"
-#include "Word.h"
-#include <iostream>
 #include <string>
+#include "Word.h"
 
 
 Word::Word(sf::RenderWindow *renderWindow, std::string str, float textSize) : GameObject(renderWindow)
@@ -9,7 +8,7 @@ Word::Word(sf::RenderWindow *renderWindow, std::string str, float textSize) : Ga
 	text.setString(str);
 	if (!font.loadFromFile("ArcadeFont.ttf"))
 	{
-		std::cout << "unable to load font" << std::endl;
+		std::printf("Unable to load font.\n");
 		system("pause");
 	}
 

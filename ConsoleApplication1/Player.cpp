@@ -1,12 +1,9 @@
 #include "stdafx.h"
-#include "Player.h"
-#include "Bullet.h"
 #include <typeinfo>
-#include <iostream>
-#include "Shield.h"
+#include "Player.h"
 #include "Animation.h"
-
-const  int FINDLATER = 5;
+#include "Shield.h"
+#include "Bullet.h"
 
 
 Player::Player(int x, sf::RenderWindow * wndw, char * name) : Ship(wndw)
@@ -133,7 +130,9 @@ void Player::update(std::vector<GameObject *> & other)
 }
 
 
-void Player::update() {};
+void Player::update() 
+{
+};
 
 
 bool Player::move(int dir)
@@ -163,10 +162,12 @@ void Player::shoot()
 	}
 }
 
+
 int Player::getScore() const
 {
 	return score;
 }
+
 
 void Player::renderLives()
 {

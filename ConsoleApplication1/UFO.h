@@ -1,6 +1,7 @@
 #pragma once
 #include "Ship.h"
 #include <SFML\Audio.hpp>
+
 class UFO : public Ship
 {
 public:
@@ -14,4 +15,3 @@ private:
 	sf::SoundBuffer buffer;
 	sf::Sound ufoSound;
 };
-

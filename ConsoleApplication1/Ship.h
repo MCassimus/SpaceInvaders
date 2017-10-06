@@ -1,8 +1,8 @@
 #pragma once
 #include "GameObject.h"
-#include <SFML/Graphics.hpp>
-#include "Bullet.h"
 #include "Animation.h"
+#include "Bullet.h"
+
 class Ship : public GameObject
 {
 public:

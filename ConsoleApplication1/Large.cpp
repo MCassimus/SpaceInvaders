@@ -1,9 +1,5 @@
 #include "stdafx.h"
 #include "Large.h"
-#include "Bullet.h"
-
-
-const  int FINDLATER = 5;
 
 
 Large::Large(int x, sf::RenderWindow * wndw) : Ship(wndw)

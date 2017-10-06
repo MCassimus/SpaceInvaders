@@ -14,6 +14,8 @@ UFO::UFO(sf::RenderWindow * window) : Ship(window)
 	points = 50 * ((rand() % 4) + 1);
 
 	buffer.loadFromFile("Sounds/UFO.wav");
+	ufoSound.setBuffer(buffer);
+	ufoSound.setLoop(true);
 	ufoSound.play();
 
 	setTexture("ufo.png");
@@ -22,14 +24,12 @@ UFO::UFO(sf::RenderWindow * window) : Ship(window)
 
 UFO::~UFO()
 {
+	ufoSound.stop();
 }
 
 
 bool UFO::move(int dir)
 {
-	if (ufoSound.getStatus() == ufoSound.Stopped)
-		ufoSound.play();
-
 	if (direction == 0)//move right
 		rectangle.move(sf::Vector2f(5, 0));
 	else if (direction == 1)//move left
@@ -48,6 +48,7 @@ bool UFO::shoot()
 {
 	return true;
 }
+
 
 void UFO::update()
 {

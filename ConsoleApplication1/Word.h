@@ -1,5 +1,6 @@
 #pragma once
 #include "GameObject.h"
+
 class Word :
 	public GameObject
 {
@@ -15,4 +16,3 @@ private:
 	sf::Text text;
 	sf::Font font;
 };
-
