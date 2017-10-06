@@ -42,9 +42,10 @@ Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
 
 	gameData[3].push_back(new Word(window, "0 Score <1> ------- Score <2>  0"));
 	gameData[3].front()->setPosition(sf::Vector2f(window->getView().getSize().x / 2, 0));
+	gameData[3].front()->update();
 
 	//ititalize sounds for enemy movement
-	sounds.loadFromFile("../Sounds/EnemyMove/enemyMove1.wav");
+	sounds.loadFromFile("Sounds/EnemyMove/enemyMove1.wav");
 	soundPlayer.setBuffer(sounds);
 
 	srand(time(NULL));
@@ -151,26 +152,27 @@ bool Game::loop()
 #pragma endregion
 
 #pragma region enemyMovement
+		static int difficulty = 40;
 		//enemy movement & sound
-		if (ticks % 20 == 0 && ticks > endticks + 100 && liveEnemies > 0)
+		if (ticks % difficulty == 0 && ticks > endticks + 100 && liveEnemies > 0)
 		{
 			static int sound = 0;
 			switch (sound)
 			{
 			case 0:
-				sounds.loadFromFile("../Sounds/EnemyMove/enemyMove1.wav");
+				sounds.loadFromFile("Sounds/EnemyMove/enemyMove1.wav");
 				sound++;
 				break;
 			case 1:
-				sounds.loadFromFile("../Sounds/EnemyMove/enemyMove2.wav");
+				sounds.loadFromFile("Sounds/EnemyMove/enemyMove2.wav");
 				sound++;
 				break;
 			case 2:
-				sounds.loadFromFile("../Sounds/EnemyMove/enemyMove3.wav");
+				sounds.loadFromFile("Sounds/EnemyMove/enemyMove3.wav");
 				sound++;
 				break;
 			case 3:
-				sounds.loadFromFile("../Sounds/EnemyMove/enemyMove4.wav");
+				sounds.loadFromFile("Sounds/EnemyMove/enemyMove4.wav");
 				sound = 0;
 				break;
 			}
@@ -235,7 +237,7 @@ bool Game::loop()
 		//update enemy texture
 		for (int i = 0; i < gameData[1].size(); i++)
 		{
-			if (ticks % 40 == 0)
+			if (ticks % (difficulty * 2) == 0)
 			{
 				std::string type = typeid(*gameData[1].at(i)).name();
 
@@ -246,7 +248,7 @@ bool Game::loop()
 				else if (type == "class Large")
 					gameData[1].at(i)->setTexture("largeShip0.png");
 			}
-			else if (ticks % 20 == 0)
+			else if (ticks % difficulty == 0)
 			{
 				std::string type = typeid(*gameData[1].at(i)).name();
 
@@ -289,6 +291,8 @@ bool Game::loop()
 			{
 				level++;
 				endticks = ticks;
+				if(difficulty - 1 > 5)
+					difficulty -= 3;
 				gameData[3].push_back(new Word(window, "LEVEL " + std::to_string(level)));
 				sf::Vector2f oldsize(window->getView().getSize());
 				gameData[3].back()->setPosition(sf::Vector2f(oldsize.x, (3 * oldsize.y) / 4));

@@ -23,11 +23,11 @@ Player::Player(int x, sf::RenderWindow * wndw, char * name) : Ship(wndw)
 	lives = 3;
 
 	//initialize bullet sounds
-	bulletBuffer.loadFromFile("../Sounds/bullet.wav");
+	bulletBuffer.loadFromFile("Sounds/bullet.wav");
 	bulletSound.setBuffer(bulletBuffer);
 
 	//intialize enemy death sounds
-	enemyDeathBuffer.loadFromFile("../Sounds/enemyDeath.wav");
+	enemyDeathBuffer.loadFromFile("Sounds/enemyDeath.wav");
 	enemyDeath.setBuffer(enemyDeathBuffer);
 
 	extraLives = new Ship(wndw);
@@ -78,15 +78,7 @@ void Player::update(std::vector<GameObject *> other)
 						score += shipTemp->getPoints();
 						shipTemp->takeLife();
 
-						//animmation and sound for enemy death
-						/*std::vector<std::string> frameFiles;
-
-						frameFiles.push_back("enemyDeath/enemyDeath0.png");
-						frameFiles.push_back("enemyDeath/enemyDeath1.png");
-						frameFiles.push_back("enemyDeath/enemyDeath2.png");
-
-						animation.push_back(new Animation(other.at(i)->getPosition(), frameFiles, window));*/
-
+						//sound for enemy death
 						enemyDeath.play();
 
 						bulletDeath = true;
