@@ -26,13 +26,9 @@ Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
 	for(int i = 0; i<11; i++)
 		gameData[1].push_back(new Small(i, window));
 	for (int i = 0; i < 22; i++)
-	{
 		gameData[1].push_back(new Medium(i, window));
-	}
 	for (int i = 0; i < 22; i++)
-	{
 		gameData[1].push_back(new Large(i, window));
-	}
 
 	//create shields
 	for (int i = 0; i < 4; i++)
@@ -66,7 +62,6 @@ bool Game::loop()
 	while (window->pollEvent(event))
 	{
 		if (event.type == sf::Event::KeyPressed)
-		{
 			if (event.key.code == sf::Keyboard::Escape)
 			{
 				if (pause)
@@ -76,9 +71,8 @@ bool Game::loop()
 			}
 			else if (event.key.code == sf::Keyboard::BackSpace && pause)
 				return false;
-			else if(event.key.code == sf::Keyboard::W || event.key.code == sf::Keyboard::Up)
-				playerShoot(event);
-		}
+		if (event.type == sf::Event::KeyPressed && sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+			playerShoot(event);
 		// Close window: exit
 		else if (event.type == sf::Event::Closed)
 			window->close();
@@ -120,7 +114,6 @@ bool Game::loop()
 				Animation * animationTemp = dynamic_cast<Animation*>(gameData[1].at(i));
 				animationTemp->update();
 			}
-
 		}
 
 		//update shield
@@ -151,7 +144,6 @@ bool Game::loop()
 		sf::Vector2f oldsize(window->getView().getSize());
 		gameData[3].front()->setTexture("Score <1>  " + player1Score + "                                " + player2Score + "  Score <2>");
 		gameData[3].front()->setPosition(sf::Vector2f(oldsize.x, 16));
-		//gameData[3].front()->setFillColor(sf::Color::White);
 		gameData[3].front()->update();
 
 		static int difficulty = 40;
