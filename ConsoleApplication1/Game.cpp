@@ -191,18 +191,13 @@ bool Game::loop()
 				{
 					if (dynamic_cast<Ship *>(gameData[1].at(i)) != nullptr)
 					{
-
 						if (dynamic_cast<Ship*>(gameData[1].at(i))->move(1))
-						{
 							dir = 0;
-						}
 					}
 					else
 					{
 						if (dynamic_cast<Animation*>(gameData[1].at(i))->move(1))
-						{
 							dir = 0;
-						}
 					}
 				}
 			}
@@ -213,16 +208,12 @@ bool Game::loop()
 					if (dynamic_cast<Ship*>(gameData[1].at(i)) != nullptr)
 					{
 						if (dynamic_cast<Ship*>(gameData[1].at(i))->move(2))
-						{
 							dir = 3;
-						}
 					}
 					else
 					{
 						if (dynamic_cast<Animation*>(gameData[1].at(i))->move(2))
-						{
 							dir = 3;
-						}
 					}
 				}
 			}
