@@ -16,7 +16,7 @@ int main()
 	//sf::RenderWindow window(sf::VideoMode::getFullscreenModes().at(0), "Space Invaders", sf::Style::Fullscreen);
 	sf::RenderWindow window(sf::VideoMode(434, 496), "Space Invaders");
 	window.setFramerateLimit(60);
-	//window.setKeyRepeatEnabled(true);
+	window.setKeyRepeatEnabled(false);
 
 	sf::View view(sf::Rect<float>(0, 0, 217, 248));
 	window.setView(view);
