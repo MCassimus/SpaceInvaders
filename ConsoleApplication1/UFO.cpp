@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "UFO.h"
+#include <iostream>
 
 
 UFO::UFO(sf::RenderWindow * window) : Ship(window)
@@ -16,6 +17,7 @@ UFO::UFO(sf::RenderWindow * window) : Ship(window)
 	buffer.loadFromFile("Sounds/UFO.wav");
 	ufoSound.setBuffer(buffer);
 	ufoSound.setLoop(true);
+	ufoSound.setVolume(10);
 	ufoSound.play();
 
 	setTexture("ufo.png");
@@ -31,9 +33,9 @@ UFO::~UFO()
 bool UFO::move(int dir)
 {
 	if (direction == 0)//move right
-		rectangle.move(sf::Vector2f(5, 0));
+		rectangle.move(sf::Vector2f(0.5, 0));
 	else if (direction == 1)//move left
-		rectangle.move(sf::Vector2f(-5, 0));
+		rectangle.move(sf::Vector2f(-0.5, 0));
 	
 	//if offscreen kill ufo
 	if (rectangle.getPosition().x < -10 || rectangle.getPosition().x > window->getView().getSize().x + 10)
@@ -52,5 +54,7 @@ bool UFO::shoot()
 
 void UFO::update()
 {
+	if (getLife() == 0)
+		ufoSound.stop();
 	move(direction);
 }

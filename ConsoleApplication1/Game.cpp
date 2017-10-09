@@ -8,6 +8,7 @@
 #include "Large.h"
 #include "UFO.h"
 #include "Word.h"
+#include <iostream>
 
 
 Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
@@ -33,6 +34,12 @@ Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
 	{
 		gameData[1].push_back(new Large(i, window));
 	}
+
+
+
+	Ship * ufo = new UFO(window);
+	ufo->takeLife();
+	gameData[1].push_back(ufo);
 
 	//create shields
 	for (int i = 0; i < 4; i++)
@@ -113,6 +120,10 @@ bool Game::loop()
 					frameFiles.push_back("transparent.png");
 					gameData[1].at(i) = new Animation(shipTemp->getPosition(), frameFiles, window);
 				}
+
+				//update ufo
+				if (i == 55)
+					shipTemp->update();
 			}
 			else
 			{
@@ -120,6 +131,7 @@ bool Game::loop()
 				Animation * animationTemp = dynamic_cast<Animation*>(gameData[1].at(i));
 				animationTemp->update();
 			}
+
 
 		}
 
@@ -149,7 +161,7 @@ bool Game::loop()
 			player2Score = "0" + player2Score;
 
 		sf::Vector2f oldsize(window->getView().getSize());
-		gameData[3].front()->setTexture("Score <1>  " + player1Score + "                                " + player2Score + "  Score <2>");
+		gameData[3].front()->setTexture("SCORE <1>  " + player1Score + "                                " + player2Score + "  SCORE <2>");
 		gameData[3].front()->setPosition(sf::Vector2f(oldsize.x, 16));
 		//gameData[3].front()->setFillColor(sf::Color::White);
 		gameData[3].front()->update();
@@ -285,6 +297,23 @@ bool Game::loop()
 			}
 		}
 
+		if (rand() % 300 == 0)
+		{
+			try
+			{
+				if (dynamic_cast<UFO *>(gameData[1].back())->getLife() == 0)
+				{
+					delete gameData[1].back();
+					gameData[1].back() = new UFO(window);
+				}
+			}
+			catch (std::exception e)
+			{
+				std::cout << gameData[1].size() << std::endl;
+				system("pause");
+			}
+		}
+
 		//check if no more enemies, then displays next level
 		if (ticks > endticks + 100)
 		{
@@ -327,8 +356,10 @@ bool Game::loop()
 			{
 				gameData[1].push_back(new Large(j, window));
 			}
-
-			gameData[1].push_back(new UFO(window));
+			
+			Ship * ufo = new UFO(window);
+			ufo->takeLife();
+			gameData[1].push_back(ufo);
 
 			for (int i = 0; i < 4; i++)
 				gameData[2].push_back(new Shield(i, window));

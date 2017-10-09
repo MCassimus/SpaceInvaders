@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Ship.h"
 #include "Shield.h"
+#include <Windows.h>
 
 
 Ship::Ship(sf::RenderWindow * renderWindow) : GameObject(renderWindow)
@@ -32,7 +33,10 @@ void Ship::render()
 
 int Ship::getLife() const
 {
-	return lives;
+	if (this != nullptr)
+		return lives;
+	else
+		return 0;
 }
 
 

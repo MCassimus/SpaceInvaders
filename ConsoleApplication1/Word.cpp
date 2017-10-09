@@ -6,7 +6,7 @@
 Word::Word(sf::RenderWindow *renderWindow, std::string str, float textSize) : GameObject(renderWindow)
 {
 	text.setString(str);
-	if (!font.loadFromFile("ArcadeFont.ttf"))
+	if (!font.loadFromFile("Pixel-Miners.otf"))
 	{
 		std::printf("Unable to load font.\n");
 		system("pause");
