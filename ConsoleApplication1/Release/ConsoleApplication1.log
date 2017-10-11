@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  stdafx.cpp
   Animation.cpp
 c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\GameObject.h(2): fatal error C1083: Cannot open include file: 'SFML\Graphics.hpp': No such file or directory
@@ -25,3 +26,31 @@ c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\GameObject.h
 c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\GameObject.h(2): fatal error C1083: Cannot open include file: 'SFML\Graphics.hpp': No such file or directory
   Word.cpp
 c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\GameObject.h(2): fatal error C1083: Cannot open include file: 'SFML\Graphics.hpp': No such file or directory
+=======
+﻿  Animation.cpp
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\GameObject.h(3): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  Bullet.cpp
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\GameObject.h(3): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  Game.cpp
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\GameObject.h(3): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  GameObject.cpp
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\GameObject.h(3): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  Large.cpp
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\GameObject.h(3): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  Medium.cpp
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\GameObject.h(3): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  Player.cpp
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\GameObject.h(3): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  Ship.cpp
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\GameObject.h(3): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  Small.cpp
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\GameObject.h(3): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  spaceInvaders.cpp
+spaceInvaders.cpp(8): fatal error C1083: Cannot open include file: 'SFML\Graphics\RenderWindow.hpp': No such file or directory
+  Shield.cpp
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\GameObject.h(3): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  UFO.cpp
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\GameObject.h(3): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  Word.cpp
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\GameObject.h(3): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+>>>>>>> 5bc0b5f97b8d4dbfc7695248bc91b72fd2ce55b2

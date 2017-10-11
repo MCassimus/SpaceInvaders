@@ -15,5 +15,8 @@ Small::Small(int x, sf::RenderWindow * wndw) : Ship(wndw)
 Small::~Small()
 {
 	if (activeShot != nullptr)
+	{
 		delete activeShot;
+		activeShot = nullptr;
+	}
 }

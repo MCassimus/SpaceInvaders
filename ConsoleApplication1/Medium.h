@@ -6,5 +6,5 @@ class Medium :
 {
 public:
 	Medium(int, sf::RenderWindow*);
-	~Medium();
+	virtual ~Medium();
 };

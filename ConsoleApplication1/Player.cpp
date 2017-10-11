@@ -39,6 +39,7 @@ Player::~Player()
 {
 	if (activeShot != nullptr)
 		delete activeShot;
+	delete extraLives;
 }
 
 

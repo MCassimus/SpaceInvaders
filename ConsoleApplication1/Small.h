@@ -5,5 +5,5 @@ class Small :
 {
 public:
 	Small(int,sf::RenderWindow*);
-	~Small();
+	virtual ~Small();
 };

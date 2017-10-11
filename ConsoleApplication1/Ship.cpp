@@ -13,7 +13,10 @@ Ship::Ship(sf::RenderWindow * renderWindow) : GameObject(renderWindow)
 Ship::~Ship()
 {
 	if (activeShot != nullptr)
+	{
 		delete activeShot;
+		activeShot = nullptr;
+	}
 }
 
 

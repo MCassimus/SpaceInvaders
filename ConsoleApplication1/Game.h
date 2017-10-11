@@ -16,7 +16,7 @@ private:
 	sf::RenderWindow * window;
 	std::vector<GameObject *> gameData[4];
 	sf::RectangleShape lifeSeperator;
-	int level;
+	int level = 1;
 	bool pause = false;
 	sf::SoundBuffer sounds;
 	sf::Sound soundPlayer;

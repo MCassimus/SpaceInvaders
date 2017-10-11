@@ -125,11 +125,6 @@ bool Game::loop()
 				Animation * animationTemp = dynamic_cast<Animation*>(gameData[1].at(i));
 				animationTemp->update();
 			}
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 5bc0b5f97b8d4dbfc7695248bc91b72fd2ce55b2
 		}
 
 		//update shield

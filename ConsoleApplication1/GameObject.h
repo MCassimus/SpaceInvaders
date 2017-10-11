@@ -5,7 +5,7 @@ class GameObject
 {
 public:
 	GameObject(sf::RenderWindow *);
-	~GameObject();
+	virtual ~GameObject();
 	virtual void render();
 	virtual void update();
 	bool collide(GameObject *);

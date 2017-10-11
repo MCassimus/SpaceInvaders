@@ -6,5 +6,5 @@ class Large :
 {
 public:
 	Large(int,sf::RenderWindow*);
-	~Large();
+	virtual ~Large();
 };

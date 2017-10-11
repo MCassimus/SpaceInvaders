@@ -13,5 +13,8 @@ Large::Large(int x, sf::RenderWindow * wndw) : Ship(wndw)
 Large::~Large()
 {
 	if (activeShot != nullptr)
+	{
 		delete activeShot;
+		activeShot = nullptr;
+	}
 }

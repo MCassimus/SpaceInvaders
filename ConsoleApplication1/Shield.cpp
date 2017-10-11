@@ -10,11 +10,6 @@ Shield::Shield(int id, sf::RenderWindow * renderWindow) : GameObject(renderWindo
 }
 
 
-Shield::~Shield()
-{
-}
-
-
 void Shield::update()
 {
 	//update texture to match

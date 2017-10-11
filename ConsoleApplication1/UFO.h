@@ -6,7 +6,7 @@ class UFO : public Ship
 {
 public:
 	UFO(sf::RenderWindow *);
-	~UFO();
+	virtual ~UFO();
 	bool move(int);
 	bool shoot();
 	void update();

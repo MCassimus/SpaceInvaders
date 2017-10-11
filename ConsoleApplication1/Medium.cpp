@@ -13,5 +13,8 @@ Medium::Medium(int x, sf::RenderWindow * wndw) : Ship(wndw)
 Medium::~Medium()
 {
 	if (activeShot != nullptr)
+	{
 		delete activeShot;
+		activeShot = nullptr;
+	}
 }

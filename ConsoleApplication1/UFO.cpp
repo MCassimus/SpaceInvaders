@@ -27,6 +27,12 @@ UFO::UFO(sf::RenderWindow * window) : Ship(window)
 UFO::~UFO()
 {
 	ufoSound.stop();
+	if (activeShot != nullptr)
+	{
+		delete activeShot;
+		std::cout << "UFO has bullet" << std::endl;
+		system("pause");
+	}
 }
 
 

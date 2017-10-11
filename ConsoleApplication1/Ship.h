@@ -7,7 +7,7 @@ class Ship : public GameObject
 {
 public:
 	Ship(sf::RenderWindow *);
-	~Ship();
+	virtual ~Ship();
 	virtual bool move(int);
 	virtual void update(std::vector<GameObject *>);
 	void update();
