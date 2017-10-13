@@ -35,6 +35,7 @@ Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
 
 	Ship * ufo = new UFO(window);
 	ufo->takeLife();
+	ufo->update();
 	gameData[1].push_back(ufo);
 
 	//create shields
@@ -279,7 +280,9 @@ bool Game::loop()
 			}
 		}
 
-		if (rand() % 300 == 0)
+
+		//ufo spawning
+		if (rand() % 875 == 0 && ticks > endticks + 100)
 		{
 			try
 			{
@@ -310,23 +313,23 @@ bool Game::loop()
 				gameData[3].back()->setPosition(sf::Vector2f(oldsize.x, (3 * oldsize.y) / 4));
 				gameData[3].back()->setFillColor(sf::Color::White);
 				gameData[3].back()->update();
+				for (int j = 0; j < gameData[1].size(); j++)
+				{
+					delete gameData[1].at(j);
+				}
+				gameData[1].clear();
+
+				for (int j = 0; j < gameData[2].size(); j++)
+				{
+					delete gameData[2].at(j);
+				}
+				gameData[2].clear();
 			}
 		}
 
 		if (ticks == endticks + 100)
 		{
 			gameData[3].pop_back();
-			for (int j = 0; j < gameData[1].size(); j++)
-			{
-				delete gameData[1].at(j);
-			}
-			gameData[1].clear();
-
-			for (int j = 0; j < gameData[2].size(); j++)
-			{
-				delete gameData[2].at(j);
-			}
-			gameData[2].clear();
 
 			for (int j = 0; j < 11; j++)
 				gameData[1].push_back(new Small(j, window));
@@ -341,6 +344,7 @@ bool Game::loop()
 			
 			Ship * ufo = new UFO(window);
 			ufo->takeLife();
+			ufo->update();
 			gameData[1].push_back(ufo);
 
 			for (int i = 0; i < 4; i++)
