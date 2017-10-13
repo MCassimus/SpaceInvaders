@@ -159,7 +159,12 @@ bool Game::loop()
 		gameData[3].front()->update();
 
 		static int difficulty = 40;
+
+		static int dir = 1;
 		//enemy movement & sound
+
+		if (ticks > endticks + 100)
+		{
 		if (ticks % difficulty == 0 && ticks > endticks + 100 && liveEnemies > 0)
 		{
 			static int sound = 0;
@@ -183,8 +188,6 @@ bool Game::loop()
 				break;
 			}
 			soundPlayer.play();
-
-			static int dir = 1;
 			if (dir == 0 || dir == 3)
 			{
 				for (int i = 0; i < gameData[1].size(); i++)
@@ -282,7 +285,7 @@ bool Game::loop()
 
 
 		//ufo spawning
-		if (rand() % 875 == 0 && ticks > endticks + 100)
+		if (rand() % 875 == 0)
 		{
 			try
 			{
@@ -300,8 +303,6 @@ bool Game::loop()
 		}
 
 		//check if no more enemies, then displays next level
-		if (ticks > endticks + 100)
-		{
 			if(liveEnemies == 0)
 			{
 				level++;
@@ -349,6 +350,8 @@ bool Game::loop()
 
 			for (int i = 0; i < 4; i++)
 				gameData[2].push_back(new Shield(i, window));
+
+			dir = 1;
 		}
 	}
 

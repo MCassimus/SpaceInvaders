@@ -6,16 +6,16 @@ c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(95)
 c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(104): warning C4018: '<': signed/unsigned mismatch
 c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(132): warning C4018: '<': signed/unsigned mismatch
 c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(142): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(190): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(202): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(218): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(235): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(262): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(316): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(322): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(367): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(382): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(390): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(422): warning C4018: '<': signed/unsigned mismatch
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(193): warning C4018: '<': signed/unsigned mismatch
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(205): warning C4018: '<': signed/unsigned mismatch
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(221): warning C4018: '<': signed/unsigned mismatch
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(238): warning C4018: '<': signed/unsigned mismatch
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(265): warning C4018: '<': signed/unsigned mismatch
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(317): warning C4018: '<': signed/unsigned mismatch
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(323): warning C4018: '<': signed/unsigned mismatch
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(370): warning C4018: '<': signed/unsigned mismatch
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(385): warning C4018: '<': signed/unsigned mismatch
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(393): warning C4018: '<': signed/unsigned mismatch
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(425): warning C4018: '<': signed/unsigned mismatch
   ConsoleApplication1.vcxproj -> C:\Users\18dcb01\Documents\GitHub\SpaceInvaders\Debug\Space Invaders.exe
   ConsoleApplication1.vcxproj -> C:\Users\18dcb01\Documents\GitHub\SpaceInvaders\Debug\Space Invaders.pdb (Partial PDB)
