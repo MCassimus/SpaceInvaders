@@ -355,6 +355,18 @@ bool Game::loop()
 		}
 	}
 
+	//check for enemy collision with shields
+	for (int j = 0; j < gameData[1].size(); j++)
+	{
+		for (int i = 0; i < gameData[2].size(); i++)
+		{
+			if (gameData[1].at(j)->collide(gameData[2].at(i)))
+				return false;
+			else if (!gameData[1].at(j)->getPosition().y > window->getView().getSize().y - 18)
+				return false;
+		}
+	}
+
 	if(window->isOpen() && !gameData[0].empty())
 		return true;//return true while players are alive & game open
 	return false;
