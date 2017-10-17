@@ -96,13 +96,25 @@ void Player::update(std::vector<GameObject *> & other)
 					}
 					else if (type == "class UFO")
 					{
+						std::vector<std::string> frameFiles;
 						Ship * shipTemp = dynamic_cast<Ship *>(other.at(i));
-						if (shotCount != 23 || shotCount - 23 % 15 == 0)
+						if (shotCount == 23 || shotCount - 23 % 15 == 0)
+						{
 							score += 300;
+							for(int i = 0; i < 3; i++)
+								frameFiles.push_back("ufoDeath/300.png");
+						}
 						else
+						{
 							score += shipTemp->getPoints();
+							for (int i = 0; i < 3; i++)
+								frameFiles.push_back("ufoDeath/" + std::to_string(shipTemp->getPoints()) + ".png");
+						}
 
 						shipTemp->takeLife();
+
+						frameFiles.push_back("transparent.png");
+						other.at(i) = new Animation(shipTemp->getPosition(), frameFiles, window);
 
 						bulletDeath = true;
 					}

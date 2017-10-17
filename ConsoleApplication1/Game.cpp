@@ -77,10 +77,10 @@ bool Game::loop()
 				else
 					pause = true;
 			}
+			else if (event.key.code == sf::Keyboard::W || event.key.code == sf::Keyboard::Up)
+				playerShoot(event);
 			else if (event.key.code == sf::Keyboard::BackSpace && pause)
 				return false;
-		if (event.type == sf::Event::KeyPressed && sf::Keyboard::isKeyPressed(sf::Keyboard::W))
-			playerShoot(event);
 		// Close window: exit
 		else if (event.type == sf::Event::Closed)
 			window->close();
@@ -159,156 +159,156 @@ bool Game::loop()
 		gameData[3].front()->update();
 
 		static int difficulty = 40;
-
 		static int dir = 1;
-		//enemy movement & sound
-
 		if (ticks > endticks + 100)
 		{
-		if (ticks % difficulty == 0 && ticks > endticks + 100 && liveEnemies > 0)
-		{
-			static int sound = 0;
-			switch (sound)
+			if (ticks % difficulty == 0 && ticks > endticks + 100 && liveEnemies > 0)
 			{
-			case 0:
-				sounds.loadFromFile("Sounds/EnemyMove/enemyMove1.wav");
-				sound++;
-				break;
-			case 1:
-				sounds.loadFromFile("Sounds/EnemyMove/enemyMove2.wav");
-				sound++;
-				break;
-			case 2:
-				sounds.loadFromFile("Sounds/EnemyMove/enemyMove3.wav");
-				sound++;
-				break;
-			case 3:
-				sounds.loadFromFile("Sounds/EnemyMove/enemyMove4.wav");
-				sound = 0;
-				break;
-			}
-			soundPlayer.play();
-			if (dir == 0 || dir == 3)
-			{
-				for (int i = 0; i < gameData[1].size(); i++)
-					if (dynamic_cast<Ship *>(gameData[1].at(i)) != nullptr)
-						dynamic_cast<Ship*>(gameData[1].at(i))->move(0);
+				//change soumd amd play as enemy moves
+				static int sound = 0;
+				switch (sound)
+				{
+				case 0:
+					sounds.loadFromFile("Sounds/EnemyMove/enemyMove1.wav");
+					sound++;
+					break;
+				case 1:
+					sounds.loadFromFile("Sounds/EnemyMove/enemyMove2.wav");
+					sound++;
+					break;
+				case 2:
+					sounds.loadFromFile("Sounds/EnemyMove/enemyMove3.wav");
+					sound++;
+					break;
+				case 3:
+					sounds.loadFromFile("Sounds/EnemyMove/enemyMove4.wav");
+					sound = 0;
+					break;
+				}
+				soundPlayer.play();
+
+				//move enemies in correct dir 
+				if (dir == 0 || dir == 3)
+				{
+					for (int i = 0; i < gameData[1].size(); i++)
+						if (dynamic_cast<Ship *>(gameData[1].at(i)) != nullptr)
+							dynamic_cast<Ship*>(gameData[1].at(i))->move(0);
+						else
+							dynamic_cast<Animation*>(gameData[1].at(i))->move(0);
+					if (dir == 0)
+						dir = 2;
 					else
-						dynamic_cast<Animation*>(gameData[1].at(i))->move(0);
-				if (dir == 0)
-					dir = 2;
+						dir = 1;
+				}
+				else if (dir == 1)
+				{
+					for (int i = 0; i < gameData[1].size(); i++)
+					{
+						if (dynamic_cast<Ship *>(gameData[1].at(i)) != nullptr)
+						{
+							if (dynamic_cast<Ship*>(gameData[1].at(i))->move(1))
+								dir = 0;
+						}
+						else
+						{
+							if (dynamic_cast<Animation*>(gameData[1].at(i))->move(1))
+								dir = 0;
+						}
+					}
+				}
 				else
-					dir = 1;
-			}
-			else if (dir == 1)
-			{
-				for (int i = 0; i < gameData[1].size(); i++)
 				{
-					if (dynamic_cast<Ship *>(gameData[1].at(i)) != nullptr)
+					for (int i = 0; i < gameData[1].size(); i++)
 					{
-						if (dynamic_cast<Ship*>(gameData[1].at(i))->move(1))
-							dir = 0;
-					}
-					else
-					{
-						if (dynamic_cast<Animation*>(gameData[1].at(i))->move(1))
-							dir = 0;
+						if (dynamic_cast<Ship*>(gameData[1].at(i)) != nullptr)
+						{
+							if (dynamic_cast<Ship*>(gameData[1].at(i))->move(2))
+								dir = 3;
+						}
+						else
+						{
+							if (dynamic_cast<Animation*>(gameData[1].at(i))->move(2))
+								dir = 3;
+						}
 					}
 				}
 			}
-			else
+
+			//update enemy texture
+			for (int i = 0; i < gameData[1].size(); i++)
 			{
-				for (int i = 0; i < gameData[1].size(); i++)
+				if (ticks % (difficulty * 2) == 0)
 				{
-					if (dynamic_cast<Ship*>(gameData[1].at(i)) != nullptr)
-					{
-						if (dynamic_cast<Ship*>(gameData[1].at(i))->move(2))
-							dir = 3;
-					}
-					else
-					{
-						if (dynamic_cast<Animation*>(gameData[1].at(i))->move(2))
-							dir = 3;
-					}
+					std::string type = typeid(*gameData[1].at(i)).name();
+
+					if (type == "class Small")
+						gameData[1].at(i)->setTexture("smallShip0.png");
+					else if (type == "class Medium")
+						gameData[1].at(i)->setTexture("mediumShip0.png");
+					else if (type == "class Large")
+						gameData[1].at(i)->setTexture("largeShip0.png");
+				}
+				else if (ticks % difficulty == 0)
+				{
+					std::string type = typeid(*gameData[1].at(i)).name();
+
+					if (type == "class Small")
+						gameData[1].at(i)->setTexture("smallShip1.png");
+					else if (type == "class Medium")
+						gameData[1].at(i)->setTexture("mediumShip1.png");
+					else if (type == "class Large")
+						gameData[1].at(i)->setTexture("largeShip1.png");
 				}
 			}
-		}
 
-		//update enemy texture
-		for (int i = 0; i < gameData[1].size(); i++)
-		{
-			if (ticks % (difficulty * 2) == 0)
+			//check player death
+			for (int i = 0; i < gameData[0].size(); i++)
+				if (dynamic_cast<Player *>(gameData[0].at(i))->getLife() == 0)
+					gameData[0].erase(gameData[0].begin() + i);
+
+			//random enemy shooting
+			for (int i = 0; i < 11; i++)
 			{
-				std::string type = typeid(*gameData[1].at(i)).name();
-
-				if (type == "class Small")
-					gameData[1].at(i)->setTexture("smallShip0.png");
-				else if (type == "class Medium")
-					gameData[1].at(i)->setTexture("mediumShip0.png");
-				else if (type == "class Large")
-					gameData[1].at(i)->setTexture("largeShip0.png");
-			}
-			else if (ticks % difficulty == 0)
-			{
-				std::string type = typeid(*gameData[1].at(i)).name();
-
-				if (type == "class Small")
-					gameData[1].at(i)->setTexture("smallShip1.png");
-				else if (type == "class Medium")
-					gameData[1].at(i)->setTexture("mediumShip1.png");
-				else if (type == "class Large")
-					gameData[1].at(i)->setTexture("largeShip1.png");
-			}
-		}
-
-		//check player death
-		for (int i = 0; i < gameData[0].size(); i++)
-			if (dynamic_cast<Player *>(gameData[0].at(i))->getLife() == 0)
-				gameData[0].erase(gameData[0].begin() + i);
-
-		//random enemy shooting
-		for (int i = 0; i < 11; i++)
-		{
-			if (rand() % 300 == 0)
-			{
-				int j = 44 + i;
-				Ship * shipTemp = dynamic_cast<Ship*>(gameData[1].at(j));
-				if (shipTemp != nullptr)
+				if (rand() % 300 == 0)
 				{
-					while (j >= 0 && !shipTemp->shoot())
+					int j = 44 + i;
+					Ship * shipTemp = dynamic_cast<Ship*>(gameData[1].at(j));
+					if (shipTemp != nullptr)
 					{
-						j -= 11;
+						while (j >= 0 && !shipTemp->shoot())
+						{
+							j -= 11;
+						}
 					}
 				}
 			}
-		}
 
 
-		//ufo spawning
-		if (rand() % 875 == 0)
-		{
-			try
+			//ufo spawning
+			if (rand() % 875 == 0)
 			{
-				if (dynamic_cast<UFO *>(gameData[1].back())->getLife() == 0)
+				try
 				{
-					delete gameData[1].back();
-					gameData[1].back() = new UFO(window);
+					if (dynamic_cast<UFO *>(gameData[1].back())->getLife() == 0)
+					{
+						delete gameData[1].back();
+						gameData[1].back() = new UFO(window);
+					}
+				}
+				catch (std::exception e)
+				{
+					std::cout << gameData[1].size() << std::endl;
+					system("pause");
 				}
 			}
-			catch (std::exception e)
-			{
-				std::cout << gameData[1].size() << std::endl;
-				system("pause");
-			}
-		}
 
-		//check if no more enemies, then displays next level
+			//check if no more enemies, then displays next level
 			if(liveEnemies == 0)
 			{
 				level++;
 				endticks = ticks;
-				if(difficulty - 1 > 5)
-					difficulty -= 3;
+				if(difficulty - 4 > 5)
+					difficulty -= 4;
 				gameData[3].push_back(new Word(window, "LEVEL " + std::to_string(level)));
 				sf::Vector2f oldsize(window->getView().getSize());
 				gameData[3].back()->setPosition(sf::Vector2f(oldsize.x, (3 * oldsize.y) / 4));

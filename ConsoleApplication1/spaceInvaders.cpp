@@ -4,7 +4,6 @@
 	Recreate arcade game space invaders
 */
 #include "stdafx.h"
-#include <Windows.h>
 #include <SFML\Graphics\RenderWindow.hpp>
 #include "Game.h"
 #include "GameObject.h"
@@ -12,7 +11,6 @@
 
 int main()
 {
-	//FreeConsole();//temp until FINAL release comment if you need console
 	//sf::RenderWindow window(sf::VideoMode::getFullscreenModes().at(0), "Space Invaders", sf::Style::Fullscreen);
 	sf::RenderWindow window(sf::VideoMode(434, 496), "Space Invaders");
 	window.setFramerateLimit(60);
@@ -37,7 +35,7 @@ int main()
 				window.close();
 			else if (event.type == sf::Event::Resized)
 			{
-				//resize window to keep view ratio
+				window.setView(view);
 			}
 			else if (event.type == sf::Event::KeyPressed)
 			{
