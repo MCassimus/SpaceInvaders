@@ -117,6 +117,8 @@ void Player::update(std::vector<GameObject *> & other)
 						other.push_back(new Animation(shipTemp->getPosition(), frameFiles, window));
 
 						bulletDeath = true;
+
+						//shipTemp
 					}
 				}
 			}

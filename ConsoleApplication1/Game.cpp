@@ -104,16 +104,16 @@ bool Game::loop()
 			Ship * shipTemp = dynamic_cast<Ship*> (gameData[1].at(i));
 			if (shipTemp != nullptr)
 			{
-				if(i<55)
+				if(i<55&&shipTemp->getLife()>0)
 					liveEnemies++;
 				shipTemp->update(gameData[0]);//update with player param
 				shipTemp->update(gameData[2]);//update with shield param
-				if (shipTemp->getLife() == 0)
+				/*if (shipTemp->getLife() == 0)
 				{
 					std::vector<std::string> frameFiles;
 					frameFiles.push_back("transparent.png");
 					gameData[1].at(i) = new Animation(shipTemp->getPosition(), frameFiles, window);
-				}
+				}*/
 
 				//update ufo
 				if (i == 55)
@@ -124,6 +124,9 @@ bool Game::loop()
 				//update animations
 				Animation * animationTemp = dynamic_cast<Animation*>(gameData[1].at(i));
 				animationTemp->update();
+				if (animationTemp->isDone())
+					delete animationTemp;
+				gameData[1].erase(gameData[1].begin() + i);
 			}
 		}
 
@@ -288,7 +291,8 @@ bool Game::loop()
 			{
 				try
 				{
-					if (dynamic_cast<UFO *>(gameData[1].at(55))->getLife() == 0)
+					UFO * ufoPtr = dynamic_cast<UFO *>(gameData[1].at(55));
+					if (ufoPtr->getLife() == 0 && !ufoPtr->actuallyDead)
 					{
 						delete gameData[1].at(55);
 						gameData[1].at(55) = new UFO(window);
@@ -302,7 +306,6 @@ bool Game::loop()
 			}
 
 			//check if no more enemies, then displays next level
-			std::cout << liveEnemies << std::endl;
 			if(liveEnemies == 0)
 			{
 				level++;
@@ -402,7 +405,7 @@ void Game::processKeyboard()
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::E))
 	{
 		Ship * shipTemp = nullptr;
-		for (int i = 0; i < gameData[1].size() && shipTemp == nullptr; i++)
+		for (int i = 0; i < 54 && shipTemp->getLife()==0; i++)
 			shipTemp = dynamic_cast<Ship *>(gameData[1].at(i));
 
 		while (shipTemp != nullptr && shipTemp->getLife() != 0)
