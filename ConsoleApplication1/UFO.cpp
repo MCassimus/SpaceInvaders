@@ -21,6 +21,8 @@ UFO::UFO(sf::RenderWindow * window) : Ship(window)
 	ufoSound.play();
 
 	setTexture("ufo.png");
+
+	permDeath = false;
 }
 
 
@@ -66,4 +68,14 @@ void UFO::update()
 	if (getLife() == 0)
 		ufoSound.stop();
 	move(direction);
+}
+
+void UFO::actuallyDie()
+{
+	permDeath = true;
+}
+
+bool UFO::actuallyDead()
+{
+	return permDeath;
 }

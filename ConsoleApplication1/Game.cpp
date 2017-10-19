@@ -80,7 +80,7 @@ bool Game::loop()
 			else if (event.key.code == sf::Keyboard::BackSpace && pause)
 				return false;
 		// Close window: exit
-		else if (event.type == sf::Event::Closed)
+		if (event.type == sf::Event::Closed)
 			window->close();
 	}
 
@@ -104,7 +104,8 @@ bool Game::loop()
 			Ship * shipTemp = dynamic_cast<Ship*> (gameData[1].at(i));
 			if (shipTemp != nullptr)
 			{
-				liveEnemies++;
+				if(i<55)
+					liveEnemies++;
 				shipTemp->update(gameData[0]);//update with player param
 				shipTemp->update(gameData[2]);//update with shield param
 				if (shipTemp->getLife() == 0)
@@ -287,10 +288,10 @@ bool Game::loop()
 			{
 				try
 				{
-					if (dynamic_cast<UFO *>(gameData[1].back())->getLife() == 0)
+					if (dynamic_cast<UFO *>(gameData[1].at(55))->getLife() == 0)
 					{
-						delete gameData[1].back();
-						gameData[1].back() = new UFO(window);
+						delete gameData[1].at(55);
+						gameData[1].at(55) = new UFO(window);
 					}
 				}
 				catch (std::exception e)
@@ -301,6 +302,7 @@ bool Game::loop()
 			}
 
 			//check if no more enemies, then displays next level
+			std::cout << liveEnemies << std::endl;
 			if(liveEnemies == 0)
 			{
 				level++;
