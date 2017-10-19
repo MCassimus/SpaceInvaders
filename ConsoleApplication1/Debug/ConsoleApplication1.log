@@ -1,9 +1,25 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ConsoleApplication1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Player.cpp
-c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(18): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(68): warning C4018: '<': signed/unsigned mismatch
-c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(110): error C2059: syntax error: ';'
-c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(110): error C2059: syntax error: ')'
-c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(111): error C2146: syntax error: missing ';' before identifier 'frameFiles'
-c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(137): warning C4018: '<': signed/unsigned mismatch
-c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\player.cpp(191): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Game.cpp
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(49): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(93): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(102): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(130): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(140): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(191): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(203): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(219): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(236): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(263): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(315): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(321): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(357): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(359): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(367): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(369): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(388): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(403): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(411): warning C4018: '<': signed/unsigned mismatch
+c:\users\18mac03\documents\spaceinvaders\consoleapplication1\game.cpp(443): warning C4018: '<': signed/unsigned mismatch
+  ConsoleApplication1.vcxproj -> C:\Users\18mac03\Documents\SpaceInvaders\Debug\Space Invaders.exe
+  ConsoleApplication1.vcxproj -> C:\Users\18mac03\Documents\SpaceInvaders\Debug\Space Invaders.pdb (Partial PDB)

@@ -13,7 +13,6 @@ UFO::UFO(sf::RenderWindow * window) : Ship(window)
 		rectangle.setPosition(sf::Vector2f(window->getView().getSize().x, 28));
 
 	points = 50 * ((rand() % 4) + 1);
-	std::printf("Points %i\n", points);
 
 	buffer.loadFromFile("Sounds/UFO.wav");
 	ufoSound.setBuffer(buffer);
@@ -46,8 +45,11 @@ bool UFO::move(int dir)
 	
 	//if offscreen kill ufo
 	if (rectangle.getPosition().x < -10 || rectangle.getPosition().x > window->getView().getSize().x + 10)
+	{
 		while (getLife() != 0)
 			takeLife();
+		ufoSound.stop();
+	}
 
 	return false;
 }

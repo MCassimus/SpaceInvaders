@@ -31,8 +31,6 @@ Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
 	for (int i = 0; i < 22; i++)
 		gameData[1].push_back(new Large(i, window));
 
-
-
 	Ship * ufo = new UFO(window);
 	ufo->takeLife();
 	ufo->update();
@@ -355,14 +353,22 @@ bool Game::loop()
 		}
 	}
 
-	//check for enemy collision with shields
+	//check for enemy collision with shields and offscreen to end game
 	for (int j = 0; j < gameData[1].size(); j++)
 	{
 		for (int i = 0; i < gameData[2].size(); i++)
 		{
-			if (gameData[1].at(j)->collide(gameData[2].at(i)))
+			if (gameData[1].at(j)->collide(gameData[2].at(i)))//collide w/ shield
 				return false;
-			else if (!gameData[1].at(j)->getPosition().y > window->getView().getSize().y - 18)
+		}
+	}
+
+	//check collision with player to end game
+	for (int i = 0; i < gameData[0].size(); i++)
+	{
+		for (int j = 0; j < gameData[1].size(); j++)
+		{
+			if (gameData[1].at(j)->collide(gameData[0].at(i)))
 				return false;
 		}
 	}
