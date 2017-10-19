@@ -45,8 +45,11 @@ bool UFO::move(int dir)
 	
 	//if offscreen kill ufo
 	if (rectangle.getPosition().x < -10 || rectangle.getPosition().x > window->getView().getSize().x + 10)
+	{
 		while (getLife() != 0)
 			takeLife();
+		ufoSound.stop();
+	}
 
 	return false;
 }
