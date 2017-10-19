@@ -354,6 +354,16 @@ bool Game::loop()
 			dir = 1;
 		}
 	}
+	else
+	{
+		GameObject menu(window);
+		menu.setTexture("pauseMenu.png");
+		menu.setPosition(sf::Vector2f(window->getView().getSize().x / 2, window->getView().getSize().y / 2));
+
+		window->clear();
+		menu.render();
+		window->display();
+	}
 
 	//check for enemy collision with shields and offscreen to end game
 	for (int j = 0; j < gameData[1].size(); j++)
@@ -377,6 +387,16 @@ bool Game::loop()
 
 	if(window->isOpen() && !gameData[0].empty())
 		return true;//return true while players are alive & game open
+
+	GameObject gameOver(window);
+	gameOver.setTexture("gameOver.png");
+	gameOver.setPosition(sf::Vector2f(window->getView().getSize().x / 2, window->getView().getSize().y / 2));
+
+	window->clear();
+	gameOver.render();
+	window->display();
+
+	_sleep(3000);
 	return false;
 }
 
