@@ -82,7 +82,7 @@ void Player::update(std::vector<GameObject *> & other)
 						frameFiles.push_back("enemyDeath/enemyDeath0.png");
 						frameFiles.push_back("enemyDeath/enemyDeath1.png");
 						frameFiles.push_back("transparent.png");
-						other.at(i) = new Animation(shipTemp->getPosition(), frameFiles, window);
+						other.push_back(new Animation(shipTemp->getPosition(), frameFiles, window));
 
 						enemyDeath.play();
 
@@ -114,7 +114,7 @@ void Player::update(std::vector<GameObject *> & other)
 						shipTemp->takeLife();
 
 						frameFiles.push_back("transparent.png");
-						other.at(i) = new Animation(shipTemp->getPosition(), frameFiles, window);
+						other.push_back(new Animation(shipTemp->getPosition(), frameFiles, window));
 
 						bulletDeath = true;
 					}

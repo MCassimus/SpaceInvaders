@@ -2,6 +2,7 @@
 #include "Ship.h"
 #include "Shield.h"
 #include <Windows.h>
+#include <iostream>
 
 
 Ship::Ship(sf::RenderWindow * renderWindow) : GameObject(renderWindow)
@@ -45,7 +46,9 @@ int Ship::getLife() const
 
 void Ship::takeLife()
 {
-	lives--;
+	lives--;//Below is a terrible way to deal with strings
+	if (lives == 0 && static_cast<std::string>(typeid(*this).name()) == "class UFO")
+		this->update();
 }
 
 

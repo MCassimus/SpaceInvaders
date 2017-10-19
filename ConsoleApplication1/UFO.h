@@ -9,9 +9,12 @@ public:
 	virtual ~UFO();
 	bool move(int);
 	bool shoot();
-	void update();
+	virtual void update();
+	void actuallyDie();
+	bool actuallyDead();
 private:
 	int direction;
 	sf::SoundBuffer buffer;
 	sf::Sound ufoSound;
+	bool permDeath;
 };
