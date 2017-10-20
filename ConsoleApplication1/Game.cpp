@@ -403,15 +403,18 @@ bool Game::loop()
 
 void Game::render()
 {
-	window->clear();
+	if (!pause)
+	{
+		window->clear();
 
-	//render every index in game data
-	for (int i = 0; i < 4; i++)
-		for (int j = 0; j < gameData[i].size(); j++)
-			gameData[i].at(j)->render();
-	window->draw(lifeSeperator);
+		//render every index in game data
+		for (int i = 0; i < 4; i++)
+			for (int j = 0; j < gameData[i].size(); j++)
+				gameData[i].at(j)->render();
+		window->draw(lifeSeperator);
 
-	window->display();
+		window->display();
+	}
 }
 
 
