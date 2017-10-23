@@ -71,9 +71,15 @@ bool Game::loop()
 			if (event.key.code == sf::Keyboard::Escape)
 			{
 				if (pause)
+				{
+					dynamic_cast<UFO *>(gameData[1].at(55))->playSound();
 					pause = false;
+				}
 				else
+				{
+					dynamic_cast<UFO *>(gameData[1].at(55))->pauseSound();
 					pause = true;
+				}
 			}
 			else if (event.key.code == sf::Keyboard::W || event.key.code == sf::Keyboard::Up)
 				playerShoot(event);
@@ -289,7 +295,7 @@ bool Game::loop()
 				try
 				{
 					UFO * ufoPtr = dynamic_cast<UFO *>(gameData[1].at(55));
-					if (ufoPtr->getLife() == 0 && !(ufoPtr->actuallyDead()))
+					if (ufoPtr->getLife() <= 0 && !(ufoPtr->actuallyDead()))
 					{
 						delete gameData[1].at(55);
 						gameData[1].at(55) = new UFO(window);
