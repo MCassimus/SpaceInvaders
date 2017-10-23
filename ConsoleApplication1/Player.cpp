@@ -4,6 +4,7 @@
 #include "Animation.h"
 #include "Shield.h"
 #include "Bullet.h"
+#include "UFO.h"
 
 
 Player::Player(int x, sf::RenderWindow * wndw, char * name) : Ship(wndw)
@@ -97,7 +98,7 @@ void Player::update(std::vector<GameObject *> & other)
 					else if (type == "class UFO")
 					{
 						std::vector<std::string> frameFiles;
-						Ship * shipTemp = dynamic_cast<Ship *>(other.at(i));
+						UFO * shipTemp = dynamic_cast<UFO *>(other.at(i));
 						if (shotCount == 23 || shotCount - 23 % 15 == 0)
 						{
 							score += 300;
@@ -112,6 +113,8 @@ void Player::update(std::vector<GameObject *> & other)
 						}
 
 						shipTemp->takeLife();
+						shipTemp->actuallyDie();
+
 
 						frameFiles.push_back("transparent.png");
 						other.push_back(new Animation(shipTemp->getPosition(), frameFiles, window));

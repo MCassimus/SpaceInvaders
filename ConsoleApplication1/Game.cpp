@@ -125,8 +125,10 @@ bool Game::loop()
 				Animation * animationTemp = dynamic_cast<Animation*>(gameData[1].at(i));
 				animationTemp->update();
 				if (animationTemp->isDone())
+				{
 					delete animationTemp;
-				gameData[1].erase(gameData[1].begin() + i);
+					gameData[1].erase(gameData[1].begin() + i);
+				}
 			}
 		}
 
@@ -292,7 +294,7 @@ bool Game::loop()
 				try
 				{
 					UFO * ufoPtr = dynamic_cast<UFO *>(gameData[1].at(55));
-					if (ufoPtr->getLife() == 0 && !ufoPtr->actuallyDead)
+					if (ufoPtr->getLife() == 0 && !(ufoPtr->actuallyDead()))
 					{
 						delete gameData[1].at(55);
 						gameData[1].at(55) = new UFO(window);
