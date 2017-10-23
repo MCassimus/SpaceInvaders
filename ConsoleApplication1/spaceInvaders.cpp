@@ -16,7 +16,7 @@ int main()
 	window.setFramerateLimit(60);
 	window.setKeyRepeatEnabled(false);
 
-	sf::View view(sf::Rect<float>(0, 0, 217, 248));
+	sf::View view(sf::Rect<float>(0, 0, 310, 248));
 	window.setView(view);
 
 	GameObject menu(&window);

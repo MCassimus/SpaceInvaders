@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  Ship.cpp
 c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\Bullet.h(14): warning C4305: 'argument': truncation from 'double' to 'float'
 Ship.cpp(33): warning C4018: '<': signed/unsigned mismatch
@@ -8,5 +9,16 @@ Ship.cpp(132): warning C4018: '<': signed/unsigned mismatch
   0 of 606 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     2 functions had inline decision re-evaluated but remain unchanged
+=======
+﻿  Large.cpp
+Large.cpp(9): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Medium.cpp
+Medium.cpp(9): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Small.cpp
+  Generating code
+  5 of 606 functions ( 0.8%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+>>>>>>> d997c6e431993e934d39b5bf33a193aaffb054b3
   Finished generating code
-  ConsoleApplication1.vcxproj -> C:\Users\18mac03\Documents\GitHub\SpaceInvaders\Release\Space Invaders.exe
+  ConsoleApplication1.vcxproj -> C:\Users\18dcb01\Documents\GitHub\SpaceInvaders\Release\Space Invaders.exe
