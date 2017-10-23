@@ -1,32 +1,16 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ConsoleApplication1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Player.cpp
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\player.cpp(19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\player.cpp(69): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\player.cpp(140): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\player.cpp(194): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Game.cpp
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(49): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(93): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(102): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(136): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(146): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(197): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(209): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(225): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(242): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(269): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(322): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(328): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(374): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(376): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(384): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(386): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(404): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdlib.h(1282): note: see declaration of '_sleep'
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(417): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(441): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(473): warning C4018: '<': signed/unsigned mismatch
+  Bullet.cpp
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\bullet.h(14): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\bullet.cpp(9): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\bullet.cpp(27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Generating Code...
-  ConsoleApplication1.vcxproj -> C:\Users\18dcb01\Documents\GitHub\SpaceInvaders\Debug\Space Invaders.exe
-  ConsoleApplication1.vcxproj -> C:\Users\18dcb01\Documents\GitHub\SpaceInvaders\Debug\Space Invaders.pdb (Partial PDB)
+  Skipping... (no relevant changes detected)
+  UFO.cpp
+  Small.cpp
+  Ship.cpp
+  Player.cpp
+  Medium.cpp
+  Large.cpp
+  Game.cpp
+  ConsoleApplication1.vcxproj -> C:\Users\18mac03\Documents\GitHub\SpaceInvaders\Debug\Space Invaders.exe
+  ConsoleApplication1.vcxproj -> C:\Users\18mac03\Documents\GitHub\SpaceInvaders\Debug\Space Invaders.pdb (Partial PDB)

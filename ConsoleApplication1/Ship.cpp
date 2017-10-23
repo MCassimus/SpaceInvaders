@@ -47,7 +47,7 @@ int Ship::getLife() const
 void Ship::takeLife()
 {
 	lives--;//Below is a terrible way to deal with strings
-	if (lives == 0 && static_cast<std::string>(typeid(*this).name()) == "class UFO")
+	if (lives == 0 && typeid(*this).name() == "class UFO")
 		this->update();
 }
 
@@ -115,6 +115,13 @@ void Ship::update(std::vector<GameObject *> other)
 				animation.at(i)->update();
 		}
 	}
+
+	sf::Vector2f position = rectangle.getPosition();
+	if (lives <= 0)
+	{
+		position.y = window->getView().getSize().y;
+		rectangle.setPosition(position);
+	}
 }
 
 
@@ -146,11 +153,11 @@ bool Ship::move(int dir)
 				return true;
 		}
 	}
-	else
-	{
-		position.y = window->getView().getSize().y;
-		rectangle.setPosition(position);
-	}
+	//else
+	//{
+	//	position.y = window->getView().getSize().y;
+	//	rectangle.setPosition(position);
+	//}
 	return false;
 }
 
