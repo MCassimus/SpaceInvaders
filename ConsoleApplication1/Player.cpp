@@ -78,13 +78,14 @@ void Player::update(std::vector<GameObject *> & other)
 						score += shipTemp->getPoints();
 						shipTemp->takeLife();
 
-						//sound for enemy death
+						//animation for enemy death
 						std::vector<std::string> frameFiles;
 						frameFiles.push_back("enemyDeath/enemyDeath0.png");
 						frameFiles.push_back("enemyDeath/enemyDeath1.png");
 						frameFiles.push_back("transparent.png");
 						other.push_back(new Animation(shipTemp->getPosition(), frameFiles, window));
 
+						//sound for enemy death
 						enemyDeath.play();
 
 						bulletDeath = true;
@@ -115,13 +116,10 @@ void Player::update(std::vector<GameObject *> & other)
 						shipTemp->takeLife();
 						shipTemp->actuallyDie();
 
-
 						frameFiles.push_back("transparent.png");
 						other.push_back(new Animation(shipTemp->getPosition(), frameFiles, window));
 
 						bulletDeath = true;
-
-						//shipTemp
 					}
 				}
 			}
@@ -135,6 +133,7 @@ void Player::update(std::vector<GameObject *> & other)
 		else
 			activeShot->update();
 	}
+
 	if (!animation.empty())
 	{
 		for (int i = 0; i < animation.size(); i++)
@@ -155,15 +154,18 @@ void Player::update()
 
 bool Player::move(int dir)
 {
-	if (dir == 1)//if 1, move right
+	if (animation.size() == 0)
 	{
-		if ((rectangle.getPosition().x + rectangle.getSize().x / 2) < window->getView().getSize().x)
-			rectangle.move(1, 0);
-	}
-	else//if 2, move left
-	{
-		if ((rectangle.getPosition().x - rectangle.getSize().x / 2) > 0)
-			rectangle.move(-1, 0);
+		if (dir == 1)//if 1, move right
+		{
+			if ((rectangle.getPosition().x + rectangle.getSize().x / 2) < window->getView().getSize().x)
+				rectangle.move(1, 0);
+		}
+		else//if 2, move left
+		{
+			if ((rectangle.getPosition().x - rectangle.getSize().x / 2) > 0)
+				rectangle.move(-1, 0);
+		}
 	}
 	return true;
 }

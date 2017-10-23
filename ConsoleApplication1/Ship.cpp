@@ -84,7 +84,29 @@ void Ship::update(std::vector<GameObject *> other)
 					if (type == "class Player")
 					{
 						Ship * shipTemp = dynamic_cast<Ship *>(other.at(i));
-						shipTemp->takeLife();
+
+						if (shipTemp->animation.empty())
+						{
+
+							shipTemp->takeLife();
+
+							//animation for enemy death
+							std::vector<std::string> frameFiles;
+							frameFiles.push_back("player.png");
+							frameFiles.push_back("transparent.png");
+							frameFiles.push_back("player.png");
+							frameFiles.push_back("transparent.png");
+							frameFiles.push_back("player.png");
+							frameFiles.push_back("transparent.png");
+							frameFiles.push_back("player.png");
+							frameFiles.push_back("transparent.png");
+							frameFiles.push_back("player.png");
+							frameFiles.push_back("transparent.png");
+							sf::Vector2f pos = shipTemp->getPosition();
+							pos.y - 8;
+							shipTemp->animation.push_back( new Animation(pos, frameFiles, window));
+						}
+												
 						bulletDeath = true;
 					}
 					else if (type == "class Shield")

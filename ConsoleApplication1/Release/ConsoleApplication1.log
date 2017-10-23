@@ -1,7 +1,12 @@
-﻿  spaceInvaders.cpp
+﻿  Ship.cpp
+c:\users\18mac03\documents\github\spaceinvaders\consoleapplication1\Bullet.h(14): warning C4305: 'argument': truncation from 'double' to 'float'
+Ship.cpp(33): warning C4018: '<': signed/unsigned mismatch
+Ship.cpp(78): warning C4018: '<': signed/unsigned mismatch
+Ship.cpp(106): warning C4552: '-': operator has no effect; expected operator with side-effect
+Ship.cpp(132): warning C4018: '<': signed/unsigned mismatch
   Generating code
-  1 of 613 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+  0 of 606 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    2 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   ConsoleApplication1.vcxproj -> C:\Users\18mac03\Documents\GitHub\SpaceInvaders\Release\Space Invaders.exe

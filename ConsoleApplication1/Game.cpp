@@ -108,13 +108,7 @@ bool Game::loop()
 					liveEnemies++;
 				shipTemp->update(gameData[0]);//update with player param
 				shipTemp->update(gameData[2]);//update with shield param
-				/*if (shipTemp->getLife() == 0)
-				{
-					std::vector<std::string> frameFiles;
-					frameFiles.push_back("transparent.png");
-					gameData[1].at(i) = new Animation(shipTemp->getPosition(), frameFiles, window);
-				}*/
-
+	
 				//update ufo
 				if (i == 55)
 					shipTemp->update();
@@ -151,6 +145,7 @@ bool Game::loop()
 				player2Score = std::to_string(dynamic_cast<Player *>(gameData[0].at(i))->getScore());
 		}
 
+		//display player scores with numbers with 5 digits in length
 		while (player1Score.length() < 5)
 			player1Score = "0" + player1Score;
 
@@ -168,7 +163,7 @@ bool Game::loop()
 		{
 			if (ticks % difficulty == 0 && ticks > endticks + 100 && liveEnemies > 0)
 			{
-				//change soumd amd play as enemy moves
+				//change soumd and play as enemy moves
 				static int sound = 0;
 				switch (sound)
 				{
