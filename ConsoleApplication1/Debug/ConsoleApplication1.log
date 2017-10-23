@@ -1,32 +1,796 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ConsoleApplication1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Player.cpp
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\player.cpp(19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\player.cpp(69): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\player.cpp(140): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\player.cpp(194): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Game.cpp
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(49): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(93): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(102): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(136): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(146): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(197): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(209): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(225): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(242): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(269): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(322): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(328): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(374): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(376): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(384): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(386): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(404): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdlib.h(1282): note: see declaration of '_sleep'
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(417): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(441): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(473): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-  ConsoleApplication1.vcxproj -> C:\Users\18dcb01\Documents\GitHub\SpaceInvaders\Debug\Space Invaders.exe
-  ConsoleApplication1.vcxproj -> C:\Users\18dcb01\Documents\GitHub\SpaceInvaders\Debug\Space Invaders.pdb (Partial PDB)
+  spaceInvaders.cpp
+sfml-system-s-d.lib(String.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-audio-s-d.lib(SoundFileReaderFlac.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-audio-s-d.lib(SoundFileWriterFlac.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-audio-s-d.lib(SoundBuffer.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-audio-s-d.lib(ALCheck.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-audio-s-d.lib(AudioDevice.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-audio-s-d.lib(SoundFileFactory.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-window-s-d.lib(JoystickManager.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-window-s-d.lib(WindowImplWin32.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-window-s-d.lib(WglExtensions.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-window-s-d.lib(JoystickImpl.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-window-s-d.lib(GlContext.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-window-s-d.lib(WindowImpl.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-window-s-d.lib(VideoModeImpl.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-window-s-d.lib(WglContext.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-graphics-s-d.lib(Image.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-window-s-d.lib(Window.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-window-s-d.lib(VideoMode.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-graphics-s-d.lib(Text.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-graphics-s-d.lib(GLCheck.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-graphics-s-d.lib(VertexArray.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+Word.obj : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-graphics-s-d.lib(Shape.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-graphics-s-d.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-graphics-s-d.lib(Font.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+Small.obj : error LNK2001: unresolved external symbol __imp___invalid_parameter
+spaceInvaders.obj : error LNK2001: unresolved external symbol __imp___invalid_parameter
+Shield.obj : error LNK2001: unresolved external symbol __imp___invalid_parameter
+UFO.obj : error LNK2001: unresolved external symbol __imp___invalid_parameter
+Large.obj : error LNK2001: unresolved external symbol __imp___invalid_parameter
+Medium.obj : error LNK2001: unresolved external symbol __imp___invalid_parameter
+Player.obj : error LNK2001: unresolved external symbol __imp___invalid_parameter
+Ship.obj : error LNK2001: unresolved external symbol __imp___invalid_parameter
+Animation.obj : error LNK2001: unresolved external symbol __imp___invalid_parameter
+Bullet.obj : error LNK2001: unresolved external symbol __imp___invalid_parameter
+Game.obj : error LNK2001: unresolved external symbol __imp___invalid_parameter
+GameObject.obj : error LNK2001: unresolved external symbol __imp___invalid_parameter
+jpeg.lib(jutils.obj) : error LNK2001: unresolved external symbol _memcpy
+jpeg.lib(jcprepct.obj) : error LNK2001: unresolved external symbol _memcpy
+freetype.lib(ftgzip.obj) : error LNK2001: unresolved external symbol _memcpy
+freetype.lib(ftlzw.obj) : error LNK2001: unresolved external symbol _memcpy
+jpeg.lib(jdatadst.obj) : error LNK2001: unresolved external symbol _memcpy
+jpeg.lib(jcparam.obj) : error LNK2001: unresolved external symbol _memcpy
+freetype.lib(ftutil.obj) : error LNK2001: unresolved external symbol _memcpy
+freetype.lib(ftgloadr.obj) : error LNK2001: unresolved external symbol _memcpy
+freetype.lib(ftrfork.obj) : error LNK2001: unresolved external symbol _memcpy
+freetype.lib(ftstream.obj) : error LNK2001: unresolved external symbol _memcpy
+freetype.lib(psaux.obj) : error LNK2001: unresolved external symbol _memcpy
+freetype.lib(sfnt.obj) : error LNK2001: unresolved external symbol _memcpy
+freetype.lib(smooth.obj) : error LNK2001: unresolved external symbol _memcpy
+freetype.lib(bdf.obj) : error LNK2001: unresolved external symbol _memcpy
+freetype.lib(type1cid.obj) : error LNK2001: unresolved external symbol _memcpy
+freetype.lib(pfr.obj) : error LNK2001: unresolved external symbol _memcpy
+freetype.lib(winfnt.obj) : error LNK2001: unresolved external symbol _memcpy
+freetype.lib(pcf.obj) : error LNK2001: unresolved external symbol _memcpy
+freetype.lib(autofit.obj) : error LNK2001: unresolved external symbol _memcpy
+freetype.lib(truetype.obj) : error LNK2001: unresolved external symbol _memcpy
+freetype.lib(type1.obj) : error LNK2001: unresolved external symbol _memcpy
+freetype.lib(cff.obj) : error LNK2001: unresolved external symbol _memcpy
+ogg.lib(framing.obj) : error LNK2001: unresolved external symbol _memcpy
+freetype.lib(ftoutln.obj) : error LNK2001: unresolved external symbol _memcpy
+freetype.lib(ftbitmap.obj) : error LNK2001: unresolved external symbol _memcpy
+freetype.lib(ftstroke.obj) : error LNK2001: unresolved external symbol _memcpy
+vorbisfile.lib(vorbisfile.obj) : error LNK2001: unresolved external symbol _memcpy
+vorbis.lib(info.obj) : error LNK2001: unresolved external symbol _memcpy
+vorbis.lib(block.obj) : error LNK2001: unresolved external symbol _memcpy
+vorbis.lib(psy.obj) : error LNK2001: unresolved external symbol _memcpy
+flac.lib(ogg_decoder_aspect.obj) : error LNK2001: unresolved external symbol _memcpy
+flac.lib(fixed.obj) : error LNK2001: unresolved external symbol _memcpy
+flac.lib(md5.obj) : error LNK2001: unresolved external symbol _memcpy
+flac.lib(ogg_encoder_aspect.obj) : error LNK2001: unresolved external symbol _memcpy
+sfml-system-s-d.lib(String.cpp.obj) : error LNK2001: unresolved external symbol _memcpy
+sfml-system-s-d.lib(MemoryInputStream.cpp.obj) : error LNK2001: unresolved external symbol _memcpy
+flac.lib(stream_decoder.obj) : error LNK2001: unresolved external symbol _memcpy
+flac.lib(stream_encoder.obj) : error LNK2001: unresolved external symbol _memcpy
+sfml-audio-s-d.lib(AudioDevice.cpp.obj) : error LNK2001: unresolved external symbol _memcpy
+sfml-audio-s-d.lib(SoundFileWriterFlac.cpp.obj) : error LNK2001: unresolved external symbol _memcpy
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol _memcpy
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol _memcpy
+sfml-window-s-d.lib(WindowImplWin32.cpp.obj) : error LNK2001: unresolved external symbol _memcpy
+sfml-window-s-d.lib(WglExtensions.cpp.obj) : error LNK2001: unresolved external symbol _memcpy
+sfml-window-s-d.lib(JoystickImpl.cpp.obj) : error LNK2001: unresolved external symbol _memcpy
+sfml-audio-s-d.lib(ALCheck.cpp.obj) : error LNK2001: unresolved external symbol _memcpy
+sfml-graphics-s-d.lib(Image.cpp.obj) : error LNK2001: unresolved external symbol _memcpy
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2001: unresolved external symbol _memcpy
+sfml-window-s-d.lib(GlContext.cpp.obj) : error LNK2001: unresolved external symbol _memcpy
+sfml-window-s-d.lib(WglContext.cpp.obj) : error LNK2001: unresolved external symbol _memcpy
+sfml-graphics-s-d.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol _memcpy
+sfml-graphics-s-d.lib(Font.cpp.obj) : error LNK2001: unresolved external symbol _memcpy
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2001: unresolved external symbol _memcpy
+sfml-graphics-s-d.lib(GLCheck.cpp.obj) : error LNK2001: unresolved external symbol _memcpy
+spaceInvaders.obj : error LNK2001: unresolved external symbol _memcpy
+Shield.obj : error LNK2001: unresolved external symbol _memcpy
+UFO.obj : error LNK2001: unresolved external symbol _memcpy
+Word.obj : error LNK2001: unresolved external symbol _memcpy
+Medium.obj : error LNK2001: unresolved external symbol _memcpy
+Player.obj : error LNK2001: unresolved external symbol _memcpy
+Ship.obj : error LNK2001: unresolved external symbol _memcpy
+Small.obj : error LNK2001: unresolved external symbol _memcpy
+Animation.obj : error LNK2001: unresolved external symbol _memcpy
+Game.obj : error LNK2001: unresolved external symbol _memcpy
+GameObject.obj : error LNK2001: unresolved external symbol _memcpy
+Large.obj : error LNK2001: unresolved external symbol _memcpy
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
+sfml-system-s-d.lib(String.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
+sfml-audio-s-d.lib(AudioDevice.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
+sfml-audio-s-d.lib(SoundFileFactory.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
+sfml-audio-s-d.lib(SoundFileReaderFlac.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
+sfml-audio-s-d.lib(SoundFileWriterFlac.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
+sfml-window-s-d.lib(WglExtensions.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
+sfml-window-s-d.lib(JoystickImpl.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
+sfml-audio-s-d.lib(SoundBuffer.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
+sfml-audio-s-d.lib(ALCheck.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
+sfml-window-s-d.lib(VideoMode.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
+sfml-window-s-d.lib(GlContext.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
+sfml-window-s-d.lib(WindowImpl.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
+sfml-window-s-d.lib(WglContext.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
+sfml-graphics-s-d.lib(GLCheck.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
+sfml-graphics-s-d.lib(Image.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
+sfml-graphics-s-d.lib(Glsl.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
+Word.obj : error LNK2001: unresolved external symbol __imp__memmove
+sfml-graphics-s-d.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
+sfml-graphics-s-d.lib(Font.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
+Small.obj : error LNK2001: unresolved external symbol __imp__memmove
+spaceInvaders.obj : error LNK2001: unresolved external symbol __imp__memmove
+Shield.obj : error LNK2001: unresolved external symbol __imp__memmove
+UFO.obj : error LNK2001: unresolved external symbol __imp__memmove
+Large.obj : error LNK2001: unresolved external symbol __imp__memmove
+Medium.obj : error LNK2001: unresolved external symbol __imp__memmove
+Player.obj : error LNK2001: unresolved external symbol __imp__memmove
+Ship.obj : error LNK2001: unresolved external symbol __imp__memmove
+Animation.obj : error LNK2001: unresolved external symbol __imp__memmove
+Bullet.obj : error LNK2001: unresolved external symbol __imp__memmove
+Game.obj : error LNK2001: unresolved external symbol __imp__memmove
+GameObject.obj : error LNK2001: unresolved external symbol __imp__memmove
+sfml-system-s-d.lib(String.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-audio-s-d.lib(SoundFileReaderFlac.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-audio-s-d.lib(SoundFileWriterFlac.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-audio-s-d.lib(SoundBuffer.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-audio-s-d.lib(ALCheck.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-audio-s-d.lib(AudioDevice.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-audio-s-d.lib(SoundFileFactory.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-window-s-d.lib(JoystickManager.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-window-s-d.lib(WindowImplWin32.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-window-s-d.lib(WglExtensions.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-window-s-d.lib(JoystickImpl.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-window-s-d.lib(GlContext.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-window-s-d.lib(WindowImpl.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-window-s-d.lib(VideoModeImpl.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-window-s-d.lib(WglContext.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-graphics-s-d.lib(Image.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-window-s-d.lib(Window.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-window-s-d.lib(VideoMode.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-graphics-s-d.lib(Text.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-graphics-s-d.lib(GLCheck.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-graphics-s-d.lib(VertexArray.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+Word.obj : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-graphics-s-d.lib(Shape.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-graphics-s-d.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-graphics-s-d.lib(Font.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+Small.obj : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+spaceInvaders.obj : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+Shield.obj : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+UFO.obj : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+Large.obj : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+Medium.obj : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+Player.obj : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+Ship.obj : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+Animation.obj : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+Bullet.obj : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+Game.obj : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+GameObject.obj : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-system-s-d.lib(String.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+MSVCRTD.lib(throw_bad_alloc.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-audio-s-d.lib(SoundFileFactory.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-audio-s-d.lib(SoundFileReaderFlac.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-audio-s-d.lib(SoundFileWriterFlac.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-window-s-d.lib(JoystickImpl.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-audio-s-d.lib(SoundBuffer.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-audio-s-d.lib(ALCheck.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-audio-s-d.lib(AudioDevice.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-window-s-d.lib(VideoModeImpl.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-window-s-d.lib(WglContext.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-window-s-d.lib(WindowImplWin32.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-window-s-d.lib(WglExtensions.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-graphics-s-d.lib(VertexArray.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-graphics-s-d.lib(Image.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-window-s-d.lib(GlContext.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-graphics-s-d.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-graphics-s-d.lib(Font.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-graphics-s-d.lib(GLCheck.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+Animation.obj : error LNK2001: unresolved external symbol __CxxThrowException@8
+Bullet.obj : error LNK2001: unresolved external symbol __CxxThrowException@8
+Game.obj : error LNK2001: unresolved external symbol __CxxThrowException@8
+Player.obj : error LNK2001: unresolved external symbol __CxxThrowException@8
+msvcprtd.lib(locale0_implib.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-system-s-d.lib(Lock.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-system-s-d.lib(ThreadLocal.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-system-s-d.lib(FileInputStream.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-system-s-d.lib(ClockImpl.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-system-s-d.lib(String.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-system-s-d.lib(Err.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-system-s-d.lib(Mutex.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-audio-s-d.lib(SoundFileWriterFlac.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-audio-s-d.lib(SoundFileReaderOgg.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-audio-s-d.lib(SoundFileReaderWav.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-audio-s-d.lib(OutputSoundFile.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-audio-s-d.lib(AudioDevice.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-audio-s-d.lib(SoundFileFactory.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-audio-s-d.lib(SoundFileReaderFlac.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-audio-s-d.lib(SoundSource.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-audio-s-d.lib(ALCheck.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-audio-s-d.lib(AlResource.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-audio-s-d.lib(InputSoundFile.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-window-s-d.lib(Joystick.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-window-s-d.lib(JoystickImpl.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-audio-s-d.lib(Sound.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-audio-s-d.lib(SoundBuffer.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-window-s-d.lib(JoystickManager.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-window-s-d.lib(SensorManager.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-window-s-d.lib(WindowImplWin32.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-window-s-d.lib(WglExtensions.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-window-s-d.lib(GlContext.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-window-s-d.lib(WindowImpl.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-window-s-d.lib(VideoModeImpl.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-window-s-d.lib(WglContext.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-window-s-d.lib(Window.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-window-s-d.lib(VideoMode.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-window-s-d.lib(GlResource.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-window-s-d.lib(Context.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-graphics-s-d.lib(VertexArray.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-graphics-s-d.lib(Image.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-graphics-s-d.lib(TextureSaver.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-graphics-s-d.lib(Text.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-graphics-s-d.lib(GLExtensions.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-graphics-s-d.lib(GLCheck.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-graphics-s-d.lib(Color.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-graphics-s-d.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-graphics-s-d.lib(RenderWindow.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-graphics-s-d.lib(Font.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+Word.obj : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-graphics-s-d.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-graphics-s-d.lib(Shape.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-graphics-s-d.lib(RectangleShape.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+Small.obj : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+spaceInvaders.obj : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+Shield.obj : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+UFO.obj : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+Large.obj : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+Medium.obj : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+Player.obj : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+Ship.obj : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+Animation.obj : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+Bullet.obj : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+Game.obj : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+GameObject.obj : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+Game.obj : error LNK2019: unresolved external symbol ___RTtypeid referenced in function "public: bool __thiscall Game::loop(void)" (?loop@Game@@QAE_NXZ)
+Player.obj : error LNK2001: unresolved external symbol ___RTtypeid
+Ship.obj : error LNK2001: unresolved external symbol ___RTtypeid
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol _memcmp
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol _memcmp
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2001: unresolved external symbol _memcmp
+sfml-window-s-d.lib(GlContext.cpp.obj) : error LNK2001: unresolved external symbol _memcmp
+sfml-audio-s-d.lib(AudioDevice.cpp.obj) : error LNK2001: unresolved external symbol _memcmp
+sfml-audio-s-d.lib(SoundFileWriterFlac.cpp.obj) : error LNK2001: unresolved external symbol _memcmp
+Game.obj : error LNK2001: unresolved external symbol _memcmp
+Player.obj : error LNK2001: unresolved external symbol _memcmp
+Ship.obj : error LNK2001: unresolved external symbol _memcmp
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2001: unresolved external symbol _memcmp
+Game.obj : error LNK2019: unresolved external symbol __imp__srand referenced in function "public: __thiscall Game::Game(class sf::RenderWindow *,bool)" (??0Game@@QAE@PAVRenderWindow@sf@@_N@Z)
+Game.obj : error LNK2019: unresolved external symbol __imp__rand referenced in function "public: bool __thiscall Game::loop(void)" (?loop@Game@@QAE_NXZ)
+Ship.obj : error LNK2001: unresolved external symbol __imp__rand
+UFO.obj : error LNK2001: unresolved external symbol __imp__rand
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp__rand
+Game.obj : error LNK2019: unresolved external symbol __imp__system referenced in function __catch$?loop@Game@@QAE_NXZ$0
+UFO.obj : error LNK2001: unresolved external symbol __imp__system
+Word.obj : error LNK2001: unresolved external symbol __imp__system
+Game.obj : error LNK2019: unresolved external symbol __imp___sleep referenced in function __catch$?loop@Game@@QAE_NXZ$0
+sfml-system-s-d.lib(String.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-audio-s-d.lib(SoundFileReaderOgg.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-audio-s-d.lib(SoundFileReaderWav.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-audio-s-d.lib(AudioDevice.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-audio-s-d.lib(SoundFileFactory.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-audio-s-d.lib(SoundFileReaderFlac.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-audio-s-d.lib(SoundFileWriterFlac.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-window-s-d.lib(JoystickImpl.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-audio-s-d.lib(SoundBuffer.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-audio-s-d.lib(ALCheck.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-audio-s-d.lib(InputSoundFile.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-window-s-d.lib(GlContext.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-window-s-d.lib(WglContext.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-window-s-d.lib(SensorManager.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-window-s-d.lib(WindowImplWin32.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-graphics-s-d.lib(GLCheck.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-graphics-s-d.lib(Image.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-window-s-d.lib(Window.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-graphics-s-d.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-graphics-s-d.lib(Font.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+sfml-graphics-s-d.lib(GLExtensions.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+Shield.obj : error LNK2001: unresolved external symbol _strlen
+UFO.obj : error LNK2001: unresolved external symbol _strlen
+Word.obj : error LNK2001: unresolved external symbol _strlen
+sfml-graphics-s-d.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol _strlen
+Player.obj : error LNK2001: unresolved external symbol _strlen
+Ship.obj : error LNK2001: unresolved external symbol _strlen
+Small.obj : error LNK2001: unresolved external symbol _strlen
+spaceInvaders.obj : error LNK2001: unresolved external symbol _strlen
+Game.obj : error LNK2001: unresolved external symbol _strlen
+GameObject.obj : error LNK2001: unresolved external symbol _strlen
+Large.obj : error LNK2001: unresolved external symbol _strlen
+Medium.obj : error LNK2001: unresolved external symbol _strlen
+sfml-system-s-d.lib(String.cpp.obj) : error LNK2001: unresolved external symbol __imp____std_exception_destroy
+Game.obj : error LNK2001: unresolved external symbol __imp____std_exception_destroy
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2001: unresolved external symbol __imp____std_exception_destroy
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp____std_exception_destroy
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp____std_exception_destroy
+Game.obj : error LNK2019: unresolved external symbol __imp____std_type_info_name referenced in function "public: char const * __thiscall type_info::name(void)const " (?name@type_info@@QBEPBDXZ)
+Player.obj : error LNK2001: unresolved external symbol __imp____std_type_info_name
+Ship.obj : error LNK2001: unresolved external symbol __imp____std_type_info_name
+Game.obj : error LNK2019: unresolved external symbol __imp___time64 referenced in function _time
+Game.obj : error LNK2019: unresolved external symbol ___RTDynamicCast referenced in function "public: bool __thiscall Game::loop(void)" (?loop@Game@@QAE_NXZ)
+Player.obj : error LNK2001: unresolved external symbol ___RTDynamicCast
+Ship.obj : error LNK2001: unresolved external symbol ___RTDynamicCast
+sfml-audio-s-d.lib(SoundFileReaderWav.cpp.obj) : error LNK2001: unresolved external symbol __purecall
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __purecall
+sfml-system-s-d.lib(FileInputStream.cpp.obj) : error LNK2001: unresolved external symbol __purecall
+sfml-system-s-d.lib(MemoryInputStream.cpp.obj) : error LNK2001: unresolved external symbol __purecall
+sfml-audio-s-d.lib(SoundFileReaderFlac.cpp.obj) : error LNK2001: unresolved external symbol __purecall
+sfml-audio-s-d.lib(SoundFileWriterFlac.cpp.obj) : error LNK2001: unresolved external symbol __purecall
+sfml-audio-s-d.lib(SoundFileReaderOgg.cpp.obj) : error LNK2001: unresolved external symbol __purecall
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __purecall
+sfml-graphics-s-d.lib(VertexArray.cpp.obj) : error LNK2001: unresolved external symbol __purecall
+sfml-window-s-d.lib(GlContext.cpp.obj) : error LNK2001: unresolved external symbol __purecall
+sfml-window-s-d.lib(WindowImpl.cpp.obj) : error LNK2001: unresolved external symbol __purecall
+sfml-audio-s-d.lib(SoundFileFactory.cpp.obj) : error LNK2001: unresolved external symbol __purecall
+Word.obj : error LNK2001: unresolved external symbol __purecall
+sfml-graphics-s-d.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol __purecall
+sfml-graphics-s-d.lib(Shape.cpp.obj) : error LNK2001: unresolved external symbol __purecall
+sfml-graphics-s-d.lib(Text.cpp.obj) : error LNK2001: unresolved external symbol __purecall
+Word.obj : error LNK2019: unresolved external symbol __imp____acrt_iob_func referenced in function _printf
+sfml-system-s-d.lib(Err.cpp.obj) : error LNK2001: unresolved external symbol __imp____acrt_iob_func
+Word.obj : error LNK2019: unresolved external symbol __imp____stdio_common_vfprintf referenced in function __vfprintf_l
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2001: unresolved external symbol __imp____stdio_common_vfprintf
+sfml-graphics-s-d.lib(Transformable.cpp.obj) : error LNK2019: unresolved external symbol _cos referenced in function _cosf
+sfml-graphics-s-d.lib(View.cpp.obj) : error LNK2001: unresolved external symbol _cos
+sfml-graphics-s-d.lib(Transform.cpp.obj) : error LNK2001: unresolved external symbol _cos
+sfml-window-s-d.lib(JoystickImpl.cpp.obj) : error LNK2001: unresolved external symbol _cos
+sfml-graphics-s-d.lib(Transformable.cpp.obj) : error LNK2019: unresolved external symbol _fmod referenced in function "double __cdecl fmod<float,int>(float,int)" (??$fmod@MH@@YANMH@Z)
+sfml-graphics-s-d.lib(View.cpp.obj) : error LNK2001: unresolved external symbol _fmod
+sfml-graphics-s-d.lib(Transformable.cpp.obj) : error LNK2019: unresolved external symbol _sin referenced in function _sinf
+sfml-graphics-s-d.lib(View.cpp.obj) : error LNK2001: unresolved external symbol _sin
+sfml-graphics-s-d.lib(Transform.cpp.obj) : error LNK2001: unresolved external symbol _sin
+sfml-window-s-d.lib(JoystickImpl.cpp.obj) : error LNK2001: unresolved external symbol _sin
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp___wassert
+sfml-audio-s-d.lib(SoundFileReaderFlac.cpp.obj) : error LNK2001: unresolved external symbol __imp___wassert
+sfml-audio-s-d.lib(SoundFileReaderOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp___wassert
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp___wassert
+sfml-audio-s-d.lib(SoundFileReaderWav.cpp.obj) : error LNK2001: unresolved external symbol __imp___wassert
+sfml-graphics-s-d.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol __imp___wassert
+sfml-graphics-s-d.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol __imp___wassert
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2001: unresolved external symbol __imp___wassert
+sfml-window-s-d.lib(GlContext.cpp.obj) : error LNK2001: unresolved external symbol __imp___wassert
+MSVCRTD.lib(utility_desktop.obj) : error LNK2001: unresolved external symbol _memset
+jpeg.lib(jccoefct.obj) : error LNK2001: unresolved external symbol _memset
+jpeg.lib(jchuff.obj) : error LNK2001: unresolved external symbol _memset
+jpeg.lib(jcarith.obj) : error LNK2001: unresolved external symbol _memset
+jpeg.lib(jfdctint.obj) : error LNK2001: unresolved external symbol _memset
+freetype.lib(ftutil.obj) : error LNK2001: unresolved external symbol _memset
+freetype.lib(ftlzw.obj) : error LNK2001: unresolved external symbol _memset
+jpeg.lib(jcapimin.obj) : error LNK2001: unresolved external symbol _memset
+jpeg.lib(jmemmgr.obj) : error LNK2001: unresolved external symbol _memset
+freetype.lib(type42.obj) : error LNK2001: unresolved external symbol _memset
+freetype.lib(psaux.obj) : error LNK2001: unresolved external symbol _memset
+freetype.lib(pshinter.obj) : error LNK2001: unresolved external symbol _memset
+freetype.lib(smooth.obj) : error LNK2001: unresolved external symbol _memset
+freetype.lib(truetype.obj) : error LNK2001: unresolved external symbol _memset
+freetype.lib(type1.obj) : error LNK2001: unresolved external symbol _memset
+freetype.lib(cff.obj) : error LNK2001: unresolved external symbol _memset
+freetype.lib(type1cid.obj) : error LNK2001: unresolved external symbol _memset
+ogg.lib(framing.obj) : error LNK2001: unresolved external symbol _memset
+freetype.lib(ftglyph.obj) : error LNK2001: unresolved external symbol _memset
+freetype.lib(ftbitmap.obj) : error LNK2001: unresolved external symbol _memset
+freetype.lib(autofit.obj) : error LNK2001: unresolved external symbol _memset
+vorbis.lib(floor0.obj) : error LNK2001: unresolved external symbol _memset
+vorbis.lib(floor1.obj) : error LNK2001: unresolved external symbol _memset
+vorbis.lib(res0.obj) : error LNK2001: unresolved external symbol _memset
+vorbis.lib(mapping0.obj) : error LNK2001: unresolved external symbol _memset
+vorbis.lib(sharedbook.obj) : error LNK2001: unresolved external symbol _memset
+vorbis.lib(psy.obj) : error LNK2001: unresolved external symbol _memset
+vorbis.lib(envelope.obj) : error LNK2001: unresolved external symbol _memset
+vorbis.lib(lpc.obj) : error LNK2001: unresolved external symbol _memset
+flac.lib(md5.obj) : error LNK2001: unresolved external symbol _memset
+vorbisfile.lib(vorbisfile.obj) : error LNK2001: unresolved external symbol _memset
+vorbis.lib(block.obj) : error LNK2001: unresolved external symbol _memset
+vorbis.lib(bitrate.obj) : error LNK2001: unresolved external symbol _memset
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol _memset
+flac.lib(stream_decoder.obj) : error LNK2001: unresolved external symbol _memset
+flac.lib(cpu.obj) : error LNK2001: unresolved external symbol _memset
+flac.lib(format.obj) : error LNK2001: unresolved external symbol _memset
+sfml-audio-s-d.lib(SoundFileReaderFlac.cpp.obj) : error LNK2001: unresolved external symbol _memset
+sfml-audio-s-d.lib(SoundFileReaderOgg.cpp.obj) : error LNK2001: unresolved external symbol _memset
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol _memset
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol _memset
+sfml-window-s-d.lib(JoystickManager.cpp.obj) : error LNK2001: unresolved external symbol _memset
+sfml-window-s-d.lib(WindowImplWin32.cpp.obj) : error LNK2001: unresolved external symbol _memset
+sfml-window-s-d.lib(JoystickImpl.cpp.obj) : error LNK2001: unresolved external symbol _memset
+sfml-audio-s-d.lib(SoundBuffer.cpp.obj) : error LNK2001: unresolved external symbol _memset
+sfml-graphics-s-d.lib(Image.cpp.obj) : error LNK2001: unresolved external symbol _memset
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2001: unresolved external symbol _memset
+sfml-window-s-d.lib(WindowImpl.cpp.obj) : error LNK2001: unresolved external symbol _memset
+sfml-window-s-d.lib(WglContext.cpp.obj) : error LNK2001: unresolved external symbol _memset
+sfml-graphics-s-d.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol _memset
+sfml-graphics-s-d.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol _memset
+sfml-graphics-s-d.lib(Font.cpp.obj) : error LNK2001: unresolved external symbol _memset
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2001: unresolved external symbol _memset
+sfml-graphics-s-d.lib(Shape.cpp.obj) : error LNK2019: unresolved external symbol _sqrt referenced in function _sqrtf
+sfml-graphics-s-d.lib(Text.cpp.obj) : error LNK2019: unresolved external symbol __imp__floor referenced in function _floorf
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2019: unresolved external symbol __imp___invalid_parameter_noinfo referenced in function _memcpy_s
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter_noinfo
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter_noinfo
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2019: unresolved external symbol __imp___errno referenced in function _memcpy_s
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp___errno
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp___errno
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2019: unresolved external symbol __imp____std_exception_copy referenced in function "public: __thiscall std::exception::exception(class std::exception const &)" (??0exception@std@@QAE@ABV01@@Z)
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp____std_exception_copy
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp____std_exception_copy
+sfml-system-s-d.lib(String.cpp.obj) : error LNK2001: unresolved external symbol __imp____std_exception_copy
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2019: unresolved external symbol __imp___get_stream_buffer_pointers referenced in function "protected: void __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::_Init(struct _iobuf *,enum std::basic_filebuf<char,struct std::char_traits<char> >::_Initfl)" (?_Init@?$basic_filebuf@DU?$char_traits@D@std@@@std@@IAEXPAU_iobuf@@W4_Initfl@12@@Z)
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp___get_stream_buffer_pointers
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp___get_stream_buffer_pointers
+sfml-system-s-d.lib(FileInputStream.cpp.obj) : error LNK2001: unresolved external symbol __imp__fclose
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2001: unresolved external symbol __imp__fclose
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2001: unresolved external symbol __imp__fclose
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp__fclose
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp__fclose
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2019: unresolved external symbol __imp__fflush referenced in function "protected: virtual int __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::sync(void)" (?sync@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHXZ)
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp__fflush
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp__fflush
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2019: unresolved external symbol __imp__fgetc referenced in function "bool __cdecl std::_Fgetc<char>(char &,struct _iobuf *)" (??$_Fgetc@D@std@@YA_NAADPAU_iobuf@@@Z)
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp__fgetc
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp__fgetc
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2019: unresolved external symbol __imp__fgetpos referenced in function "protected: virtual class std::fpos<struct _Mbstatet> __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::seekoff(__int64,int,int)" (?seekoff@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@_JHH@Z)
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp__fgetpos
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp__fgetpos
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2019: unresolved external symbol __imp__fputc referenced in function "bool __cdecl std::_Fputc<char>(char,struct _iobuf *)" (??$_Fputc@D@std@@YA_NDPAU_iobuf@@@Z)
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2001: unresolved external symbol __imp__fputc
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp__fputc
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp__fputc
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2019: unresolved external symbol __imp__fsetpos referenced in function "protected: virtual class std::fpos<struct _Mbstatet> __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::seekpos(class std::fpos<struct _Mbstatet>,int)" (?seekpos@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@V32@H@Z)
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp__fsetpos
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp__fsetpos
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2019: unresolved external symbol __imp___fseeki64 referenced in function "protected: virtual class std::fpos<struct _Mbstatet> __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::seekoff(__int64,int,int)" (?seekoff@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@_JHH@Z)
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp___fseeki64
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp___fseeki64
+sfml-system-s-d.lib(Err.cpp.obj) : error LNK2001: unresolved external symbol __imp__fwrite
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2001: unresolved external symbol __imp__fwrite
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2001: unresolved external symbol __imp__fwrite
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp__fwrite
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp__fwrite
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2019: unresolved external symbol __imp__setvbuf referenced in function "protected: virtual class std::basic_streambuf<char,struct std::char_traits<char> > * __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::setbuf(char *,__int64)" (?setbuf@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@PAD_J@Z)
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp__setvbuf
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp__setvbuf
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2019: unresolved external symbol __imp__ungetc referenced in function "bool __cdecl std::_Ungetc<char>(char const &,struct _iobuf *)" (??$_Ungetc@D@std@@YA_NABDPAU_iobuf@@@Z)
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp__ungetc
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp__ungetc
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2019: unresolved external symbol __imp___lock_file referenced in function "public: virtual void __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::_Lock(void)" (?_Lock@?$basic_filebuf@DU?$char_traits@D@std@@@std@@UAEXXZ)
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp___lock_file
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp___lock_file
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2019: unresolved external symbol __imp___unlock_file referenced in function "public: virtual void __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::_Unlock(void)" (?_Unlock@?$basic_filebuf@DU?$char_traits@D@std@@@std@@UAEXXZ)
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp___unlock_file
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp___unlock_file
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp__memchr
+sfml-graphics-s-d.lib(GLCheck.cpp.obj) : error LNK2001: unresolved external symbol __imp__memchr
+sfml-audio-s-d.lib(ALCheck.cpp.obj) : error LNK2001: unresolved external symbol __imp__memchr
+sfml-audio-s-d.lib(SoundFileWriterFlac.cpp.obj) : error LNK2001: unresolved external symbol __imp__memchr
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp__memchr
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2019: unresolved external symbol _abs referenced in function "unsigned char * __cdecl stbi__bmp_load(struct stbi__context *,int *,int *,int *,int)" (?stbi__bmp_load@@YAPAEPAUstbi__context@@PAH11H@Z)
+sfml-window-s-d.lib(GlContext.cpp.obj) : error LNK2001: unresolved external symbol _abs
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2019: unresolved external symbol _pow referenced in function _powf
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2019: unresolved external symbol __imp__frexp referenced in function _frexpf
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2019: unresolved external symbol __imp__ldexp referenced in function _ldexpf
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2019: unresolved external symbol __imp__free referenced in function _stbi_image_free
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2019: unresolved external symbol __imp__malloc referenced in function "void * __cdecl stbi__malloc(unsigned int)" (?stbi__malloc@@YAPAXI@Z)
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2019: unresolved external symbol __imp__realloc referenced in function "int __cdecl stbi__zexpand(struct stbi__zbuf *,char *,int)" (?stbi__zexpand@@YAHPAUstbi__zbuf@@PADH@Z)
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2019: unresolved external symbol __lrotl referenced in function "int __cdecl stbi__extend_receive(struct stbi__jpeg *,int)" (?stbi__extend_receive@@YAHPAUstbi__jpeg@@H@Z)
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2019: unresolved external symbol __imp__strtol referenced in function "float * __cdecl stbi__hdr_load(struct stbi__context *,int *,int *,int *,int)" (?stbi__hdr_load@@YAPAMPAUstbi__context@@PAH11H@Z)
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2019: unresolved external symbol __imp__fopen_s referenced in function "struct _iobuf * __cdecl stbi__fopen(char const *,char const *)" (?stbi__fopen@@YAPAU_iobuf@@PBD0@Z)
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2019: unresolved external symbol __imp__feof referenced in function "void __cdecl stbi__start_callbacks(struct stbi__context *,struct stbi_io_callbacks *,void *)" (?stbi__start_callbacks@@YAXPAUstbi__context@@PAUstbi_io_callbacks@@PAX@Z)
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2019: unresolved external symbol __imp__fopen referenced in function "private: bool __thiscall sf::priv::ImageLoader::writeJpg(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::vector<unsigned char,class std::allocator<unsigned char> > const &,unsigned int,unsigned int)" (?writeJpg@ImageLoader@priv@sf@@AAE_NABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV?$vector@EV?$allocator@E@std@@@5@II@Z)
+sfml-system-s-d.lib(FileInputStream.cpp.obj) : error LNK2001: unresolved external symbol __imp__fopen
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2019: unresolved external symbol __imp__fread referenced in function "void __cdecl stbi__start_callbacks(struct stbi__context *,struct stbi_io_callbacks *,void *)" (?stbi__start_callbacks@@YAXPAUstbi__context@@PAUstbi_io_callbacks@@PAX@Z)
+sfml-system-s-d.lib(FileInputStream.cpp.obj) : error LNK2001: unresolved external symbol __imp__fread
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2019: unresolved external symbol __imp__fseek referenced in function _stbi_load_from_file
+sfml-system-s-d.lib(FileInputStream.cpp.obj) : error LNK2001: unresolved external symbol __imp__fseek
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2019: unresolved external symbol __imp__ftell referenced in function _stbi_info_from_file
+sfml-system-s-d.lib(FileInputStream.cpp.obj) : error LNK2001: unresolved external symbol __imp__ftell
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2019: unresolved external symbol _strcmp referenced in function "float * __cdecl stbi__hdr_load(struct stbi__context *,int *,int *,int *,int)" (?stbi__hdr_load@@YAPAMPAUstbi__context@@PAH11H@Z)
+sfml-window-s-d.lib(GlContext.cpp.obj) : error LNK2001: unresolved external symbol _strcmp
+sfml-window-s-d.lib(WglExtensions.cpp.obj) : error LNK2001: unresolved external symbol _strcmp
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2019: unresolved external symbol __imp__strncmp referenced in function "float * __cdecl stbi__hdr_load(struct stbi__context *,int *,int *,int *,int)" (?stbi__hdr_load@@YAPAMPAUstbi__context@@PAH11H@Z)
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2019: unresolved external symbol __imp__tolower referenced in function "class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl `anonymous namespace'::toLower(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?toLower@?A0x0a864e12@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V23@@Z)
+sfml-audio-s-d.lib(SoundFileWriterFlac.cpp.obj) : error LNK2001: unresolved external symbol __imp__tolower
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp__tolower
+sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp__tolower
+sfml-window-s-d.lib(GlContext.cpp.obj) : error LNK2019: unresolved external symbol __imp__strstr referenced in function "private: void __thiscall sf::priv::GlContext::initialize(struct sf::ContextSettings const &)" (?initialize@GlContext@priv@sf@@AAEXABUContextSettings@3@@Z)
+sfml-window-s-d.lib(WindowImpl.cpp.obj) : error LNK2019: unresolved external symbol _fabs referenced in function _fabsf
+sfml-window-s-d.lib(WglContext.cpp.obj) : error LNK2019: unresolved external symbol __imp__wcslen referenced in function "public: static unsigned int __cdecl std::char_traits<wchar_t>::length(wchar_t const *)" (?length@?$char_traits@_W@std@@SAIPB_W@Z)
+sfml-window-s-d.lib(JoystickImpl.cpp.obj) : error LNK2001: unresolved external symbol __imp__wcslen
+sfml-system-s-d.lib(String.cpp.obj) : error LNK2001: unresolved external symbol __imp__wcslen
+flac.lib(stream_decoder.obj) : error LNK2019: unresolved external symbol ___acrt_iob_func referenced in function _FLAC__stream_decoder_finish
+flac.lib(stream_encoder.obj) : error LNK2001: unresolved external symbol ___acrt_iob_func
+flac.lib(win_utf8_io.obj) : error LNK2001: unresolved external symbol ___acrt_iob_func
+jpeg.lib(jerror.obj) : error LNK2001: unresolved external symbol ___acrt_iob_func
+flac.lib(stream_decoder.obj) : error LNK2019: unresolved external symbol _fclose referenced in function _FLAC__stream_decoder_finish
+flac.lib(stream_encoder.obj) : error LNK2001: unresolved external symbol _fclose
+vorbisfile.lib(vorbisfile.obj) : error LNK2001: unresolved external symbol _fclose
+freetype.lib(ftsystem.obj) : error LNK2001: unresolved external symbol _fclose
+flac.lib(stream_decoder.obj) : error LNK2019: unresolved external symbol _feof referenced in function _file_eof_callback_
+flac.lib(stream_encoder.obj) : error LNK2001: unresolved external symbol _feof
+flac.lib(stream_decoder.obj) : error LNK2019: unresolved external symbol _ferror referenced in function _file_read_callback_
+flac.lib(stream_encoder.obj) : error LNK2001: unresolved external symbol _ferror
+jpeg.lib(jdatadst.obj) : error LNK2001: unresolved external symbol _ferror
+flac.lib(stream_decoder.obj) : error LNK2019: unresolved external symbol __fileno referenced in function _init_FILE_internal_
+flac.lib(stream_encoder.obj) : error LNK2001: unresolved external symbol __fileno
+OLDNAMES.lib(fileno.obj) : error LNK2001: unresolved external symbol __fileno
+flac.lib(stream_decoder.obj) : error LNK2019: unresolved external symbol _fread referenced in function _file_read_callback_
+flac.lib(stream_encoder.obj) : error LNK2001: unresolved external symbol _fread
+vorbisfile.lib(vorbisfile.obj) : error LNK2001: unresolved external symbol _fread
+freetype.lib(ftsystem.obj) : error LNK2001: unresolved external symbol _fread
+flac.lib(stream_decoder.obj) : error LNK2019: unresolved external symbol __fseeki64 referenced in function _file_seek_callback_
+flac.lib(stream_encoder.obj) : error LNK2001: unresolved external symbol __fseeki64
+flac.lib(stream_decoder.obj) : error LNK2019: unresolved external symbol __ftelli64 referenced in function _file_tell_callback_
+flac.lib(stream_encoder.obj) : error LNK2001: unresolved external symbol __ftelli64
+flac.lib(stream_decoder.obj) : error LNK2019: unresolved external symbol _fileno referenced in function _file_length_callback_
+OLDNAMES.lib(fileno.obj) : error LNK2001: unresolved external symbol _fileno
+vorbis.lib(res0.obj) : error LNK2001: unresolved external symbol _calloc
+vorbis.lib(mapping0.obj) : error LNK2001: unresolved external symbol _calloc
+vorbis.lib(envelope.obj) : error LNK2001: unresolved external symbol _calloc
+vorbis.lib(smallft.obj) : error LNK2001: unresolved external symbol _calloc
+vorbis.lib(floor0.obj) : error LNK2001: unresolved external symbol _calloc
+vorbis.lib(floor1.obj) : error LNK2001: unresolved external symbol _calloc
+vorbis.lib(block.obj) : error LNK2001: unresolved external symbol _calloc
+vorbis.lib(sharedbook.obj) : error LNK2001: unresolved external symbol _calloc
+vorbis.lib(codebook.obj) : error LNK2001: unresolved external symbol _calloc
+vorbis.lib(psy.obj) : error LNK2001: unresolved external symbol _calloc
+flac.lib(bitwriter.obj) : error LNK2001: unresolved external symbol _calloc
+vorbisenc.lib(vorbisenc.obj) : error LNK2001: unresolved external symbol _calloc
+vorbisfile.lib(vorbisfile.obj) : error LNK2001: unresolved external symbol _calloc
+vorbis.lib(info.obj) : error LNK2001: unresolved external symbol _calloc
+flac.lib(stream_decoder.obj) : error LNK2001: unresolved external symbol _calloc
+flac.lib(stream_encoder.obj) : error LNK2001: unresolved external symbol _calloc
+flac.lib(win_utf8_io.obj) : error LNK2001: unresolved external symbol _calloc
+flac.lib(bitreader.obj) : error LNK2001: unresolved external symbol _calloc
+jpeg.lib(jdatadst.obj) : error LNK2001: unresolved external symbol _free
+jpeg.lib(jmemnobs.obj) : error LNK2001: unresolved external symbol _free
+vorbis.lib(mapping0.obj) : error LNK2001: unresolved external symbol _free
+ogg.lib(framing.obj) : error LNK2001: unresolved external symbol _free
+ogg.lib(bitwise.obj) : error LNK2001: unresolved external symbol _free
+freetype.lib(ftsystem.obj) : error LNK2001: unresolved external symbol _free
+vorbis.lib(smallft.obj) : error LNK2001: unresolved external symbol _free
+vorbis.lib(floor0.obj) : error LNK2001: unresolved external symbol _free
+vorbis.lib(floor1.obj) : error LNK2001: unresolved external symbol _free
+vorbis.lib(res0.obj) : error LNK2001: unresolved external symbol _free
+vorbis.lib(sharedbook.obj) : error LNK2001: unresolved external symbol _free
+vorbis.lib(psy.obj) : error LNK2001: unresolved external symbol _free
+vorbis.lib(mdct.obj) : error LNK2001: unresolved external symbol _free
+vorbis.lib(envelope.obj) : error LNK2001: unresolved external symbol _free
+flac.lib(ogg_helper.obj) : error LNK2001: unresolved external symbol _free
+vorbisfile.lib(vorbisfile.obj) : error LNK2001: unresolved external symbol _free
+vorbis.lib(info.obj) : error LNK2001: unresolved external symbol _free
+vorbis.lib(block.obj) : error LNK2001: unresolved external symbol _free
+flac.lib(format.obj) : error LNK2001: unresolved external symbol _free
+flac.lib(md5.obj) : error LNK2001: unresolved external symbol _free
+flac.lib(memory.obj) : error LNK2001: unresolved external symbol _free
+flac.lib(bitwriter.obj) : error LNK2001: unresolved external symbol _free
+flac.lib(stream_decoder.obj) : error LNK2001: unresolved external symbol _free
+flac.lib(stream_encoder.obj) : error LNK2001: unresolved external symbol _free
+flac.lib(win_utf8_io.obj) : error LNK2001: unresolved external symbol _free
+flac.lib(bitreader.obj) : error LNK2001: unresolved external symbol _free
+freetype.lib(ftsystem.obj) : error LNK2001: unresolved external symbol _malloc
+jpeg.lib(jdatadst.obj) : error LNK2001: unresolved external symbol _malloc
+jpeg.lib(jmemnobs.obj) : error LNK2001: unresolved external symbol _malloc
+MSVCRTD.lib(new_scalar.obj) : error LNK2001: unresolved external symbol _malloc
+vorbis.lib(floor0.obj) : error LNK2001: unresolved external symbol _malloc
+vorbis.lib(res0.obj) : error LNK2001: unresolved external symbol _malloc
+ogg.lib(framing.obj) : error LNK2001: unresolved external symbol _malloc
+ogg.lib(bitwise.obj) : error LNK2001: unresolved external symbol _malloc
+vorbis.lib(codebook.obj) : error LNK2001: unresolved external symbol _malloc
+vorbis.lib(psy.obj) : error LNK2001: unresolved external symbol _malloc
+vorbis.lib(mdct.obj) : error LNK2001: unresolved external symbol _malloc
+vorbis.lib(envelope.obj) : error LNK2001: unresolved external symbol _malloc
+vorbisfile.lib(vorbisfile.obj) : error LNK2001: unresolved external symbol _malloc
+vorbis.lib(info.obj) : error LNK2001: unresolved external symbol _malloc
+vorbis.lib(block.obj) : error LNK2001: unresolved external symbol _malloc
+vorbis.lib(sharedbook.obj) : error LNK2001: unresolved external symbol _malloc
+flac.lib(memory.obj) : error LNK2001: unresolved external symbol _malloc
+flac.lib(bitwriter.obj) : error LNK2001: unresolved external symbol _malloc
+flac.lib(ogg_helper.obj) : error LNK2001: unresolved external symbol _malloc
+vorbisenc.lib(vorbisenc.obj) : error LNK2001: unresolved external symbol _malloc
+flac.lib(stream_decoder.obj) : error LNK2001: unresolved external symbol _malloc
+flac.lib(win_utf8_io.obj) : error LNK2001: unresolved external symbol _malloc
+flac.lib(bitreader.obj) : error LNK2001: unresolved external symbol _malloc
+flac.lib(md5.obj) : error LNK2001: unresolved external symbol _malloc
+ogg.lib(framing.obj) : error LNK2001: unresolved external symbol _realloc
+ogg.lib(bitwise.obj) : error LNK2001: unresolved external symbol _realloc
+freetype.lib(ftsystem.obj) : error LNK2001: unresolved external symbol _realloc
+vorbisfile.lib(vorbisfile.obj) : error LNK2001: unresolved external symbol _realloc
+vorbis.lib(info.obj) : error LNK2001: unresolved external symbol _realloc
+vorbis.lib(block.obj) : error LNK2001: unresolved external symbol _realloc
+vorbis.lib(envelope.obj) : error LNK2001: unresolved external symbol _realloc
+flac.lib(stream_decoder.obj) : error LNK2001: unresolved external symbol _realloc
+flac.lib(format.obj) : error LNK2001: unresolved external symbol _realloc
+flac.lib(md5.obj) : error LNK2001: unresolved external symbol _realloc
+flac.lib(bitwriter.obj) : error LNK2001: unresolved external symbol _realloc
+flac.lib(stream_decoder.obj) : error LNK2019: unresolved external symbol __fstat64 referenced in function _file_length_callback_
+flac.lib(stream_decoder.obj) : error LNK2019: unresolved external symbol __setmode referenced in function _init_FILE_internal_
+flac.lib(stream_encoder.obj) : error LNK2001: unresolved external symbol __setmode
+flac.lib(stream_encoder.obj) : error LNK2019: unresolved external symbol _fwrite referenced in function _file_write_callback_
+jpeg.lib(jdatadst.obj) : error LNK2001: unresolved external symbol _fwrite
+flac.lib(stream_encoder.obj) : error LNK2019: unresolved external symbol _setvbuf referenced in function _init_FILE_internal_
+flac.lib(stream_encoder.obj) : error LNK2019: unresolved external symbol _strtod referenced in function _FLAC__stream_encoder_set_apodization
+freetype.lib(ftlzw.obj) : error LNK2001: unresolved external symbol _memmove
+freetype.lib(type1cid.obj) : error LNK2001: unresolved external symbol _memmove
+freetype.lib(pshinter.obj) : error LNK2001: unresolved external symbol _memmove
+freetype.lib(bdf.obj) : error LNK2001: unresolved external symbol _memmove
+freetype.lib(ftgloadr.obj) : error LNK2001: unresolved external symbol _memmove
+ogg.lib(framing.obj) : error LNK2001: unresolved external symbol _memmove
+ogg.lib(bitwise.obj) : error LNK2001: unresolved external symbol _memmove
+freetype.lib(truetype.obj) : error LNK2001: unresolved external symbol _memmove
+freetype.lib(type1.obj) : error LNK2001: unresolved external symbol _memmove
+flac.lib(stream_encoder.obj) : error LNK2001: unresolved external symbol _memmove
+flac.lib(bitreader.obj) : error LNK2001: unresolved external symbol _memmove
+vorbis.lib(block.obj) : error LNK2001: unresolved external symbol _memmove
+vorbis.lib(envelope.obj) : error LNK2001: unresolved external symbol _memmove
+flac.lib(stream_encoder.obj) : error LNK2019: unresolved external symbol _strchr referenced in function _FLAC__stream_encoder_set_apodization
+freetype.lib(bdf.obj) : error LNK2001: unresolved external symbol _strncmp
+freetype.lib(type1cid.obj) : error LNK2001: unresolved external symbol _strncmp
+freetype.lib(type42.obj) : error LNK2001: unresolved external symbol _strncmp
+freetype.lib(psaux.obj) : error LNK2001: unresolved external symbol _strncmp
+freetype.lib(sfnt.obj) : error LNK2001: unresolved external symbol _strncmp
+flac.lib(stream_encoder.obj) : error LNK2001: unresolved external symbol _strncmp
+freetype.lib(truetype.obj) : error LNK2001: unresolved external symbol _strncmp
+freetype.lib(type1.obj) : error LNK2001: unresolved external symbol _strncmp
+freetype.lib(cff.obj) : error LNK2001: unresolved external symbol _strncmp
+flac.lib(win_utf8_io.obj) : error LNK2019: unresolved external symbol _fputws referenced in function _print_console
+flac.lib(win_utf8_io.obj) : error LNK2019: unresolved external symbol __wfopen referenced in function _fopen_utf8
+flac.lib(win_utf8_io.obj) : error LNK2019: unresolved external symbol ___stdio_common_vsnprintf_s referenced in function _fprintf_utf8
+flac.lib(win_utf8_io.obj) : error LNK2019: unresolved external symbol __wstat64 referenced in function __stat64_utf8
+flac.lib(win_utf8_io.obj) : error LNK2019: unresolved external symbol __wutime64 referenced in function _utime_utf8
+flac.lib(win_utf8_io.obj) : error LNK2019: unresolved external symbol __wchmod referenced in function _chmod_utf8
+flac.lib(win_utf8_io.obj) : error LNK2019: unresolved external symbol __wunlink referenced in function _unlink_utf8
+flac.lib(win_utf8_io.obj) : error LNK2019: unresolved external symbol __wrename referenced in function _rename_utf8
+flac.lib(bitreader.obj) : error LNK2019: unresolved external symbol ___stdio_common_vfprintf referenced in function _fprintf
+flac.lib(bitwriter.obj) : error LNK2001: unresolved external symbol ___stdio_common_vfprintf
+jpeg.lib(jerror.obj) : error LNK2001: unresolved external symbol ___stdio_common_vfprintf
+flac.lib(fixed.obj) : error LNK2019: unresolved external symbol ___libm_sse2_log referenced in function _FLAC__fixed_compute_best_predictor
+flac.lib(lpc.obj) : error LNK2001: unresolved external symbol ___libm_sse2_log
+flac.lib(fixed_intrin_sse2.obj) : error LNK2001: unresolved external symbol ___libm_sse2_log
+flac.lib(fixed_intrin_ssse3.obj) : error LNK2001: unresolved external symbol ___libm_sse2_log
+freetype.lib(sfnt.obj) : error LNK2001: unresolved external symbol _qsort
+freetype.lib(bdf.obj) : error LNK2001: unresolved external symbol _qsort
+freetype.lib(ftrfork.obj) : error LNK2001: unresolved external symbol _qsort
+vorbis.lib(lsp.obj) : error LNK2001: unresolved external symbol _qsort
+freetype.lib(type1.obj) : error LNK2001: unresolved external symbol _qsort
+freetype.lib(psaux.obj) : error LNK2001: unresolved external symbol _qsort
+freetype.lib(psmodule.obj) : error LNK2001: unresolved external symbol _qsort
+flac.lib(format.obj) : error LNK2001: unresolved external symbol _qsort
+vorbis.lib(sharedbook.obj) : error LNK2001: unresolved external symbol _qsort
+vorbis.lib(psy.obj) : error LNK2001: unresolved external symbol _qsort
+vorbis.lib(floor1.obj) : error LNK2001: unresolved external symbol _qsort
+flac.lib(lpc.obj) : error LNK2019: unresolved external symbol __copysign referenced in function _FLAC__lpc_quantize_coefficients
+flac.lib(lpc.obj) : error LNK2019: unresolved external symbol _frexp referenced in function _FLAC__lpc_quantize_coefficients
+flac.lib(window.obj) : error LNK2019: unresolved external symbol ___libm_sse2_cos referenced in function _FLAC__window_bartlett_hann
+flac.lib(window.obj) : error LNK2019: unresolved external symbol ___libm_sse2_exp referenced in function _FLAC__window_gauss
+vorbisfile.lib(vorbisfile.obj) : error LNK2019: unresolved external symbol __errno referenced in function __get_next_page
+vorbisfile.lib(vorbisfile.obj) : error LNK2019: unresolved external symbol _fopen referenced in function _ov_fopen
+freetype.lib(ftsystem.obj) : error LNK2001: unresolved external symbol _fopen
+vorbisfile.lib(vorbisfile.obj) : error LNK2019: unresolved external symbol _fseek referenced in function __fseek64_wrap
+freetype.lib(ftsystem.obj) : error LNK2001: unresolved external symbol _fseek
+vorbisfile.lib(vorbisfile.obj) : error LNK2019: unresolved external symbol _ftell referenced in function _ov_fopen
+freetype.lib(ftsystem.obj) : error LNK2001: unresolved external symbol _ftell
+vorbis.lib(mdct.obj) : error LNK2001: unresolved external symbol _floor
+vorbis.lib(floor0.obj) : error LNK2001: unresolved external symbol _floor
+vorbis.lib(floor1.obj) : error LNK2001: unresolved external symbol _floor
+vorbisfile.lib(vorbisfile.obj) : error LNK2001: unresolved external symbol _floor
+vorbis.lib(bitrate.obj) : error LNK2001: unresolved external symbol _floor
+vorbis.lib(sharedbook.obj) : error LNK2001: unresolved external symbol _floor
+vorbis.lib(psy.obj) : error LNK2001: unresolved external symbol _floor
+vorbis.lib(info.obj) : error LNK2019: unresolved external symbol _toupper referenced in function _vorbis_comment_query
+vorbis.lib(sharedbook.obj) : error LNK2019: unresolved external symbol _ldexp referenced in function _vorbis_book_init_encode
+vorbis.lib(sharedbook.obj) : error LNK2019: unresolved external symbol __libm_sse2_log_precise referenced in function __float32_pack
+vorbis.lib(psy.obj) : error LNK2001: unresolved external symbol __libm_sse2_log_precise
+vorbis.lib(mdct.obj) : error LNK2001: unresolved external symbol __libm_sse2_log_precise
+vorbis.lib(sharedbook.obj) : error LNK2019: unresolved external symbol __libm_sse2_pow_precise referenced in function __book_maptype1_quantvals
+vorbis.lib(psy.obj) : error LNK2019: unresolved external symbol __libm_sse2_atan_precise referenced in function __vp_psy_init
+vorbis.lib(floor0.obj) : error LNK2001: unresolved external symbol __libm_sse2_atan_precise
+vorbis.lib(psy.obj) : error LNK2019: unresolved external symbol __libm_sse2_exp_precise referenced in function __vp_psy_init
+vorbis.lib(lsp.obj) : error LNK2001: unresolved external symbol __libm_sse2_exp_precise
+vorbis.lib(psy.obj) : error LNK2019: unresolved external symbol __libm_sse2_sqrt_precise referenced in function _noise_normalize
+vorbis.lib(lsp.obj) : error LNK2001: unresolved external symbol __libm_sse2_sqrt_precise
+vorbis.lib(psy.obj) : error LNK2019: unresolved external symbol _ceil referenced in function _setup_tone_curves
+vorbis.lib(mdct.obj) : error LNK2019: unresolved external symbol __libm_sse2_cos_precise referenced in function _mdct_init
+vorbis.lib(smallft.obj) : error LNK2001: unresolved external symbol __libm_sse2_cos_precise
+vorbis.lib(lsp.obj) : error LNK2001: unresolved external symbol __libm_sse2_cos_precise
+vorbis.lib(mdct.obj) : error LNK2019: unresolved external symbol __libm_sse2_sin_precise referenced in function _mdct_init
+vorbis.lib(envelope.obj) : error LNK2001: unresolved external symbol __libm_sse2_sin_precise
+vorbis.lib(smallft.obj) : error LNK2001: unresolved external symbol __libm_sse2_sin_precise
+vorbis.lib(floor1.obj) : error LNK2019: unresolved external symbol _exit referenced in function _floor1_fit
+jpeg.lib(jerror.obj) : error LNK2001: unresolved external symbol _exit
+vorbis.lib(lsp.obj) : error LNK2019: unresolved external symbol __libm_sse2_acos_precise referenced in function _vorbis_lpc_to_lsp
+ogg.lib(framing.obj) : error LNK2019: unresolved external symbol _memchr referenced in function _ogg_sync_pageout
+freetype.lib(type1.obj) : error LNK2001: unresolved external symbol _memchr
+freetype.lib(sfnt.obj) : error LNK2001: unresolved external symbol _memchr
+freetype.lib(ftobjs.obj) : error LNK2019: unresolved external symbol _longjmp referenced in function _ft_validator_error
+freetype.lib(smooth.obj) : error LNK2001: unresolved external symbol _longjmp
+freetype.lib(truetype.obj) : error LNK2019: unresolved external symbol _strstr referenced in function _tt_check_trickyness_family
+freetype.lib(type1cid.obj) : error LNK2019: unresolved external symbol _atol referenced in function _cid_parser_new
+freetype.lib(type42.obj) : error LNK2001: unresolved external symbol _atol
+freetype.lib(sfnt.obj) : error LNK2019: unresolved external symbol __setjmp3 referenced in function _tt_face_build_cmaps
+freetype.lib(smooth.obj) : error LNK2001: unresolved external symbol __setjmp3
+freetype.lib(ftrfork.obj) : error LNK2019: unresolved external symbol _strncpy referenced in function _raccess_make_file_name
+freetype.lib(ftrfork.obj) : error LNK2019: unresolved external symbol _strrchr referenced in function _raccess_make_file_name
+jpeg.lib(jerror.obj) : error LNK2019: unresolved external symbol ___stdio_common_vsprintf referenced in function _sprintf
+jpeg.lib(jdatadst.obj) : error LNK2019: unresolved external symbol _fflush referenced in function _term_destination
+jpeg.lib(jmemmgr.obj) : error LNK2019: unresolved external symbol _getenv referenced in function _jinit_memory_mgr
+jpeg.lib(jmemmgr.obj) : error LNK2019: unresolved external symbol ___stdio_common_vsscanf referenced in function _sscanf
+msvcprtd.lib(locale0_implib.obj) : error LNK2019: unresolved external symbol __imp___free_dbg referenced in function "public: static void __cdecl std::_Fac_node::operator delete(void *)" (??3_Fac_node@std@@SAXPAX@Z)
+msvcprtd.lib(locale0_implib.obj) : error LNK2019: unresolved external symbol __imp___malloc_dbg referenced in function "public: static void * __cdecl std::_Fac_node::operator new(unsigned int)" (??2_Fac_node@std@@SAPAXI@Z)
+MSVCRTD.lib(new_scalar.obj) : error LNK2019: unresolved external symbol __callnewh referenced in function "void * __cdecl operator new(unsigned int)" (??2@YAPAXI@Z)
+MSVCRTD.lib(delete_scalar.obj) : error LNK2019: unresolved external symbol __free_dbg referenced in function "void __cdecl operator delete(void *)" (??3@YAXPAX@Z)
+MSVCRTD.lib(_init_.obj) : error LNK2019: unresolved external symbol __CrtDbgReport referenced in function __CRT_RTC_INIT
+MSVCRTD.lib(_init_.obj) : error LNK2019: unresolved external symbol __CrtDbgReportW referenced in function __CRT_RTC_INITW
+MSVCRTD.lib(thread_safe_statics.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+MSVCRTD.lib(ehvecdtr.obj) : error LNK2019: unresolved external symbol _terminate referenced in function "int __cdecl ArrayUnwindFilter(struct _EXCEPTION_POINTERS *)" (?ArrayUnwindFilter@@YAHPAU_EXCEPTION_POINTERS@@@Z)
+MSVCRTD.lib(utility_desktop.obj) : error LNK2001: unresolved external symbol _terminate
+MSVCRTD.lib(tncleanup.obj) : error LNK2019: unresolved external symbol ___std_type_info_destroy_list referenced in function "void __cdecl __scrt_uninitialize_type_info(void)" (?__scrt_uninitialize_type_info@@YAXXZ)
+MSVCRTD.lib(_ftol3_.obj) : error LNK2019: unresolved external symbol __except1 referenced in function __ftol3_except
+MSVCRTD.lib(utility.obj) : error LNK2019: unresolved external symbol ___vcrt_initialize referenced in function ___scrt_initialize_crt
+MSVCRTD.lib(utility.obj) : error LNK2019: unresolved external symbol ___vcrt_uninitialize referenced in function ___scrt_initialize_crt
+MSVCRTD.lib(utility.obj) : error LNK2019: unresolved external symbol ___vcrt_uninitialize_critical referenced in function ___scrt_dllmain_uninitialize_critical
+MSVCRTD.lib(utility.obj) : error LNK2019: unresolved external symbol ___vcrt_thread_attach referenced in function ___scrt_dllmain_crt_thread_attach
+MSVCRTD.lib(utility.obj) : error LNK2019: unresolved external symbol ___vcrt_thread_detach referenced in function ___scrt_dllmain_crt_thread_attach
+MSVCRTD.lib(utility.obj) : error LNK2019: unresolved external symbol __seh_filter_dll referenced in function ___scrt_dllmain_exception_filter
+MSVCRTD.lib(utility.obj) : error LNK2019: unresolved external symbol __is_c_termination_complete referenced in function ___scrt_dllmain_uninitialize_c
+MSVCRTD.lib(utility.obj) : error LNK2019: unresolved external symbol __configure_narrow_argv referenced in function "public: static int __cdecl __scrt_narrow_argv_policy::configure_argv(void)" (?configure_argv@__scrt_narrow_argv_policy@@SAHXZ)
+MSVCRTD.lib(utility.obj) : error LNK2019: unresolved external symbol __initialize_narrow_environment referenced in function ___scrt_dllmain_after_initialize_c
+MSVCRTD.lib(utility.obj) : error LNK2019: unresolved external symbol __initialize_onexit_table referenced in function ___scrt_initialize_onexit_tables
+MSVCRTD.lib(utility.obj) : error LNK2019: unresolved external symbol __register_onexit_function referenced in function __onexit
+MSVCRTD.lib(utility.obj) : error LNK2019: unresolved external symbol __execute_onexit_table referenced in function ___scrt_dllmain_uninitialize_c
+MSVCRTD.lib(utility.obj) : error LNK2019: unresolved external symbol __crt_atexit referenced in function __onexit
+MSVCRTD.lib(utility.obj) : error LNK2019: unresolved external symbol __crt_at_quick_exit referenced in function _at_quick_exit
+MSVCRTD.lib(utility.obj) : error LNK2019: unresolved external symbol ___acrt_initialize referenced in function ___scrt_initialize_crt
+MSVCRTD.lib(utility.obj) : error LNK2019: unresolved external symbol ___acrt_uninitialize referenced in function ___scrt_uninitialize_crt
+MSVCRTD.lib(utility.obj) : error LNK2019: unresolved external symbol ___acrt_uninitialize_critical referenced in function ___scrt_dllmain_uninitialize_critical
+MSVCRTD.lib(utility.obj) : error LNK2019: unresolved external symbol ___acrt_thread_attach referenced in function ___scrt_dllmain_crt_thread_attach
+MSVCRTD.lib(utility.obj) : error LNK2019: unresolved external symbol ___acrt_thread_detach referenced in function ___scrt_dllmain_crt_thread_detach
+MSVCRTD.lib(utility.obj) : error LNK2019: unresolved external symbol __cexit referenced in function ___scrt_dllmain_uninitialize_c
+MSVCRTD.lib(thread_safe_statics.obj) : error LNK2019: unresolved external symbol ___vcrt_InitializeCriticalSectionEx referenced in function "void __cdecl __scrt_initialize_thread_safe_statics_platform_specific(void)" (?__scrt_initialize_thread_safe_statics_platform_specific@@YAXXZ)
+MSVCRTD.lib(throw_bad_alloc.obj) : error LNK2019: unresolved external symbol ___std_exception_copy referenced in function "public: __thiscall std::exception::exception(class std::exception const &)" (??0exception@std@@QAE@ABV01@@Z)
+MSVCRTD.lib(throw_bad_alloc.obj) : error LNK2019: unresolved external symbol ___std_exception_destroy referenced in function "public: virtual __thiscall std::exception::~exception(void)" (??1exception@std@@UAE@XZ)
+MSVCRTD.lib(_error_.obj) : error LNK2019: unresolved external symbol _strcpy_s referenced in function "void __cdecl _RTC_StackFailure(void *,char const *)" (?_RTC_StackFailure@@YAXPAXPBD@Z)
+MSVCRTD.lib(_error_.obj) : error LNK2019: unresolved external symbol _strcat_s referenced in function "void __cdecl _RTC_StackFailure(void *,char const *)" (?_RTC_StackFailure@@YAXPAXPBD@Z)
+MSVCRTD.lib(_error_.obj) : error LNK2019: unresolved external symbol ___stdio_common_vsprintf_s referenced in function __vsprintf_s_l
+MSVCRTD.lib(_chandler4gs_.obj) : error LNK2019: unresolved external symbol __except_handler4_common referenced in function __except_handler4
+MSVCRTD.lib(_pdblkup_.obj) : error LNK2019: unresolved external symbol __wmakepath_s referenced in function "int __cdecl GetPdbDllPathFromFilePath(wchar_t const *,wchar_t *,unsigned int)" (?GetPdbDllPathFromFilePath@@YAHPB_WPA_WI@Z)
+MSVCRTD.lib(_pdblkup_.obj) : error LNK2019: unresolved external symbol __wsplitpath_s referenced in function "int __cdecl GetPdbDllPathFromFilePath(wchar_t const *,wchar_t *,unsigned int)" (?GetPdbDllPathFromFilePath@@YAHPB_WPA_WI@Z)
+MSVCRTD.lib(_pdblkup_.obj) : error LNK2019: unresolved external symbol _wcscpy_s referenced in function "int __cdecl GetPdbDllPathFromFilePath(wchar_t const *,wchar_t *,unsigned int)" (?GetPdbDllPathFromFilePath@@YAHPB_WPA_WI@Z)
+MSVCRTD.lib(_pdblkup_.obj) : error LNK2019: unresolved external symbol ___vcrt_GetModuleFileNameW referenced in function "struct HINSTANCE__ * __cdecl GetPdbDll(void)" (?GetPdbDll@@YAPAUHINSTANCE__@@XZ)
+MSVCRTD.lib(_pdblkup_.obj) : error LNK2019: unresolved external symbol ___vcrt_GetModuleHandleW referenced in function "struct HINSTANCE__ * __cdecl GetPdbDll(void)" (?GetPdbDll@@YAPAUHINSTANCE__@@XZ)
+MSVCRTD.lib(_pdblkup_.obj) : error LNK2019: unresolved external symbol ___vcrt_LoadLibraryExW referenced in function "struct HINSTANCE__ * __cdecl GetPdbDll(void)" (?GetPdbDll@@YAPAUHINSTANCE__@@XZ)
+C:\Users\18dcb01\Documents\GitHub\SpaceInvaders\Debug\Space Invaders.exe : fatal error LNK1120: 171 unresolved externals
