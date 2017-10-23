@@ -12,6 +12,8 @@ public:
 	virtual void update();
 	void actuallyDie();
 	bool actuallyDead();
+	void pauseSound();
+	void playSound();
 private:
 	int direction;
 	sf::SoundBuffer buffer;

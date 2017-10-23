@@ -1,11 +1,38 @@
-﻿  Large.cpp
-Large.cpp(9): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Medium.cpp
-Medium.cpp(9): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Small.cpp
+﻿  Game.cpp
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\Bullet.h(14): warning C4305: 'argument': truncation from 'double' to 'float'
+Game.cpp(21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+Game.cpp(49): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+Game.cpp(99): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(108): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(142): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(152): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(203): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(215): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(231): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(248): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(275): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(328): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(334): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(380): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(382): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(390): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(392): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(410): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\ucrt\stdlib.h(1282): note: see declaration of '_sleep'
+Game.cpp(423): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(447): warning C4018: '<': signed/unsigned mismatch
+Game.cpp(479): warning C4018: '<': signed/unsigned mismatch
+  Player.cpp
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\Bullet.h(14): warning C4305: 'argument': truncation from 'double' to 'float'
+Player.cpp(19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+Player.cpp(69): warning C4018: '<': signed/unsigned mismatch
+Player.cpp(140): warning C4018: '<': signed/unsigned mismatch
+Player.cpp(194): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  UFO.cpp
+c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\Bullet.h(14): warning C4305: 'argument': truncation from 'double' to 'float'
   Generating code
-  5 of 606 functions ( 0.8%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+  4 of 615 functions ( 0.7%) were compiled, the rest were copied from previous compilation.
+    2 functions were new in current compilation
+    5 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   ConsoleApplication1.vcxproj -> C:\Users\18dcb01\Documents\GitHub\SpaceInvaders\Release\Space Invaders.exe

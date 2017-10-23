@@ -38,6 +38,9 @@ UFO::~UFO()
 }
 
 
+
+
+
 bool UFO::move(int dir)
 {
 	if (direction == 0)//move right
@@ -78,4 +81,15 @@ void UFO::actuallyDie()
 bool UFO::actuallyDead()
 {
 	return permDeath;
+}
+
+void UFO::pauseSound()
+{
+	ufoSound.pause();
+}
+
+void UFO::playSound()
+{
+	if(lives>0)
+		ufoSound.play();
 }
