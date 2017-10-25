@@ -67,3 +67,9 @@ bool Animation::move(int dir)
 	}
 	return false;
 }
+
+
+void Animation::setColor(sf::Color color)
+{
+	rectangle.setFillColor(color);
+}

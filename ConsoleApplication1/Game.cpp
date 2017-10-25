@@ -146,7 +146,10 @@ bool Game::loop()
 		for (int i = 0; i < gameData[0].size(); i++)
 		{
 			if (dynamic_cast<Player *>(gameData[0].at(i))->player == "Player 1")
+			{
 				player1Score = std::to_string(dynamic_cast<Player *>(gameData[0].at(i))->getScore());
+
+			}
 			else
 				player2Score = std::to_string(dynamic_cast<Player *>(gameData[0].at(i))->getScore());
 		}
@@ -417,6 +420,7 @@ void Game::render()
 		for (int i = 0; i < 4; i++)
 			for (int j = 0; j < gameData[i].size(); j++)
 				gameData[i].at(j)->render();
+
 		window->draw(lifeSeperator);
 
 		window->display();

@@ -104,7 +104,9 @@ void Ship::update(std::vector<GameObject *> other)
 							frameFiles.push_back("transparent.png");
 							sf::Vector2f pos = shipTemp->getPosition();
 							pos.y - 8;
-							shipTemp->animation.push_back( new Animation(pos, frameFiles, window));
+							Animation * animationTemp = new Animation(pos, frameFiles, window);
+							animationTemp->setColor(sf::Color::Red);
+							shipTemp->animation.push_back(animationTemp);
 						}
 												
 						bulletDeath = true;
