@@ -17,7 +17,7 @@ Player::Player(int x, sf::RenderWindow * wndw, char * name) : Ship(wndw)
 	setTexture("player.png");
 	points = 40;
 	rectangle.setPosition(sf::Vector2f(x, wndw->getView().getSize().y - 40));
-	rectangle.setOrigin(rectangle.getOrigin().x, 0);//set origin to top of player for bullet to spawn correctly
+	//rectangle.setOrigin(rectangle.getOrigin().x, 0);//set origin to top of player for bullet to spawn correctly
 	lives = 3;
 
 	//initialize bullet sounds
@@ -78,13 +78,14 @@ void Player::update(std::vector<GameObject *> & other)
 						score += shipTemp->getPoints();
 						shipTemp->takeLife();
 
-						//sound for enemy death
+						//animation for enemy death
 						std::vector<std::string> frameFiles;
 						frameFiles.push_back("enemyDeath/enemyDeath0.png");
 						frameFiles.push_back("enemyDeath/enemyDeath1.png");
 						frameFiles.push_back("transparent.png");
 						other.push_back(new Animation(shipTemp->getPosition(), frameFiles, window));
 
+						//sound for enemy death
 						enemyDeath.play();
 
 						bulletDeath = true;
@@ -115,13 +116,10 @@ void Player::update(std::vector<GameObject *> & other)
 						shipTemp->takeLife();
 						shipTemp->actuallyDie();
 
-
 						frameFiles.push_back("transparent.png");
 						other.push_back(new Animation(shipTemp->getPosition(), frameFiles, window));
 
 						bulletDeath = true;
-
-						//shipTemp
 					}
 				}
 			}
@@ -135,6 +133,7 @@ void Player::update(std::vector<GameObject *> & other)
 		else
 			activeShot->update();
 	}
+
 	if (!animation.empty())
 	{
 		for (int i = 0; i < animation.size(); i++)
@@ -155,15 +154,18 @@ void Player::update()
 
 bool Player::move(int dir)
 {
-	if (dir == 1)//if 1, move right
+	if (animation.size() == 0)
 	{
-		if ((rectangle.getPosition().x + rectangle.getSize().x / 2) < window->getView().getSize().x)
-			rectangle.move(1, 0);
-	}
-	else//if 2, move left
-	{
-		if ((rectangle.getPosition().x - rectangle.getSize().x / 2) > 0)
-			rectangle.move(-1, 0);
+		if (dir == 1)//if 1, move right
+		{
+			if ((rectangle.getPosition().x + rectangle.getSize().x / 2) < window->getView().getSize().x)
+				rectangle.move(1, 0);
+		}
+		else//if 2, move left
+		{
+			if ((rectangle.getPosition().x - rectangle.getSize().x / 2) > 0)
+				rectangle.move(-1, 0);
+		}
 	}
 	return true;
 }
@@ -171,7 +173,7 @@ bool Player::move(int dir)
 
 void Player::shoot()
 {
-	if (activeShot == nullptr && lives>0 && bulletSound.getStatus() == bulletSound.Stopped)
+	if (activeShot == nullptr && lives>0 && bulletSound.getStatus() == bulletSound.Stopped && animation.size() == 0)
 	{
 		bulletSound.play();
 		activeShot = new Bullet(sf::Vector2i(rectangle.getPosition()), window);
@@ -191,7 +193,7 @@ void Player::renderLives()
 {
 	for (int i = 1; i < lives; i++)
 	{
-		extraLives->setPosition(sf::Vector2f(player == "Player 1" ? i * 16 - 8 : 224 - i * 16, window->getView().getSize().y - 8));
+		extraLives->setPosition(sf::Vector2f(player == "Player 1" ? i * 16 - 8 : window->getView().getSize().x - i * 16 + 8, window->getView().getSize().y - 8));
 		extraLives->render();
 	}
 }

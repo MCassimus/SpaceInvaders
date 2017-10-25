@@ -5,6 +5,7 @@
 Animation::Animation(sf::Vector2f pos, std::vector<std::string> frames, sf::RenderWindow * wndw): GameObject(wndw)
 {
 	frameFiles = frames;
+	rectangle.setOrigin(rectangle.getSize().x / 2, rectangle.getSize().y / 2);
 	rectangle.setPosition(pos);
 	update();
 }
@@ -65,4 +66,10 @@ bool Animation::move(int dir)
 		rectangle.setPosition(position);
 	}
 	return false;
+}
+
+
+void Animation::setColor(sf::Color color)
+{
+	rectangle.setFillColor(color);
 }

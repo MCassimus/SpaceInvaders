@@ -23,5 +23,4 @@ private:
 	sf::Sound bulletSound;
 	sf::SoundBuffer enemyDeathBuffer;
 	sf::Sound enemyDeath;
-
 };

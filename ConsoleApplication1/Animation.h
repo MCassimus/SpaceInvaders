@@ -9,6 +9,7 @@ public:
 	void update();
 	bool isDone();
 	bool move(int);
+	void setColor(sf::Color);
 private:
 	int frame = 0;
 	int frameDelay = 1;
