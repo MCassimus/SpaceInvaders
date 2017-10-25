@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿  Game.cpp
 c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\Bullet.h(14): warning C4305: 'argument': truncation from 'double' to 'float'
 Game.cpp(22): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
@@ -91,10 +92,18 @@ Word.cpp(49): warning C4244: 'argument': conversion from 'const float' to 'unsig
 Word.cpp(51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   spaceInvaders.cpp
 spaceInvaders.cpp(41): warning C4244: 'argument': conversion from 'const float' to 'unsigned int', possible loss of data
+=======
+﻿  spaceInvaders.cpp
+spaceInvaders.cpp(40): warning C4244: 'argument': conversion from 'double' to 'unsigned int', possible loss of data
+>>>>>>> 7083b7d083e06c4fa596d8315f2c538ecb15d896
   Generating code
-  36 of 551 functions ( 6.5%) were compiled, the rest were copied from previous compilation.
+  1 of 616 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
+<<<<<<< HEAD
     14 functions had inline decision re-evaluated but remain unchanged
 >>>>>>> e2fdfadd3d4f713701886360fecc7fa60cc33e6f
+=======
+    0 functions had inline decision re-evaluated but remain unchanged
+>>>>>>> 7083b7d083e06c4fa596d8315f2c538ecb15d896
   Finished generating code
-  ConsoleApplication1.vcxproj -> C:\Users\18mac03\Documents\SpaceInvaders\Release\Space Invaders.exe
+  ConsoleApplication1.vcxproj -> C:\Users\18mac03\Documents\GitHub\SpaceInvaders\Release\Space Invaders.exe
