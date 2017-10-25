@@ -9,6 +9,7 @@
 #include "UFO.h"
 #include "Word.h"
 #include <iostream>
+#include <time.h>
 
 
 Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
@@ -49,6 +50,8 @@ Game::Game(sf::RenderWindow * renderWindow, bool twoPlayer)
 	srand(time(NULL));
 
 	level = 1;
+
+	beginTime = clock();
 }
 
 
@@ -288,6 +291,10 @@ bool Game::loop()
 						while (j >= 0 && !shipTemp->shoot())
 						{
 							j -= 11;
+							if (j >= 0)
+							{
+								shipTemp = dynamic_cast<Ship*>(gameData[1].at(j));
+							}
 						}
 					}
 				}
@@ -414,7 +421,9 @@ bool Game::loop()
 
 void Game::render()
 {
-	if (!pause)
+	ticks++;
+	while (clock() - beginTime < ticks * 14) {}
+	if (!pause&&clock()-beginTime < ticks*14+15)
 	{
 		window->clear();
 

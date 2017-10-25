@@ -20,4 +20,6 @@ private:
 	bool pause = false;
 	sf::SoundBuffer sounds;
 	sf::Sound soundPlayer;
+	clock_t beginTime;
+	int ticks = 0;
 };
