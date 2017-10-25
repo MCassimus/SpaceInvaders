@@ -11,10 +11,16 @@
 
 int main()
 {
+<<<<<<< HEAD
 	//sf::RenderWindow window(sf::VideoMode::getFullscreenModes().at(0), "Space Invaders", sf::Style::Fullscreen);
 	sf::RenderWindow window(sf::VideoMode(620, 496), "Space Invaders");
+=======
+	sf::RenderWindow window(sf::VideoMode::getFullscreenModes().at(0), "Space Invaders", sf::Style::Fullscreen);
+	//sf::RenderWindow window(sf::VideoMode(620, 496, 24), "Space Invaders");
+>>>>>>> e2fdfadd3d4f713701886360fecc7fa60cc33e6f
 	window.setFramerateLimit(60);
 	window.setKeyRepeatEnabled(false);
+	window.setMouseCursorVisible(false);
 
 	sf::View view(sf::Rect<float>(0, 0, 310, 248));
 	window.setView(view);
@@ -35,6 +41,11 @@ int main()
 				window.close();
 			else if (event.type == sf::Event::Resized)
 			{
+				double ratio = event.size.width / view.getSize().x;
+				view.setCenter(view.getSize().x / 2, view.getSize().y / 2);
+				sf::VideoMode vidModeTemp(view.getSize().x, view.getSize().y, 24);
+				window.close();
+				window.create(vidModeTemp, "Space Invaders", sf::Style::Fullscreen);
 				window.setView(view);
 			}
 			else if (event.type == sf::Event::KeyPressed)
