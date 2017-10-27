@@ -10,23 +10,40 @@
 
 
 int main()
-{
-	sf::RenderWindow window(sf::VideoMode::getFullscreenModes().at(0), "Space Invaders", sf::Style::Fullscreen);
+{ 
+	sf::RenderWindow window(sf::VideoMode::getFullscreenModes().at(0), "Space Invaders", (sf::Style::Resize + sf::Style::Close + sf::Style::Fullscreen));
 	//sf::RenderWindow window(sf::VideoMode(620, 496, 24), "Space Invaders");
 	window.setFramerateLimit(60);
 	window.setKeyRepeatEnabled(false);
 	window.setMouseCursorVisible(false);
 
 	sf::View view(sf::Rect<float>(0, 0, 310, 248));
-	
-	double ratio = view.getSize().x / view.getSize().y;
+	view.setCenter(view.getSize().x / 2, view.getSize().y / 2);
 
+	float winRatio = window.getSize().x / window.getSize().y;
+	float viewRatio = view.getSize().x / view.getSize().y;
+
+	sf::Vector2f viewPos(0, 0);
+	sf::Vector2f viewSize(1, 1);
+
+	//apply margins where approriate to scale view to fit window
+	if (winRatio < viewRatio)
+	{
+		viewSize.y = winRatio / viewRatio;
+		viewPos.y = (1 - viewSize.y) / 2.0f;
+	}
+	else
+	{
+		viewSize.x = viewRatio / winRatio;
+		viewPos.x = (1 - viewSize.x) / 2.0f;
+	}
 	
-	sf::VideoMode vidModeTemp(window.getSize().x, window.getSize().y / ratio, 24);
-	//window.close();
-	//window.create(vidModeTemp, "Space Invaders", sf::Style::Fullscreen);
-	view.setViewport(sf::FloatRect(0, 0, 1, (vidModeTemp.height / window.getSize().y) * 1));
-	
+	printf("win x: %f\nwin y: %f\n", window.getSize().x, window.getSize().y);
+	printf("winratio: %f\nviewratio: %f\n", winRatio, viewRatio);
+	printf("view x : %f \nview y: %f\n", viewSize.x, viewSize.y);
+	printf("pos x : %f \npos y: %f\n", viewPos.x, viewPos.y);
+
+	view.setViewport(sf::FloatRect(viewPos.x, viewPos.y, viewSize.x, viewSize.y));
 	window.setView(view);
 
 	GameObject menu(&window);
@@ -45,10 +62,26 @@ int main()
 				window.close();
 			else if (event.type == sf::Event::Resized)
 			{
-				double ratio = view.getSize().x / view.getSize().y;
-				sf::VideoMode vidModeTemp(event.size.width, event.size.height / ratio , 24);
-				window.close();
-				window.create(vidModeTemp, "Space Invaders", sf::Style::Fullscreen);
+				winRatio = event.size.width / (float)event.size.height;
+
+				//apply margins where approriate to scale view to fit window
+				if (winRatio < viewRatio)
+				{
+					viewSize.y = winRatio / viewRatio;
+					viewPos.y = (1 - viewSize.y) / 2.0f;
+				}
+				else
+				{
+					viewSize.x = viewRatio / winRatio;
+					viewPos.x = (1 - viewSize.x) / 2.0f;
+				}
+
+				printf("win x: %f\nwin y: %f\n", window.getSize().x, window.getSize().y);
+				printf("winratio: %f\nviewratio: %f\n", winRatio, viewRatio);
+				printf("view x : %f \nview y: %f\n", viewSize.x, viewSize.y);
+				printf("pos x : %f \npos y: %f\n", viewPos.x, viewPos.y);
+			
+				view.setViewport(sf::FloatRect(viewPos.x, viewPos.y, viewSize.x, viewSize.y));
 				window.setView(view);
 			}
 			else if (event.type == sf::Event::KeyPressed)

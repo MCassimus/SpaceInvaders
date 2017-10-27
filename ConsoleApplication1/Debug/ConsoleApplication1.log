@@ -1,67 +1,4 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ConsoleApplication1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  stdafx.cpp
-  spaceInvaders.cpp
-  Word.cpp
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\word.cpp(19): warning C4244: 'argument': conversion from 'const float' to 'unsigned int', possible loss of data
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\word.cpp(21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\word.cpp(47): warning C4244: 'argument': conversion from 'const float' to 'unsigned int', possible loss of data
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\word.cpp(49): warning C4244: 'argument': conversion from 'const float' to 'unsigned int', possible loss of data
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\word.cpp(51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  UFO.cpp
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\bullet.h(14): warning C4305: 'argument': truncation from 'double' to 'float'
-  Small.cpp
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\bullet.h(14): warning C4305: 'argument': truncation from 'double' to 'float'
-  Ship.cpp
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\bullet.h(14): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\ship.cpp(33): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\ship.cpp(78): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\ship.cpp(110): warning C4018: '<': signed/unsigned mismatch
-  Shield.cpp
-  Player.cpp
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\bullet.h(14): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\player.cpp(19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\player.cpp(69): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\player.cpp(140): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\player.cpp(194): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Medium.cpp
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\bullet.h(14): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\medium.cpp(9): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Large.cpp
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\bullet.h(14): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\large.cpp(9): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  GameObject.cpp
-  Game.cpp
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\bullet.h(14): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(49): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(93): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(102): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(136): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(146): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(197): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(209): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(225): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(242): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(269): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(322): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(328): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(374): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(376): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(384): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(386): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(404): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdlib.h(1282): note: see declaration of '_sleep'
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(417): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(441): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\game.cpp(473): warning C4018: '<': signed/unsigned mismatch
-  Bullet.cpp
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\bullet.h(14): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\bullet.cpp(9): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\bullet.cpp(27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Animation.cpp
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\animation.cpp(20): warning C4018: '<': signed/unsigned mismatch
-c:\users\18dcb01\documents\github\spaceinvaders\consoleapplication1\animation.cpp(33): warning C4018: '>=': signed/unsigned mismatch
-  Generating Code...
 sfml-system-s-d.lib(String.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
 sfml-audio-s-d.lib(SoundFileReaderFlac.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
 sfml-audio-s-d.lib(SoundFileWriterFlac.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
@@ -84,9 +21,9 @@ sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2001: unresolved external 
 sfml-window-s-d.lib(Window.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
 sfml-window-s-d.lib(VideoMode.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
 sfml-graphics-s-d.lib(Text.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
+sfml-graphics-s-d.lib(VertexArray.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
 sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
 sfml-graphics-s-d.lib(GLCheck.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
-sfml-graphics-s-d.lib(VertexArray.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
 Word.obj : error LNK2001: unresolved external symbol __imp___invalid_parameter
 sfml-graphics-s-d.lib(Shape.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
 sfml-graphics-s-d.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter
@@ -169,7 +106,7 @@ Animation.obj : error LNK2001: unresolved external symbol _memcpy
 Game.obj : error LNK2001: unresolved external symbol _memcpy
 GameObject.obj : error LNK2001: unresolved external symbol _memcpy
 Large.obj : error LNK2001: unresolved external symbol _memcpy
-sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2019: unresolved external symbol __imp__memmove referenced in function "public: virtual bool __thiscall sf::priv::SoundFileWriterOgg::open(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,unsigned int,unsigned int)" (?open@SoundFileWriterOgg@priv@sf@@UAE_NABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@II@Z)
 sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
 sfml-system-s-d.lib(String.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
 sfml-audio-s-d.lib(AudioDevice.cpp.obj) : error LNK2001: unresolved external symbol __imp__memmove
@@ -226,9 +163,9 @@ sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2001: unresolved external 
 sfml-window-s-d.lib(Window.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
 sfml-window-s-d.lib(VideoMode.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
 sfml-graphics-s-d.lib(Text.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-graphics-s-d.lib(VertexArray.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
 sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
 sfml-graphics-s-d.lib(GLCheck.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
-sfml-graphics-s-d.lib(VertexArray.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
 Word.obj : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
 sfml-graphics-s-d.lib(Shape.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
 sfml-graphics-s-d.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
@@ -245,29 +182,30 @@ Animation.obj : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
 Bullet.obj : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
 Game.obj : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
 GameObject.obj : error LNK2001: unresolved external symbol __imp___CrtDbgReportW
+sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2019: unresolved external symbol __CxxThrowException@8 referenced in function __catch$?_Copy@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXII@Z$1
 sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
 sfml-system-s-d.lib(String.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
 MSVCRTD.lib(throw_bad_alloc.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-audio-s-d.lib(AudioDevice.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
 sfml-audio-s-d.lib(SoundFileFactory.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
 sfml-audio-s-d.lib(SoundFileReaderFlac.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
 sfml-audio-s-d.lib(SoundFileWriterFlac.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
-sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-window-s-d.lib(WglExtensions.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
 sfml-window-s-d.lib(JoystickImpl.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
 sfml-audio-s-d.lib(SoundBuffer.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
 sfml-audio-s-d.lib(ALCheck.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
-sfml-audio-s-d.lib(AudioDevice.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-window-s-d.lib(GlContext.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
 sfml-window-s-d.lib(VideoModeImpl.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
 sfml-window-s-d.lib(WglContext.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
 sfml-window-s-d.lib(WindowImplWin32.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
-sfml-window-s-d.lib(WglExtensions.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
-sfml-graphics-s-d.lib(VertexArray.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
-sfml-graphics-s-d.lib(Image.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
-sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
-sfml-window-s-d.lib(GlContext.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
-sfml-graphics-s-d.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
-sfml-graphics-s-d.lib(Font.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
 sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
 sfml-graphics-s-d.lib(GLCheck.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-graphics-s-d.lib(Image.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+Ship.obj : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-graphics-s-d.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-graphics-s-d.lib(Font.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
+sfml-graphics-s-d.lib(VertexArray.cpp.obj) : error LNK2001: unresolved external symbol __CxxThrowException@8
 Animation.obj : error LNK2001: unresolved external symbol __CxxThrowException@8
 Bullet.obj : error LNK2001: unresolved external symbol __CxxThrowException@8
 Game.obj : error LNK2001: unresolved external symbol __CxxThrowException@8
@@ -309,22 +247,22 @@ sfml-window-s-d.lib(Window.cpp.obj) : error LNK2001: unresolved external symbol 
 sfml-window-s-d.lib(VideoMode.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
 sfml-window-s-d.lib(GlResource.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
 sfml-window-s-d.lib(Context.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
-sfml-graphics-s-d.lib(VertexArray.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-graphics-s-d.lib(GLCheck.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
 sfml-graphics-s-d.lib(Image.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
 sfml-graphics-s-d.lib(TextureSaver.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
 sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
 sfml-graphics-s-d.lib(Text.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-graphics-s-d.lib(VertexArray.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
 sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
 sfml-graphics-s-d.lib(GLExtensions.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
-sfml-graphics-s-d.lib(GLCheck.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
 sfml-graphics-s-d.lib(Color.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
 sfml-graphics-s-d.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
 sfml-graphics-s-d.lib(RenderWindow.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
 sfml-graphics-s-d.lib(Font.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
 Word.obj : error LNK2001: unresolved external symbol ___CxxFrameHandler3
-sfml-graphics-s-d.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
 sfml-graphics-s-d.lib(Shape.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
 sfml-graphics-s-d.lib(RectangleShape.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
+sfml-graphics-s-d.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol ___CxxFrameHandler3
 Small.obj : error LNK2001: unresolved external symbol ___CxxFrameHandler3
 spaceInvaders.obj : error LNK2001: unresolved external symbol ___CxxFrameHandler3
 Shield.obj : error LNK2001: unresolved external symbol ___CxxFrameHandler3
@@ -404,6 +342,7 @@ sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved exter
 Game.obj : error LNK2019: unresolved external symbol __imp____std_type_info_name referenced in function "public: char const * __thiscall type_info::name(void)const " (?name@type_info@@QBEPBDXZ)
 Player.obj : error LNK2001: unresolved external symbol __imp____std_type_info_name
 Ship.obj : error LNK2001: unresolved external symbol __imp____std_type_info_name
+Game.obj : error LNK2019: unresolved external symbol __imp__clock referenced in function "public: __thiscall Game::Game(class sf::RenderWindow *,bool)" (??0Game@@QAE@PAVRenderWindow@sf@@_N@Z)
 Game.obj : error LNK2019: unresolved external symbol __imp___time64 referenced in function _time
 Game.obj : error LNK2019: unresolved external symbol ___RTDynamicCast referenced in function "public: bool __thiscall Game::loop(void)" (?loop@Game@@QAE_NXZ)
 Player.obj : error LNK2001: unresolved external symbol ___RTDynamicCast
@@ -421,8 +360,8 @@ sfml-window-s-d.lib(GlContext.cpp.obj) : error LNK2001: unresolved external symb
 sfml-window-s-d.lib(WindowImpl.cpp.obj) : error LNK2001: unresolved external symbol __purecall
 sfml-audio-s-d.lib(SoundFileFactory.cpp.obj) : error LNK2001: unresolved external symbol __purecall
 Word.obj : error LNK2001: unresolved external symbol __purecall
-sfml-graphics-s-d.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol __purecall
 sfml-graphics-s-d.lib(Shape.cpp.obj) : error LNK2001: unresolved external symbol __purecall
+sfml-graphics-s-d.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol __purecall
 sfml-graphics-s-d.lib(Text.cpp.obj) : error LNK2001: unresolved external symbol __purecall
 Word.obj : error LNK2019: unresolved external symbol __imp____acrt_iob_func referenced in function _printf
 sfml-system-s-d.lib(Err.cpp.obj) : error LNK2001: unresolved external symbol __imp____acrt_iob_func
@@ -438,6 +377,7 @@ sfml-graphics-s-d.lib(Transformable.cpp.obj) : error LNK2019: unresolved externa
 sfml-graphics-s-d.lib(View.cpp.obj) : error LNK2001: unresolved external symbol _sin
 sfml-graphics-s-d.lib(Transform.cpp.obj) : error LNK2001: unresolved external symbol _sin
 sfml-window-s-d.lib(JoystickImpl.cpp.obj) : error LNK2001: unresolved external symbol _sin
+sfml-graphics-s-d.lib(Shape.cpp.obj) : error LNK2019: unresolved external symbol _sqrt referenced in function _sqrtf
 sfml-audio-s-d.lib(SoundFileWriterWav.cpp.obj) : error LNK2001: unresolved external symbol __imp___wassert
 sfml-audio-s-d.lib(SoundFileReaderFlac.cpp.obj) : error LNK2001: unresolved external symbol __imp___wassert
 sfml-audio-s-d.lib(SoundFileReaderOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp___wassert
@@ -500,7 +440,6 @@ sfml-graphics-s-d.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external
 sfml-graphics-s-d.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol _memset
 sfml-graphics-s-d.lib(Font.cpp.obj) : error LNK2001: unresolved external symbol _memset
 sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2001: unresolved external symbol _memset
-sfml-graphics-s-d.lib(Shape.cpp.obj) : error LNK2019: unresolved external symbol _sqrt referenced in function _sqrtf
 sfml-graphics-s-d.lib(Text.cpp.obj) : error LNK2019: unresolved external symbol __imp__floor referenced in function _floorf
 sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2019: unresolved external symbol __imp___invalid_parameter_noinfo referenced in function _memcpy_s
 sfml-audio-s-d.lib(SoundFileWriterOgg.cpp.obj) : error LNK2001: unresolved external symbol __imp___invalid_parameter_noinfo
@@ -855,4 +794,4 @@ MSVCRTD.lib(_pdblkup_.obj) : error LNK2019: unresolved external symbol _wcscpy_s
 MSVCRTD.lib(_pdblkup_.obj) : error LNK2019: unresolved external symbol ___vcrt_GetModuleFileNameW referenced in function "struct HINSTANCE__ * __cdecl GetPdbDll(void)" (?GetPdbDll@@YAPAUHINSTANCE__@@XZ)
 MSVCRTD.lib(_pdblkup_.obj) : error LNK2019: unresolved external symbol ___vcrt_GetModuleHandleW referenced in function "struct HINSTANCE__ * __cdecl GetPdbDll(void)" (?GetPdbDll@@YAPAUHINSTANCE__@@XZ)
 MSVCRTD.lib(_pdblkup_.obj) : error LNK2019: unresolved external symbol ___vcrt_LoadLibraryExW referenced in function "struct HINSTANCE__ * __cdecl GetPdbDll(void)" (?GetPdbDll@@YAPAUHINSTANCE__@@XZ)
-C:\Users\18dcb01\Documents\GitHub\SpaceInvaders\Debug\Space Invaders.exe : fatal error LNK1120: 171 unresolved externals
+C:\Users\18mac03\Documents\GitHub\SpaceInvaders\Debug\Space Invaders.exe : fatal error LNK1120: 172 unresolved externals

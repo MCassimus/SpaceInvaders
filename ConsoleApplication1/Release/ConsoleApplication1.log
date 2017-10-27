@@ -1,7 +1,9 @@
 ﻿  spaceInvaders.cpp
-spaceInvaders.cpp(25): warning C4244: 'argument': conversion from 'double' to 'unsigned int', possible loss of data
-spaceInvaders.cpp(28): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-spaceInvaders.cpp(49): warning C4244: 'argument': conversion from 'double' to 'unsigned int', possible loss of data
+spaceInvaders.cpp(23): warning C4244: 'initializing': conversion from 'unsigned int' to 'float', possible loss of data
+spaceInvaders.cpp(41): warning C4477: 'printf' : format string '%f' requires an argument of type 'double', but variadic argument 1 has type 'unsigned int'
+spaceInvaders.cpp(41): warning C4477: 'printf' : format string '%f' requires an argument of type 'double', but variadic argument 2 has type 'unsigned int'
+spaceInvaders.cpp(79): warning C4477: 'printf' : format string '%f' requires an argument of type 'double', but variadic argument 1 has type 'unsigned int'
+spaceInvaders.cpp(79): warning C4477: 'printf' : format string '%f' requires an argument of type 'double', but variadic argument 2 has type 'unsigned int'
   Generating code
   1 of 623 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
