@@ -7,12 +7,13 @@
 #include <SFML\Graphics\RenderWindow.hpp>
 #include "Game.h"
 #include "GameObject.h"
+#include <windows.h>
 
 
 int main()
 { 
-	sf::RenderWindow window(sf::VideoMode::getFullscreenModes().at(0), "Space Invaders", (sf::Style::Resize + sf::Style::Close + sf::Style::Fullscreen));
-	//sf::RenderWindow window(sf::VideoMode(620, 496, 24), "Space Invaders");
+	sf::RenderWindow window(sf::VideoMode::getFullscreenModes().at(0), "Space Invaders", (sf::Style::Resize + sf::Style::Close /*+ sf::Style::Fullscreen*/));
+	//sf::RenderWindow window(sf::VideoMode(310, 248), "Space Invaders", (sf::Style::Resize + sf::Style::Close + sf::Style::Fullscreen));
 	window.setFramerateLimit(60);
 	window.setKeyRepeatEnabled(false);
 	window.setMouseCursorVisible(false);
@@ -20,14 +21,24 @@ int main()
 	sf::View view(sf::Rect<float>(0, 0, 310, 248));
 	view.setCenter(view.getSize().x / 2, view.getSize().y / 2);
 
-	float winRatio = window.getSize().x / window.getSize().y;
-	float viewRatio = view.getSize().x / view.getSize().y;
+	MONITORINFO mi = { sizeof(mi) };
 
-	sf::Vector2f viewPos(0, 0);
-	sf::Vector2f viewSize(1, 1);
+	HWND hwnd = window.getSystemHandle();
+
+	// get the coordinates of the monitor the window is currently in
+	GetMonitorInfo(MonitorFromWindow(hwnd, MONITOR_DEFAULTTONEAREST), &mi);
+	
+	double viewRatio = view.getSize().x / view.getSize().y;
+	DWORD winWidth = (mi.rcMonitor.right - mi.rcMonitor.left);
+	DWORD winHeight =  (mi.rcMonitor.bottom - mi.rcMonitor.top);
+
+	printf("%d\n", winWidth / winHeight);
+
+	sf::Vector2<double> viewPos(0, 0);
+	sf::Vector2<double> viewSize(1, 1);
 
 	//apply margins where approriate to scale view to fit window
-	if (winRatio < viewRatio)
+	/*if (winRatio < viewRatio)
 	{
 		viewSize.y = winRatio / viewRatio;
 		viewPos.y = (1 - viewSize.y) / 2.0f;
@@ -37,12 +48,7 @@ int main()
 		viewSize.x = viewRatio / winRatio;
 		viewPos.x = (1 - viewSize.x) / 2.0f;
 	}
-	
-	printf("win x: %f\nwin y: %f\n", window.getSize().x, window.getSize().y);
-	printf("winratio: %f\nviewratio: %f\n", winRatio, viewRatio);
-	printf("view x : %f \nview y: %f\n", viewSize.x, viewSize.y);
-	printf("pos x : %f \npos y: %f\n", viewPos.x, viewPos.y);
-
+*/
 	view.setViewport(sf::FloatRect(viewPos.x, viewPos.y, viewSize.x, viewSize.y));
 	window.setView(view);
 
@@ -62,27 +68,22 @@ int main()
 				window.close();
 			else if (event.type == sf::Event::Resized)
 			{
-				winRatio = event.size.width / (float)event.size.height;
+				//float winRatio = sf::VideoMode::getFullscreenModes().at(0).width / sf::VideoMode::getFullscreenModes().at(0).height;
 
-				//apply margins where approriate to scale view to fit window
-				if (winRatio < viewRatio)
-				{
-					viewSize.y = winRatio / viewRatio;
-					viewPos.y = (1 - viewSize.y) / 2.0f;
-				}
-				else
-				{
-					viewSize.x = viewRatio / winRatio;
-					viewPos.x = (1 - viewSize.x) / 2.0f;
-				}
-
-				printf("win x: %f\nwin y: %f\n", window.getSize().x, window.getSize().y);
-				printf("winratio: %f\nviewratio: %f\n", winRatio, viewRatio);
-				printf("view x : %f \nview y: %f\n", viewSize.x, viewSize.y);
-				printf("pos x : %f \npos y: %f\n", viewPos.x, viewPos.y);
+				////apply margins where approriate to scale view to fit window
+				//if (winRatio < viewRatio)
+				//{
+				//	//viewSize.y = winRatio / viewRatio;
+				//	//viewPos.y = (1 - viewSize.y) / 2.0f;
+				//}
+				//else
+				//{
+				//	viewSize.x = viewRatio / winRatio;
+				//	viewPos.x = (1 - viewSize.x) / 2.0f;
+				//}
 			
-				view.setViewport(sf::FloatRect(viewPos.x, viewPos.y, viewSize.x, viewSize.y));
-				window.setView(view);
+				//view.setViewport(sf::FloatRect(viewPos.x, viewPos.y, viewSize.x, viewSize.y));
+				//window.setView(view);
 			}
 			else if (event.type == sf::Event::KeyPressed)
 			{
