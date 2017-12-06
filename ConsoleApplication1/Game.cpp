@@ -71,7 +71,7 @@ bool Game::loop()
 	while (window->pollEvent(event))
 	{
 		if (event.type == sf::Event::KeyPressed)
-			if (event.key.code == sf::Keyboard::Escape)
+			if (event.key.code == sf::Keyboard::Num3)
 			{
 				if (pause)
 				{
@@ -84,10 +84,10 @@ bool Game::loop()
 					pause = true;
 				}
 			}
-			else if (event.key.code == sf::Keyboard::W || event.key.code == sf::Keyboard::Up)
-				playerShoot(event);
-			else if (event.key.code == sf::Keyboard::BackSpace && pause)
+			else if (event.key.code == sf::Keyboard::Num4 && pause)
 				return false;
+			else
+				playerShoot(event);
 		// Close window: exit
 		if (event.type == sf::Event::Closed)
 			window->close();
@@ -440,16 +440,16 @@ void Game::render()
 
 void Game::processKeyboard()
 {
-	//E key cheat code
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::E))
-	{
-		Ship * shipTemp = nullptr;
-		for (int i = 0; i < 54 && shipTemp->getLife()==0; i++)
-			shipTemp = dynamic_cast<Ship *>(gameData[1].at(i));
+	////E key cheat code, kills ships until 1 remains
+	//if (sf::Keyboard::isKeyPressed(sf::Keyboard::E))
+	//{
+	//	Ship * shipTemp = nullptr;
+	//	for (int i = 0; i < 54 && shipTemp->getLife()==0; i++)
+	//		shipTemp = dynamic_cast<Ship *>(gameData[1].at(i));
 
-		while (shipTemp != nullptr && shipTemp->getLife() != 0)
-			shipTemp->takeLife();
-	}
+	//	while (shipTemp != nullptr && shipTemp->getLife() != 0)
+	//		shipTemp->takeLife();
+	//}
 
 	//for each player in game data
 	for (int i = 0; i < gameData[0].size(); i++)
@@ -461,20 +461,20 @@ void Game::processKeyboard()
 		if (playerTemp->player == "Player 1")
 		{
 			//A key move left
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 				playerTemp->move(2);
 			//D Key move right
-			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 				playerTemp->move(1);
 		}
 		//if current index is for player 2 process player 2 controls
 		else if (playerTemp->player == "Player 2")
 		{
 			//dpad left move left
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
 				playerTemp->move(2);
 			//dpad right move right
-			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::G))
 				playerTemp->move(1);
 		}
 	}
@@ -492,15 +492,73 @@ void Game::playerShoot(sf::Event event)
 		//if current index is for player 1 process player 1 controls
 		if (playerTemp->player == "Player 1")
 		{
-			//W key shoots
-			if (event.key.code == sf::Keyboard::W)
+			bool playerShot = false;
+
+			switch (event.key.code)
+			{
+			case sf::Keyboard::C:
+				playerShot = true;
+				break;
+			case sf::Keyboard::Num5:
+				playerShot = true;
+				break;
+			case sf::Keyboard::LShift:
+				playerShot = true;
+				break;
+			case sf::Keyboard::Z:
+				playerShot = true;
+				break;
+			case sf::Keyboard::X:
+				playerShot = true;
+				break;
+			case sf::Keyboard::Space:
+				playerShot = true;
+				break;
+			case sf::Keyboard::LControl:
+				playerShot = true;
+				break;
+			case sf::Keyboard::LAlt:
+				playerShot = true;
+				break;
+			}
+
+			if (playerShot)
 				playerTemp->shoot();
 		}
 		//if current index is for player 2 process player 2 controls
 		else if (playerTemp->player == "Player 2")
 		{
-			//dpad up Shoots
-			if (event.key.code == sf::Keyboard::Up)
+			bool playerShot = false;
+
+			switch (event.key.code)
+			{
+			case sf::Keyboard::RBracket:
+				playerShot = true;
+				break;
+			case sf::Keyboard::Num6:
+				playerShot = true;
+				break;
+			case sf::Keyboard::W:
+				playerShot = true;
+				break;
+			case sf::Keyboard::E:
+				playerShot = true;
+				break;
+			case sf::Keyboard::LBracket:
+				playerShot = true;
+				break;
+			case sf::Keyboard::A:
+				playerShot = true;
+				break;
+			case sf::Keyboard::S:
+				playerShot = true;
+				break;
+			case sf::Keyboard::Q:
+				playerShot = true;
+				break;
+			}
+
+			if (playerShot)
 				playerTemp->shoot();
 		}
 	}
